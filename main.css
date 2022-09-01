@@ -1,0 +1,120 @@
+@font-face {
+  font-family: "ylee MHIM";
+  src: url(ylee\ MHIM.ttf);
+}
+@font-face {
+  font-family: "avenir_next";
+  src: url(Avenir\ Next.ttc);
+}
+body {
+  margin: 0;
+  font-family: "Avenir Next", "avenir_next";
+  background: #C8DCE7;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.nav {
+  background-color: #304C5C;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1500px;
+  padding: 20px 50px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-weight: 400;
+  font-size: 13pt;
+}
+.logo img {
+  margin-right: 15px;
+  height: 40px;
+}
+
+.links a {
+  margin-left: 40px;
+  color: white;
+  text-decoration: none;
+}
+
+.header {
+  background-color: #304C5C;
+  text-align: center;
+  margin: 0;
+  color: white;
+  font-size: 25pt;
+  font-weight: 400;
+  padding: 50px 0;
+}
+
+.groups {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 30px;
+}
+
+.group-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  max-width: 1500px;
+  width: 100%;
+  gap: 50px;
+  justify-items: center;
+}
+.group-grid .group {
+  background: white;
+  width: 280px;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0px 0px 25px rgba(48, 76, 92, 0.2431372549);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.group-grid .group:hover .name::after {
+  width: 100%;
+}
+.group-grid .group .cover {
+  width: 100%;
+  height: 260px;
+  background-image: url(Mause300x200.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+.group-grid .group .name {
+  font-family: "ylee MHIM";
+  font-size: 50px;
+  text-align: center;
+  margin: 0;
+  margin-top: 10px;
+  position: relative;
+}
+.group-grid .group .name::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  width: 0px;
+  height: 1px;
+  background-color: black;
+  transition: all 0.2s;
+}
+.group-grid .group svg {
+  margin-top: 5px;
+  height: 20px;
+  fill: rgb(91, 91, 91);
+  transition: all 0.2s;
+}/*# sourceMappingURL=main.css.map */
