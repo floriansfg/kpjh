@@ -8,6 +8,7 @@
 	src: url(Avenir\ Next.ttc);
 }
 
+$enable-shadows: true;
 $maxWidth: 1500px;
 
 body {
@@ -125,3 +126,55 @@ body {
 
 	}
 }
+.container {
+    background-color: white;
+    //box-shadow: 0px 0px 5px #5c30303e;
+
+    padding: 15px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 11px;
+    max-width: $maxWidth;
+    width: auto;
+    align-content: center;
+
+
+    //display: flex;
+    //box-shadow: 0px, 0px, 20px #0e0e0e;
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+}
+.container:hover {
+    box-shadow: 0px 0px 10px #46575f3e;
+    transition: all 0.5s;
+}
+
+.txt {
+    margin: 160px;
+    line-height: 2.8;
+    text-indent: 10px;
+    margin-top: 100px;
+}
+h3 {
+    margin: 100px;
+    margin-left: 180px;
+}
+.busbilder {
+    height: 200px;
+    background-color: gray;
+    margin-bottom: 20px;
+}
+.form {
+    margin: 80px;
+    height: 1500px;
+    background-color: white;
+    border-radius: 40px;
+}
+
+

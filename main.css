@@ -117,4 +117,50 @@ body {
   height: 20px;
   fill: rgb(91, 91, 91);
   transition: all 0.2s;
+}
+
+.container {
+  background-color: white;
+  padding: 15px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 11px;
+  max-width: 1500px;
+  width: auto;
+  align-content: center;
+}
+.container .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container:hover {
+  box-shadow: 0px 0px 10px rgba(70, 87, 95, 0.2431372549);
+  transition: all 0.5s;
+}
+
+.txt {
+  margin: 160px;
+  line-height: 2.8;
+  text-indent: 10px;
+  margin-top: 100px;
+}
+
+h3 {
+  margin: 100px;
+  margin-left: 180px;
+}
+
+.busbilder {
+  height: 200px;
+  background-color: gray;
+  margin-bottom: 20px;
+}
+
+.form {
+  margin: 80px;
+  height: 1500px;
+  background-color: white;
+  border-radius: 40px;
 }/*# sourceMappingURL=main.css.map */
