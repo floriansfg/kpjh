@@ -2,22 +2,18 @@
   <!-- <DefaultView titel="Gruppen">
     <Groups/>
   </DefaultView> -->
-  <DefaultView titel="Über Uns">
+  <!-- <DefaultView titel="Über Uns"> -->
     <!-- <Groups/> -->
-    <UeberUns>
+    <!-- <UeberUns>
 
     </UeberUns>
-  </DefaultView>
+  </DefaultView> -->
+  <RouterView/>
+
 </template>
 
 <script>
-  import DefaultView from './components/DefaultView.vue';
-  import Groups from './components/Group/Groups.vue'
-  import UeberUns from './components/UeberUns.vue'
+  import {RouterView} from 'vue-router'
 
-  export default {
-      components: {
-        DefaultView, Groups, UeberUns
-      }
-  }
+
 </script>

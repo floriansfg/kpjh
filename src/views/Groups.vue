@@ -1,21 +1,24 @@
 <template>
-    <div class="groups">
-        <div class="group-grid">
-            <Group v-for="group in this.groups" :gruppe="group"/>
+    <DefaultView titel="Gruppen">
+        <div class="groups">
+            <div class="group-grid">
+                <Group v-for="group in this.groups" :gruppe="group"/>
+            </div>
         </div>
-    </div>
 
-    <ul>
-        <li v-for="gruppe in this.groups">{{gruppe.name}}</li>
-    </ul>
+        <ul>
+            <li v-for="gruppe in this.groups">{{gruppe.name}}</li>
+        </ul>
+    </DefaultView>  
 </template>
 <script>
-    import Group from "./Group.vue"
+    import Group from "../components/Group.vue"
+    import DefaultView from "../components/DefaultView.vue"
     
     export default {
 
         components: {
-            Group
+            Group, DefaultView
         },
         data() {
             return {

@@ -1,15 +1,15 @@
 <template>
 <div class="nav">
 		<div class="wrapper">
-			<div class="logo">
+			<router-link :to="{name:'home'} " class="logo">
 				<img src="../assets/logo.png"/>
 				Katholische<br/>Pfarrjugend Hüls
-			</div>
+			</router-link>
 			<div class="links">
-				<a href="ueberuns.html">Über Uns</a>
-				<a href="index.html">Gruppen</a>
-				<a href="fotos.html">Fotos</a>
-				<a href="verleih.html">Bus & Zeltverleih</a>
+                <router-link :to="{name:'ueberuns'}">Über Uns</router-link>
+                <router-link :to="{name: 'gruppen'}">Gruppen</router-link>
+                <router-link :to="{name: 'fotos'}">Fotos</router-link>
+                <router-link :to="{name: 'verleih'}">Bus & Zeltverleih</router-link>
 			</div>
 		</div>
 	</div>
@@ -37,6 +37,7 @@
     color: white;
     font-weight: 400;
     font-size: 13pt;
+    text-decoration: none;
     }
     .logo img {
     margin-right: 15px;
