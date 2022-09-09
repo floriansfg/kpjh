@@ -1,5 +1,7 @@
 <template>
-    <div class="group">
+    <Modal v-if="this.showDetails" @close="this.showDetails=false"></Modal>
+
+    <div class="group" @click="this.showDetails=true">
         <img class="cover" :src="this.gruppe.images[0]" />
         <p class="name">{{this.gruppe.name}}</p>
         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
@@ -9,10 +11,20 @@
 
 </template>
 <script>
+    import Modal from "./Modal.vue"
+
     export default {
         props: [
             'gruppe'
-        ]
+        ],
+        components: {
+            Modal
+        },
+        data() {
+            return {
+                showDetails: false
+            }
+        }
     }
 </script>
 

@@ -1,5 +1,6 @@
 <template>
     <DefaultView titel="Gruppen">
+
         <div class="groups">
             <div class="group-grid">
                 <Group v-for="group in this.groups" :gruppe="group"/>
@@ -14,6 +15,8 @@
 <script>
     import Group from "../components/Group.vue"
     import DefaultView from "../components/DefaultView.vue"
+    // import Modal from "../components/Modal.vue"
+
     
     export default {
 
