@@ -1,5 +1,7 @@
 <template>
-    <Modal v-if="this.showDetails" @close="this.showDetails=false"></Modal>
+    <Modal v-if="this.showDetails" @close="this.showDetails=false">
+        <GroupDetails :groupData="this.gruppe"/>
+    </Modal>
 
     <div class="group" @click="this.showDetails=true">
         <img class="cover" :src="this.gruppe.images[0]" />
@@ -12,13 +14,14 @@
 </template>
 <script>
     import Modal from "./Modal.vue"
+    import GroupDetails from "./GroupDetails.vue"
 
     export default {
         props: [
             'gruppe'
         ],
         components: {
-            Modal
+            Modal, GroupDetails
         },
         data() {
             return {

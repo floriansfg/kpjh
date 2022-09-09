@@ -35,7 +35,7 @@
                         ]
                     },
                     {
-                        name: "St.Werner",
+                        name: "St.Maus",
                         supervisor: "Inge+Felix",
                         year: "1994/1995",
                         images: [
