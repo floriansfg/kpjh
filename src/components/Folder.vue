@@ -18,7 +18,7 @@
         ]
     }
 </script>
-<style>
+<style scoped>
     .container {
         display: flex;
         flex-direction: row;
@@ -39,5 +39,6 @@
     .container:hover {
     box-shadow: 0px 0px 10px #0000003e;
     transition: all 0.5s;
-}
+    }
+    
 </style>  
