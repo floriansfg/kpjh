@@ -23,7 +23,8 @@
 <style scoped>
     .container {
         margin: 20px;
-       
+        margin-bottom: 0;
+        
     }
     .p1 {
         background-color: white;
@@ -32,11 +33,10 @@
         display: inline-block;
         text-align: center;
         align-self: center;
-        width: 49%;
+        width: 50%;
         border-top-left-radius: 10px;
         background-color: rgb(200, 200, 200);
         opacity: 0.5;
-        
     }
     .p2 {
         background-color: white;
@@ -45,8 +45,11 @@
         display: inline-block;
         align-self: center;
         text-align: center;
-        width: 49%;
+        width: 50%;
         border-top-right-radius: 10px;
-        
-    }
+        margin-left: 0;
+        box-shadow: 0 0 15px rgb(104 103 103 / 30%);
+        /*TODO hier muss oben noch die ecke weggemacht werden-nur wie? */
+        clip-path: inset(0px 0px 0px -18px);
+        }
 </style>
