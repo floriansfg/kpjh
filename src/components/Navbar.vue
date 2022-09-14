@@ -27,7 +27,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: 1500px;
+    max-width: var(--contentWidth);
     padding: 20px 50px;
     }
 

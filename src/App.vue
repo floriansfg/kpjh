@@ -17,3 +17,9 @@
 
 
 </script>
+
+<style>
+:root {
+  --contentWidth: 1500px;
+}
+</style>

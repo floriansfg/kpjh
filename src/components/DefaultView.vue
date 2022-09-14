@@ -3,7 +3,9 @@
     <div class="header">
         {{titel}}
     </div>
-    <slot></slot>
+    <div class="content">
+        <slot></slot>
+    </div>
 
 </template>
 
@@ -28,5 +30,10 @@
     font-size: 25pt;
     font-weight: 400;
     padding: 50px 0;
+    }
+
+    .content {
+        max-width: var(--contentWidth);
+        margin: auto;
     }
 </style>
