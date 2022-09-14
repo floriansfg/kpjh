@@ -14,7 +14,7 @@
 
 <script>
   import {RouterView} from 'vue-router'
-
+  import 'v-calendar/dist/style.css';
 
 </script>
 
