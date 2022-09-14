@@ -1,13 +1,23 @@
 <template>
     <div class="form">hi</div>
 </template>
+<script>
+    export default {
+        data() {
+            return {
+                showsmth:true
+            }
+        }    
+    }
+    
+</script>
 <style scoped>
    .form {
     background-color: white;
     margin: 20px;
     margin-top: 0;
     height: 800px;
-    position: relative;
+    position: absolute;
    }
    .form::after {
     content: "";

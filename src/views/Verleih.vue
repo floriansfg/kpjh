@@ -4,7 +4,7 @@
             <div class="p1">Busverleih</div>
             <div class="p2">Zeltverleih</div>
         </div>
-        <Busverleih/>
+        <Busverleih></Busverleih>
         <Zeltverleih/>
     </DefaultView>
 </template>
@@ -17,6 +17,16 @@
         components: {
             DefaultView, Busverleih, Zeltverleih
         }
+        // data() {
+        //     return {
+        //         showsmth:true
+        //     }
+        // }
+        // methods: {
+        //     toggleVerleih() {
+
+        //     }
+        // }
     }
     
 </script>
