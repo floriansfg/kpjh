@@ -1,6 +1,6 @@
 <template>
     <div class="pics">
-        <img :src="this.groupData.images[0]"/>
+        <Diashow :images="this.groupData.images"/>
     </div>
     <div class="name">{{this.groupData.name}}</div>
     <div class="info">
@@ -11,23 +11,18 @@
 
 </template>
 <script>
+    import Diashow from './Diashow.vue';
     export default {
         props: [
             "groupData"
-        ]
+        ],
+        components: {
+            Diashow
+        }
     }
 </script>
 <style scoped>
-    .pics {
-        width: 100%;
-        height: 280px;
-    }
-    img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        object-position: center;
-    }
+    
     .name {
         font-family: 'ylee MHIM';
         font-size: 37px;
@@ -45,4 +40,14 @@
         margin: 0;
         margin-top: 10px;
     }
+
+    .pics::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 25px;
+        background-image: linear-gradient(rgba(35, 34, 34, 0.326), rgba(0, 0, 0, 0));
+    } 
 </style>

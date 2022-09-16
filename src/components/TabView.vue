@@ -43,13 +43,13 @@
 	}
 
 	.tabs span:not(.active) {
-		opacity: 0.5;
-		background-color: rgb(200, 200, 200);
-		box-shadow: inset -10px -10px 15px rgb(104 103 103 / 30%);
+		opacity: 0.8;
+		background-color: rgb(213, 220, 223);
+		box-shadow: inset -5px -5px 15px rgba(0, 0, 0, 0.2);
 	}
 
 	.tabs span:last-of-type:not(.active) {
-		box-shadow: inset 10px -10px 15px rgb(104 103 103 / 30%);
+		box-shadow: inset 5px -5px 15px rgba(0, 0, 0, 0.2);
 	}
 
 	.content {

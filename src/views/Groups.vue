@@ -26,7 +26,8 @@
                         supervisor: "Inge+Felix",
                         year: "1994/1995",
                         images: [
-                            "https://kpjh.de/wp-content/uploads/2016/03/2015_KPJH_Zeltlager_Oberthal-3749-750x500.jpg"
+                            "https://kpjh.de/wp-content/uploads/2016/03/2015_KPJH_Zeltlager_Oberthal-3749-750x500.jpg",
+                            "https://kpjh.de/wp-content/uploads/2016/03/IMG_1124-750x500.jpg"
                         ]
                     },
                     {

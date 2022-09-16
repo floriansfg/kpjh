@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container" @click="this.showModal=true">
         <div class="place">
             {{this.folder.place}}
         </div>
@@ -10,13 +10,24 @@
             {{this.folder.date}}
         </div>
     </div>
+
+    <Modal v-if="this.showModal" @close="this.showModal=false" buttonColor="black">
+        Heyy
+    </Modal>
 </template>
 <script>
+import Modal from './Modal.vue';
     export default {
-        props: [
-            "folder"
-        ]
+    props: [
+        "folder"
+    ],
+    components: { Modal },
+    data() {
+        return {
+            showModal: false
+        }
     }
+}
 </script>
 <style scoped>
     .container {
@@ -33,12 +44,11 @@
         margin-top: 20px;
         margin-bottom: 20px;
         border-radius: 11px;
-        max-width: 1500px;
         width: auto;
     }
     .container:hover {
-    box-shadow: 0px 0px 10px #0000003e;
-    transition: all 0.5s;
+        box-shadow: 0px 0px 10px #0000003e;
+        transition: all 0.5s;
     }
     
 </style>  

@@ -2,7 +2,7 @@
     <div class="ModalWrapper">
         
         <div class="Modal">
-            <svg viewBox="0 0 45 45" stroke="black" class="closeButton" xmlns="http://www.w3.org/2000/svg" @click="close">
+            <svg viewBox="0 0 45 45" :stroke="this.buttonColor" class="closeButton" xmlns="http://www.w3.org/2000/svg" @click="close">
                 <path d="M11.3137 10.9602L33.5876 33.234" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M10.9602 33.234L33.2341 10.9602" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
@@ -20,6 +20,7 @@
 <script>
     
     export default {
+        props: ['buttonColor'],
         emits: [
             "close"
         ],
@@ -39,7 +40,8 @@
         background-color: rgb(39, 42, 42);
         opacity: 0.6;
         position: fixed;
-
+        top: 0;
+        left: 0;
     }
     .ModalWrapper {
         top: 0;
@@ -64,16 +66,6 @@
         position: absolute;
         top: 5px;
         right: 5px;
-        stroke: white;
         z-index:12;
     }
-    .Modal::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 25px;
-        background-image: linear-gradient(rgba(35, 34, 34, 0.326), rgba(0, 0, 0, 0));
-    } 
 </style>

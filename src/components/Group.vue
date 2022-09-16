@@ -1,5 +1,5 @@
 <template>
-    <Modal v-if="this.showDetails" @close="this.showDetails=false">
+    <Modal v-if="this.showDetails" @close="this.showDetails=false" buttonColor="white">
         <GroupDetails :groupData="this.gruppe"/>
     </Modal>
 

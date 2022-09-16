@@ -1,6 +1,8 @@
 <template>
     <DefaultView titel="Fotos">
-        <Folder v-for="_folder in this.folders" :folder="_folder"></Folder>
+        <div class="folders">
+            <Folder v-for="_folder in this.folders" :folder="_folder"></Folder>
+        </div>
     </DefaultView>
 </template>
 <script>
@@ -46,5 +48,8 @@
     
 </script>
 <style scoped>
-   
+    .folders {
+        max-width: var(--contentWidth);
+        margin: 20px;
+    }
 </style>
