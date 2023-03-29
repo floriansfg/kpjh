@@ -45,6 +45,7 @@ import { onMounted } from "vue";
 		box-shadow: 0px 0px 25px #304c5c3e;
 		cursor: pointer;
 		transition: all 0.2s;
+        border-radius: 8px;
     }
 
     .cover {

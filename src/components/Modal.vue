@@ -58,7 +58,7 @@
         background-color: white;
         z-index: 11;
         position: relative;
-        border-radius: 10px;
+        border-radius: 8px;
         overflow: hidden;
     }
     .closeButton {

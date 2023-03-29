@@ -19,11 +19,10 @@
 <script>
 
 import 'v-calendar/dist/style.css';
-import Loader from './components/Loader.vue';
 import Navbar from './components/Navbar.vue'
 
 export default {
-  components: {Loader,Navbar}
+  components: {Navbar}
 }
 </script>
 

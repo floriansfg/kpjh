@@ -2,6 +2,7 @@ import Groups from '../views/Groups.vue'
 import UeberUns from '../views/UeberUns.vue'
 import Fotos from '../views/Fotos.vue'
 import Verleih from '../views/Verleih.vue'
+import Home from '../views/Home.vue'
 
 import {createRouter, createWebHistory} from 'vue-router'
 
@@ -11,7 +12,7 @@ const router = createRouter({
         {
             path:'/',
             name:'home',
-            component: UeberUns
+            component: Home
         },
         {
             path:'/ueberuns',

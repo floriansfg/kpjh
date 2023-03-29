@@ -12,15 +12,13 @@ import Group from "../components/Group.vue"
 import DefaultView from "../components/DefaultView.vue"
 // import Modal from "../components/Modal.vue"
 import gql from 'graphql-tag'
-import Loader from "../components/Loader.vue"
 
 
 export default {
 
     components: {
     Group,
-    DefaultView,
-    Loader
+    DefaultView
 },
     data() {
         return {
