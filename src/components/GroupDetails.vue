@@ -1,6 +1,6 @@
 <template>
     <div class="pics">
-        <Diashow :images="this.groupData.images"/>
+        <Diashow :images="this.groupData.images.items"/>
     </div>
     <div class="name">{{this.groupData.name}}</div>
     <div class="info">

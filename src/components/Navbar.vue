@@ -17,10 +17,13 @@
 <style>
     .nav {
     background-color: #304C5C;
+    background-color: var(--primaryBg);
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 100;
+    position: relative;
     }
     .nav .wrapper {
     display: flex;

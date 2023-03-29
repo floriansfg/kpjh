@@ -1,5 +1,10 @@
 @import "~bootstrap/scss/bootstrap";
 
+:root {
+	--primaryBg: #304C5C; 
+	--primaryBg: #255977; 
+}
+
 @font-face {
 	font-family: "ylee MHIM";
 	src: url("src/assets/ylee\ MHIM.ttf");

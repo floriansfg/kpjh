@@ -1,10 +1,12 @@
 <template>
+    <Transition>
     <Modal v-if="this.showDetails" @close="this.showDetails=false" buttonColor="white">
         <GroupDetails :groupData="this.gruppe"/>
     </Modal>
+</Transition>
 
     <div class="group" @click="this.showDetails=true">
-        <img class="cover" :src="this.gruppe.images[0]" />
+        <img class="cover" :src="this.gruppe.images.items[0].url" />
         <p class="name">{{this.gruppe.name}}</p>
         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
@@ -15,6 +17,7 @@
 <script>
     import Modal from "./Modal.vue"
     import GroupDetails from "./GroupDetails.vue"
+import { onMounted } from "vue";
 
     export default {
         props: [

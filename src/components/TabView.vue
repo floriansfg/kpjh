@@ -45,11 +45,12 @@
 	.tabs span:not(.active) {
 		opacity: 0.8;
 		background-color: rgb(213, 220, 223);
-		box-shadow: inset -5px -5px 15px rgba(0, 0, 0, 0.2);
+		box-shadow: inset -5px -5px 15px 20px rgba(0, 0, 0, 0.2);
+		box-shadow: -15px -15px 15px -10px rgba(0, 0, 0, 0.1) inset;
 	}
 
 	.tabs span:last-of-type:not(.active) {
-		box-shadow: inset 5px -5px 15px rgba(0, 0, 0, 0.2);
+		box-shadow: 15px -15px 15px -10px rgba(0, 0, 0, 0.1) inset;
 	}
 
 	.content {
