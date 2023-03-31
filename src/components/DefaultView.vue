@@ -31,11 +31,12 @@
         color: white;
         font-size: 25pt;
         font-weight: 400;
-        padding: 50px 0;
+        padding: 70px 0;
         position: relative;
         margin-bottom: 50px;
         height: 100px;
         transition: all 0.5s ease;
+        padding-top: 150px;
     }
 
     .header svg {

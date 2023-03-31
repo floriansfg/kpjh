@@ -1,5 +1,5 @@
 <template>
-<div class="nav">
+<div class="nav" :class="{fixed: this.fixedBar}">
 		<div class="wrapper">
 			<router-link :to="{name:'home'} " class="logo">
 				<img src="../assets/logo.png"/>
@@ -14,16 +14,40 @@
 		</div>
 	</div>
 </template>
+
+<script>
+    export default {
+        data() {
+            return {
+                fixedBar: false
+            }
+        },
+        beforeMount() {
+            window.addEventListener('scroll', this.handleScroll)
+        },
+        methods: {
+            handleScroll(e){
+                this.fixedBar = window.scrollY > 40
+            }
+        }
+    }
+</script>
+
 <style>
     .nav {
-    background-color: #304C5C;
-    background-color: var(--primaryBg);
+    background-color: #304c5c00;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 100;
-    position: relative;
+    z-index: 10;
+    position: fixed;
+    height: 120px;
+    transition: 0.4s all;
+    }
+    .nav.fixed {
+        background-color: var(--primaryBg);
+        height: 90px;
     }
     .nav .wrapper {
     display: flex;
