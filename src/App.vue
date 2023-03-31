@@ -1,13 +1,8 @@
 <template>
   <Navbar />
   <router-view v-slot="{ Component, route }">
-    <!-- <transition :duration="1000" name="nested" mode="out-in">
-      <div :key="route.name">
-        <component :is="Component"></component>
-      </div>
-    </transition> -->
 
-    <transition name="fade">
+    <transition :name="route.meta.transition" mode="out-in">
       <div :key="route.name">
         <component :is="Component"></component>
       </div>
@@ -27,27 +22,55 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 :root {
   --contentWidth: 1500px;
 }
 
-/* .nested-enter-active::after,
-.nested-leave-active::after{
-  transition: all 0.5s ease;
+.fade-enter-from .view, .fade-leave-to .view {
+  .header {
+    color: rgba(255, 255, 255, 0);
+  }
+  .content {
+    opacity: 0;
+  }
+}
+
+.fade-enter-active, .fade-enter-active * ,
+.fade-leave-active, .fade-leave-active * {
+  transition: all .5s;
+} 
+
+
+.fullfade-enter-active, .fullfade-leave-active, .fullfade-enter-active::after, .fullfade-leave-active::after {
+  transition: all .5s;
+}
+
+.fullfade-enter-active::after, .fullfade-leave-active::after {
   content: '';
-  position: absolute;
-  width: 100vw;
-  height: 0;
+  position: fixed;
+  z-index: 29;
+  width: 100%;
+  height: 100%;
   top: 0;
-  background-color: #1f4053;
-  z-index: 200;
+  left: 0;
+  background: var(--primaryBg);
+  opacity: 0;
+}
+
+.fullfade-enter-from::after, .fullfade-leave-to::after {
+  opacity: 1;
 }
 
 
-.nested-enter-from::after,
-.nested-leave-to::after {
-  height: 100vh;
-} */
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
 
 </style>

@@ -21,9 +21,6 @@
 </script>
 <style scoped>
 
-    .view {
-        background: #C8DCE7
-    }
     .header {
         background-color: #304C5C;
         background-color: var(--primaryBg);

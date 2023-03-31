@@ -11,9 +11,10 @@
 
             </slot>
         </div>
+        <Transition>
         <div class="Backdrop" @click="close">
-            
         </div>
+        </Transition>
 
     </div>
 </template>
@@ -45,6 +46,7 @@
     }
     .ModalWrapper {
         top: 0;
+        left: 0;
         position: fixed;
         height: 100vh;
         width: 100vw;

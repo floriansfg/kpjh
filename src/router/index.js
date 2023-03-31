@@ -37,4 +37,8 @@ const router = createRouter({
     ]
 })
 
+router.afterEach((to, from) => {
+    to.meta.transition = (to.name=="home" || from.name=="home") ? "fullfade" : "fade"
+})
+
 export default router
