@@ -7,10 +7,11 @@
     "preview": "vite preview --port 4173"
   },
   "dependencies": {
-    "@popperjs/core": "^2.11.7",
-    "bootstrap": "^5.2.3",
     "@apollo/client": "^3.6.9",
+    "@popperjs/core": "^2.11.7",
     "@vue/apollo-option": "^4.0.0-alpha.20",
+    "bootstrap": "^5.2.3",
+    "contentful-rich-text-vue-renderer": "^3.1.0",
     "graphql": "^15.8.0",
     "graphql-tag": "^2.12.6",
     "v-calendar": "^3.0.0-alpha.8",

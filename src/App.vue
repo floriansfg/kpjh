@@ -13,16 +13,17 @@
       </div>
     </transition>
   </router-view>
-
+  <Footer/>
 </template>
 
 <script>
 
 import 'v-calendar/dist/style.css';
 import Navbar from './components/Navbar.vue'
+import Footer from './components/Footer.vue'
 
 export default {
-  components: {Navbar}
+  components: {Navbar, Footer}
 }
 </script>
 

@@ -42,7 +42,7 @@ export default {
                     }
                 }`,
             result(data, key) {
-                console.log(this.groups.items)
+                //console.log(this.groups.items)
             }
         }
     }
