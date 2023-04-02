@@ -1,8 +1,8 @@
 <template>
     <Transition>
-    <Modal v-if="this.showDetails" @close="this.showDetails=false" buttonColor="white">
-        <GroupDetails :groupData="this.gruppe"/>
-    </Modal>
+        <Modal v-if="this.showDetails" @close="this.showDetails=false" buttonColor="white">
+            <GroupDetails :groupData="this.gruppe"/>
+        </Modal>
     </Transition>
     <div class="group" @click="this.showDetails=true">
         <img class="cover" :src="getImages[0] ? getImages[0].url : 'src/assets/imageError.svg'" />
