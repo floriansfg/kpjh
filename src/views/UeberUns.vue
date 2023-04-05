@@ -1,7 +1,8 @@
 <template>
     <DefaultView titel="Über Uns">
-        <h3>Echte Frönde stonnt tesaame...</h3>
+        
         <div class="txt">
+            <h3>Echte Frönde stonnt tesaame...</h3>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             ...unter diesem Motto steht die katholische Pfarrjugend Hüls seit 1978. <br>
             Spielerisch lernen unsere jungen Mitglieder durch verschiedene Aktivitäten die Bedeutung von Freundschaft, Zusammenhalt und Verantwortung. 
@@ -39,9 +40,5 @@
         line-height: 2.8;
         text-indent: 10px;
         margin-top: 100px;
-    }
-    h3 {
-        margin: 100px;
-        margin-left: 180px;
     }
 </style>

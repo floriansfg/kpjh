@@ -1,25 +1,22 @@
 <template>
     <header></header>
+    <h4 class="text-center">Aktuelles</h4>
     <div class="timeline">
-        <div class="event" v-for="event in this.events.items">
-            <img class="icon" :src="event.icon.url" />
-            <div class="content">
-                <b>{{ event.dateDisplay }}</b>
-                <RichTextRenderer :document="event.description.json" />
-            </div>
+        <div class="event" v-for="(event, key) in this.events.items" :key="key">
+            <Event :event="event"/>
         </div>
     </div>
 </template>
 
 <script>
+import Event from '../components/Event.vue'
 import DefaultView from '../components/DefaultView.vue';
 import gql from 'graphql-tag'
-import RichTextRenderer from 'contentful-rich-text-vue-renderer'
 
 export default {
     components: {
         DefaultView,
-        RichTextRenderer
+        Event
     },
     data() {
         return {
@@ -31,6 +28,7 @@ export default {
             query: gql`{
                 events: eventsCollection(limit:0, order: [date_ASC]) {
                     items {
+                        title,
                         icon {
                             url
                         },
@@ -53,7 +51,7 @@ export default {
 
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
 header {
     width: 100%;
@@ -62,6 +60,7 @@ header {
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
+    margin-bottom: 50px;
 }
 
 .txt {
@@ -69,11 +68,6 @@ header {
     line-height: 2.8;
     text-indent: 10px;
     margin-top: 100px;
-}
-
-h3 {
-    margin: 100px;
-    margin-left: 180px;
 }
 
 .timeline {
@@ -91,24 +85,9 @@ h3 {
     max-width: 600px;
     position: relative;
     overflow: hidden;
-    padding: 15px;
+    padding: 0px;
     flex-wrap: wrap;
-}
-
-li {
-    float: left;
-    width: 100%;
-    clear: both;
-    overflow-wrap: break-word;
-}
-
-.icon {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 40px;
-    height: 40px;
+    margin-top: 20px;
 }
 
 .event:not(:last-child)::after {
@@ -119,20 +98,17 @@ li {
     left: 0;
     right: 0;
     margin: auto;
-    top: 80px;
-    background: #d0d0d0;
+    margin-top: 60px;
+    background: #373737;
+    opacity: 0.2;
     overflow: hidden;
 }
 
-.content {
-    width: 40%;
-}
-
-.event:nth-of-type(2n-1) .content {
+:deep(.event:nth-of-type(2n-1) .content) {
     margin-left: auto;
 }
 
-.event:nth-of-type(2n) .content {
+:deep(.event:nth-of-type(2n) .content) {
     margin-right: auto;
 }
 </style>

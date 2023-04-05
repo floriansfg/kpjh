@@ -23,8 +23,9 @@ export default {
 </script>
 
 <style lang="scss">
-:root {
-  --contentWidth: 1500px;
+
+body {
+  background-color: var(--secondaryBg) !important;
 }
 
 .fade-enter-from .view, .fade-leave-to .view {

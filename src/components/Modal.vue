@@ -57,7 +57,7 @@
     .Modal {
         width: 500px;
         align-self: center;
-        background-color: white;
+        background-color: var(--secondaryBg);
         z-index: 11;
         position: relative;
         border-radius: 8px;
