@@ -1,0 +1,21 @@
+@import "bootstrap/scss/bootstrap";
+
+:root {
+	--contentWidth: 1500px;
+	--primaryBg: #304C5C; 
+	--primaryBg: #255977;
+	--secondaryBg: #FFEED3;
+}
+
+@font-face {
+	font-family: "ylee MHIM";
+	src: url("~/assets/fonts/secondaryFont.ttf") format("truetype");
+  }
+
+body {
+	margin: 0;
+	font-family: "Avenir Next", "avenir_next";
+	font-weight: 500;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
