@@ -2,7 +2,7 @@
     <div class="nav" :class="{ fixed: fixedBar }">
         <div class="wrapper">
             <NuxtLink to="/" class="logo">
-                <img src="../assets/logo.png" />
+                <img src="~/assets/logo.png" />
                 Katholische<br />Pfarrjugend Hüls
             </NuxtLink>
             <div class="links">

@@ -1,15 +1,28 @@
 <template>
     <DefaultView titel="Fotos">
-		<img v-for="image in images" referrerpolicy="no-referrer" :src="image.thumbnailLink"/>
+		<Album v-if="albums" v-for="album in albums" :album="album" />
     </DefaultView>
 </template>
 <script>
 
 export default {
-    data() {
-        return {
-            images: {},
-        };
+    async setup() {
+        const query = gql`
+			query {
+  				albums: albumCollection(limit: 0) {
+    				items {
+      					title,
+      					location {
+        					lat,
+        					lon
+      					},
+      					folderId
+    				}
+  				}
+			}
+        `
+        const { data: { value: {albums: {items: albums} } }} = await useAsyncQuery(query)
+        return {albums}
     },
     async created() {
         try {
@@ -22,8 +35,5 @@ export default {
 };
 </script>
 <style scoped>
-.folders {
-    max-width: var(--contentWidth);
-    margin: 20px;
-}
+/*Test*/
 </style>

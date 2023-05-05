@@ -45,7 +45,8 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 50px 30px;
+    padding: 50px 30px;
+	width: 100%;
 }
 
 .group-grid {

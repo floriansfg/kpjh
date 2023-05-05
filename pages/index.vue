@@ -16,7 +16,6 @@ import gql from 'graphql-tag'
 
 export default {
     async setup() {
-
         const query = gql`
             query {
                 events: eventsCollection(limit:0, order: [date_ASC]) {
