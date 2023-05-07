@@ -1,4 +1,3 @@
-import {Auth, google} from 'googleapis'
 
 export default defineEventHandler(async (event) => {
 

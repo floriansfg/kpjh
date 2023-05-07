@@ -3,8 +3,7 @@ import { defineNuxtConfig } from 'nuxt/config'
 export default defineNuxtConfig({
 	modules: [
 		'@nuxtjs/apollo',
-		//'nuxt-speedkit'
-		'@nuxt/image-edge',
+		'@nuxt/image-edge'
 	],
 	components: [
 		{

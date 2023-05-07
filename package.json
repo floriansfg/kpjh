@@ -21,6 +21,7 @@
     "contentful-rich-text-vue-renderer": "^3.1.0",
     "googleapis": "^118.0.0",
     "graphql-tag": "^2.12.6",
+    "jsonwebtoken": "^9.0.0",
     "leaflet": "^1.9.3",
     "nuxt-speedkit": "^2.2.0",
     "sass": "^1.62.1"
