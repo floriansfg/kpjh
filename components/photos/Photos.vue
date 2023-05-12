@@ -1,27 +1,28 @@
 <template>
+	<div>
+		{{useState('loggedIn')}}
 	<div v-for="image in images" :key="image.name">
-		<img :src="image.thumbnailLink" alt="">
+		<img referrerpolicy="no-referrer" :src="image.thumbnailLink" alt="">
 	</div>
+</div>
 </template>
   
 <script>
 export default {
 	data() {
 		return {
-			images: [],
-		};
-	},
-	async created() {
-		try {
-			const response = await fetch('/api/listImages');
-			if (!response.ok) {
-				throw new Error(`Failed to fetch images (${response.status} ${response.statusText})`);
-			}
-			this.images = await response.json();
-		} catch (error) {
-			console.error(error);
+			images: []
 		}
 	},
+	async setup() {
+		let images = []
+		if(useState('loggedIn').value) {
+			await useFetch('/api/listImages').then((response) => {
+				images = response.data.value
+			})
+		}
+		return {images}
+	}
 };
 </script>
   

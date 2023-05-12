@@ -15,4 +15,14 @@ export default defineEventHandler(async (event) => {
 
 	event.context.drive = drive
 
+	const token = getCookie(event,'token')
+	let user = null
+	if(token) {
+		const res = jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
+			if(!err) {
+				user = decoded
+			}
+		});
+	}
+	event.context.auth = {userType: user}
 })

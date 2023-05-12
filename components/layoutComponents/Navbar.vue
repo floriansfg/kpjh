@@ -9,8 +9,11 @@
                 <NuxtLink to="/ueberuns">Über Uns</NuxtLink>
                 <NuxtLink to="/gruppen">Gruppen</NuxtLink>
                 <NuxtLink to="/fotos">Fotos</NuxtLink>
+				<a v-if="useState('loggedIn').value" @click="useLogout()" class="btn-primary">Abmelden</a>
+				<a v-else @click="useState('showLogin').value=true" class="btn-primary">Anmelden</a>
             </div>
         </div>
+		<Login/>
     </div>
 </template>
 
@@ -32,7 +35,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 .nav {
     background-color: #304c5c00;
     width: 100%;
@@ -70,9 +73,11 @@ export default {
     height: 40px;
 }
 
-.links a {
-    margin-left: 40px;
-    color: white;
-    text-decoration: none;
+.links { 
+	a, button {
+		margin-left: 40px;
+		color: white;
+		text-decoration: none;
+	}
 }
 </style>

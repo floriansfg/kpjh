@@ -1,7 +1,6 @@
 <template>
     <DefaultView titel="Fotos">
 		<Album v-if="albums" v-for="album in albums" :album="album" />
-		<Login/>
     </DefaultView>
 </template>
 <script>
@@ -24,18 +23,7 @@ export default {
         `
         const { data: { value: {albums: {items: albums} } }} = await useAsyncQuery(query)
         return {albums}
-    },
-	data() {
-		return { images: []}
-	},
-    async created() {
-        try {
-            const response = await fetch("/api/listImages");
-            this.images = await response.json()
-        } catch (error) {
-            //console.error(error);
-        }
-    },
+    }
 };
 </script>
 <style scoped>
