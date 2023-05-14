@@ -1,14 +1,15 @@
 <template>
-    <div class="pics">
-        <Diashow :images="this.groupData.images.items"/>
-    </div>
-    <div class="name">{{this.groupData.name}}</div>
-    <div class="info">
-        <p>Jahrgang: {{this.groupData.year}}</p>
-        <p>Gruppenstunde: Freitag 18:30-20:00</p>
-        <p>Leiter:in: {{this.groupData.supervisor}}</p>
-    </div>
-
+	<div class="groupDetails">
+		<div class="pics">
+			<Diashow :images="this.groupData.images.items.map(image => image.url)" currentImg="3" height="280px" repeat/>
+		</div>
+		<div class="name">{{this.groupData.name}}</div>
+		<div class="info">
+			<p>Jahrgang: {{this.groupData.year}}</p>
+			<p>Gruppenstunde: Freitag 18:30-20:00</p>
+			<p>Leiter:in: {{this.groupData.supervisor}}</p>
+		</div>
+	</div>
 </template>
 <script>
     export default {
@@ -18,6 +19,9 @@
     }
 </script>
 <style scoped>
+	.groupDetails {
+		width: 500px;
+	}
     
     .name {
         font-family: 'ylee MHIM';
