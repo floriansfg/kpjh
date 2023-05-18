@@ -32,12 +32,12 @@ export default defineNuxtConfig({
 		'@/assets/scss/styles.scss',
 		'leaflet/dist/leaflet.css'
 	],
-	devServer: {
-	  https: {
-	    key: 'localhost-key.pem',
-	    cert: 'localhost.pem'
-	  }
-	},
+	// devServer: {
+	//   https: {
+	//     key: 'localhost-key.pem',
+	//     cert: 'localhost.pem'
+	//   }
+	// },
 	app: {
 		head: {
 			viewport: 'width=device-width, initial-scale=1',

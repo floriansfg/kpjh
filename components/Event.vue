@@ -1,13 +1,11 @@
 <template>
-	<Transition v-if="event.additionalInfo">
-		<Modal v-if="showEvent" @close="showEvent=false" buttonColor="black">
-			<div class="eventDetail">
-				<img class="icon" :src="event.icon.url">
-				<h4 class="text-center"><strong>{{ event.title }}</strong></h4>
-				<RichTextRenderer :document="event.description.json" />
-			</div>
-		</Modal>
-	</Transition>
+	<Modal :show="showEvent" @close="showEvent=false" buttonColor="black">
+		<div class="eventDetail">
+			<img class="icon" :src="event.icon.url">
+			<h4 class="text-center"><strong>{{ event.title }}</strong></h4>
+			<RichTextRenderer :document="event.description.json" />
+		</div>
+	</Modal>
 	<img class="icon" :src="event.icon.url" />
 	<div class="content">
 		<b>{{ event.dateDisplay }}</b>

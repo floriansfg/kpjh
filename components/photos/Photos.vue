@@ -11,6 +11,7 @@
   
 <script>
 export default {
+	props: ["album"],
 	data() {
 		return {
 			images: [],
@@ -18,24 +19,24 @@ export default {
 			clickedImage: 0
 		}
 	},
-	async setup() {
-		let images = []
+	async created() {
+		console.log(this.album)
+		//let images = this.images
 		if(useState('loggedIn').value) {
-			await useFetch('/api/listImages').then((response) => {
-				images = response.data.value
+			await useFetch('/api/listImages?id='+this.album.folderId).then((response) => {
+				this.images = response.data.value
+				console.log(response.data.value)
 			})
 		}
-		return {images}
 	},
 	methods: {
 		async openImage(index) {
-			await this.loadImage(index)
 			this.clickedImage = index
 			this.showImageModal = true
+			await this.loadImage(index)
 
-			if(index<this.images.length) await this.loadImage(index+1)
-
-			if(index>=0) await this.loadImage(index-1)
+			if(index+1<this.images.length) await this.loadImage(index+1)
+			if(index-1>=0) await this.loadImage(index-1)
 		},
 		async getImageUrl(id) {
 			try {
@@ -46,7 +47,7 @@ export default {
 					);
 				}
 				const array = await response.arrayBuffer();
-				const blob = new Blob([array], { type: "image/jpeg" });
+				const blob = new Blob([array], { type: "image/png" });
 				const url = URL.createObjectURL(blob);
 				return url;
 			} catch (error) {
@@ -63,10 +64,10 @@ export default {
 			}
 		},
 		prevImage(index) {
-			if(index>=0) this.loadImage(index-1)
+			if(index-1>=0) this.loadImage(index-1)
 		},
 		nextImage(index) {
-			if(index<this.images.length) this.loadImage(index+1)
+			if(index+1<this.images.length) this.loadImage(index+1)
 		}
 	}
 };

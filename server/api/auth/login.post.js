@@ -8,8 +8,6 @@ export default defineEventHandler(async (event) => {
 		groupLeader: process.env.GROUPLEADER_PW
 	}
 
-	console.log(await readBody(event))
-
 	if(user_pws.hasOwnProperty(userType)) {
 		if (password === user_pws[userType]) {
 			// Create a JWT token

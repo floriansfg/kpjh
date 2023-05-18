@@ -12,7 +12,7 @@
 	src: url("~/assets/fonts/secondaryFont.ttf") format("truetype");
   }
 
-body {
+body, input {
 	margin: 0;
 	font-family: "Avenir Next", "avenir_next";
 	font-weight: 500;
