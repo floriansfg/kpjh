@@ -35,7 +35,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .nav {
     background-color: #304c5c00;
     width: 100%;
