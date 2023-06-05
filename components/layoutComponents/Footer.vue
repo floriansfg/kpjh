@@ -102,6 +102,7 @@ export default {
   }
   svg {
         height: 20px;
+        width: 25px;
         padding-right: 10px;
     }
   </style>
