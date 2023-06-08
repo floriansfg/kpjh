@@ -1,13 +1,13 @@
 <template>
 	<div class="groupDetails">
 		<div class="pics">
-			<Diashow :images="this.groupData.images.items.map(image => image.url)" currentImg="3" height="280px" repeat/>
+			<Diashow :images="groupData.images.items.map(image => image.url)" currentImg="3" height="280px" repeat/>
 		</div>
-		<div class="name">{{this.groupData.name}}</div>
+		<div class="name">{{groupData.name}}</div>
 		<div class="info">
-			<p>Jahrgang: {{this.groupData.year}}</p>
+			<p>Jahrgang: {{groupData.year}}</p>
 			<p>Gruppenstunde: Freitag 18:30-20:00</p>
-			<p>Leiter:in: {{this.groupData.supervisor}}</p>
+			<p>Leiter:in: {{groupData.supervisor}}</p>
 		</div>
 	</div>
 </template>
