@@ -38,7 +38,7 @@ export default {
         const { data: { value: {events: {items: events} } }} = await useAsyncQuery(query)
 
         return {events}
-    }
+    },
 }
 
 </script>

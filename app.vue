@@ -6,18 +6,6 @@
   </div>
 </template>
 
-<script setup>
-// get token from runtime config
-const { contentfulToken } = useRuntimeConfig();
-
-// init cookie for github token
-const cookie = useCookie("contentful-token");
-
-// set cookie value if not set
-cookie.value = cookie.value || contentfulToken;
-</script>
-
-
 <style lang="scss">
 
 body {

@@ -1,6 +1,6 @@
 <template>
     <DefaultView titel="Fotos">
-		<div class="folders">
+		<div v-if="albums" class="folders">
 			<div class="searchInput">
 				<input type="text" v-model="search" placeholder="Suchen..."/>
 				<svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">

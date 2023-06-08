@@ -44,7 +44,6 @@
         ],
         methods: {
             prevImage() {
-				console.log("test")
                 if(this.currentImg-1 <0) {
 					if(this.repeat) this.currentImg = this.images.length-1
 				} else {
