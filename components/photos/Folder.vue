@@ -1,32 +1,45 @@
 <template>
-	<div class="photos">
-		<div class="photoGrid">
-			<img v-if="images" v-for="(image, index) in images" :key="image.name" :src="image.thumbnailLink" @click="openImage(index, image.id)" referrerpolicy="no-referrer">
-		</div>
-		<Modal :show="showImageModal" @close="showImageModal=false">
-			<Diashow :firstImageId="clickedImage" :images="images.map(image => image.thumbnailLink)" @nextImage="nextImage" @prevImage="prevImage" width="80vw"/>
-		</Modal>
-	</div>
+    <div class="accordion">
+        <div class="accordion-item" v-for="folder in folders">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" :data-bs-target="'#' + folder.id" aria-expanded="false">
+                    {{ folder.name }}
+                </button>
+            </h2>
+            <div :id="folder.id" class="accordion-collapse collapse">
+                <div v-if="folder.id" class="accordion-body">
+                    <Folder :folderId="folder.id" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div v-if="images" class="photoGrid">
+        <img v-for="(image, index) in images" :key="image.name" :src="image.thumbnailLink" @click="openImage(index, image.id)" referrerpolicy="no-referrer" />
+    </div>
+	<Modal :show="showImageModal" @close="showImageModal=false">
+		<Diashow :firstImageId="clickedImage" :images="images.map(image => image.thumbnailLink)" @nextImage="nextImage" @prevImage="prevImage" width="80vw"/>
+	</Modal>
 </template>
-  
+
 <script>
 export default {
-	props: ["album"],
+    props: ["folderId"],
 	data() {
 		return {
+			folders: [],
 			images: [],
 			showImageModal: false,
 			clickedImage: 0
 		}
 	},
 	async created() {
-		console.log(this.album)
-		//let images = this.images
-		if(useState('loggedIn').value) {
-			await useFetch('/api/listImages?id='+this.album.folderId).then((response) => {
-				this.images = response.data.value
-				console.log(response.data.value)
-			})
+		console.log("Lade: "+this.folderId)
+		if (useState("loggedIn").value) {
+            const {data: {value: {files}}} = await useFetch("/api/listImages?id=" + this.folderId)
+			if(files) {
+				this.folders = files.filter(file => file.mimeType === 'application/vnd.google-apps.folder');
+				this.images = files.filter(file => file.mimeType !== 'application/vnd.google-apps.folder');
+			}
 		}
 	},
 	methods: {
@@ -74,14 +87,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.photos {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-	padding: 40px 0;
+
+.accordion {
 	width: 100%;
 }
-
 .photoGrid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -101,4 +110,5 @@ export default {
 		}
 	}
 }
+
 </style>

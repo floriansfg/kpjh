@@ -15,7 +15,7 @@ export default defineEventHandler(async (event) => {
 		
 			// Return the token to the client
 			//return res.json({ token });
-			setCookie(event, 'token',token, {secure: true, httpOnly: true})
+			setCookie(event, 'token',token)
 			return {
 				statusCode: 200,
 				statusMessage: 'success',
