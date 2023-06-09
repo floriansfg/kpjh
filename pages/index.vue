@@ -60,10 +60,8 @@ export default {
         const { data: { value: {events: {items: events}, diashow: {items: diashows}} }} = await useAsyncQuery(query)
     //    const { data} = await useAsyncQuery(query2)
 
-        //const { data: { value: {images: {items: diashow}} }} = await useAsyncQuery(query2)
-        // console.log(diashow.filter(image => image.images.items))
-        return {events, diashows}
-    }
+        return {events}
+    },
 }
 
 </script>

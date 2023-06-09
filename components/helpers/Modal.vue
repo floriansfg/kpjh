@@ -24,10 +24,7 @@
             close() {
                 this.$emit("close")
             }
-        },
-		created() {
-			console.log('hey')	
-		},
+        }
     }
     
 

@@ -7,11 +7,14 @@ export default defineNuxtConfig({
 	],
 	components: [
 		{
-		  path: '~/components', // will get any components nested in let's say /components/test too
-		  pathPrefix: false,
+			path: '~/components', // will get any components nested in let's say /components/test too
+			pathPrefix: false,
 		},
 	],
 	apollo: {
+		authType: "Bearer",
+		authHeader: "Authorization",
+		tokenStorage: "cookie",
 		clients: {
 			default: {
 				httpEndpoint: process.env.CONTENTFUL_API,
@@ -25,8 +28,7 @@ export default defineNuxtConfig({
 	},
 	runtimeConfig: {
 		// The private keys which are only available server-side
-		contentfulToken: process.env.CONTENTFUL_TOKEN,
-		googleToken: process.env.GOOGLE_KEY
+		contentfulToken: process.env.CONTENTFUL_TOKEN
 	},
 	css: [
 		'@/assets/scss/styles.scss',
@@ -41,6 +43,7 @@ export default defineNuxtConfig({
 	app: {
 		head: {
 			viewport: 'width=device-width, initial-scale=1',
+			script: [{ src: "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js", body: true }],
 		},
 	}
 }) 
