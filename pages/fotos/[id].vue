@@ -13,7 +13,7 @@
 				<Map v-if="album.location" :location="[album.location.lat, album.location.lon]"/>
 			</div>
 			<div v-if="useState('loggedIn').value" class="photos">
-				<Folder :folderId="album.folderId" />
+				<Folder :folderId="album.folderId" open="true"/>
 			</div>
 			<div v-else class="contentLocked">
 				<svg viewBox="0 0 34 41" xmlns="http://www.w3.org/2000/svg" fill="#304C5C">
