@@ -1,22 +1,24 @@
 <template>
     <div>
         <svg class="svg">
-  <clipPath id="wave" clipPathUnits="objectBoundingBox"><path d="M1,0 H0 V1 L0,0.999 C0,0.999,0,1,0,1 C0.049,0.985,0.164,0.955,0.265,0.955 C0.321,0.955,0.374,0.964,0.434,0.974 L0.434,0.974 C0.509,0.986,0.595,1,0.709,1 C0.805,1,0.873,0.988,0.922,0.98 C0.956,0.974,0.981,0.97,1,0.972 L1,0"></path></clipPath>
-</svg>
+            <clipPath id="wave" clipPathUnits="objectBoundingBox"><path d="M1,0 H0 V1 L0,0.999 C0,0.999,0,1,0,1 C0.049,0.985,0.164,0.955,0.265,0.955 C0.321,0.955,0.374,0.964,0.434,0.974 L0.434,0.974 C0.509,0.986,0.595,1,0.709,1 C0.805,1,0.873,0.988,0.922,0.98 C0.956,0.974,0.981,0.97,1,0.972 L1,0"></path></clipPath>
+        </svg>
         <header>
 			<Diashow  v-if="diashows" v-for="diashow in diashows" :images="diashow.images.items.map(image => image.url)" currentImg="3" height="500px" repeat/>
         </header>
-        <h4 class="text-center">Aktuelles</h4>
-        <div class="timeline">
-        	<div class="event" v-if="events" v-for="event in events">
-                <Event v-if="event" :event="event"/>
+        <section>
+            <h4 class="text-center">Aktuelles</h4>
+            <div class="timeline">
+                <div class="event" v-if="events" v-for="event in events">
+                    <Event v-if="event" :event="event"/>
+                </div>
             </div>
-        </div>
-        <svg width="19" height="23" viewBox="0 0 19 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M9.5001 0C4.25643 0 0 4.17113 0 9.30938C0 12.2277 1.37244 15.0195 3.07909 17.2965C5.48048 20.5017 8.48178 22.6625 8.50813 22.6818C9.09883 23.1061 9.90117 23.1061 10.4919 22.6818C10.5183 22.6625 13.5197 20.5017 15.9209 17.2965C17.6276 15.0194 19 12.2276 19 9.30938C19 4.17099 14.7434 0 9.4999 0H9.5001ZM9.5001 5.47636C11.6588 5.47636 13.412 7.19422 13.412 9.30957C13.412 11.4251 11.6588 13.143 9.5001 13.143C7.34141 13.143 5.58816 11.4251 5.58816 9.30957C5.58816 7.19422 7.34141 5.47636 9.5001 5.47636Z" fill="#7AA1B7"/>
-</svg>
-
-		<Map/>
+            <Map/>
+            <svg class="wave" viewBox="0 0 1440 139" fill="var(--secondaryBg)" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path d="M381.765 99.5C236.064 99.5 70.549 125.567 0 138.6V0H1440V114.522C1373.95 109.515 1255.77 138.6 1021.21 138.6C728.005 138.6 563.892 99.5 381.765 99.5Z" />
+            </svg>
+        </section>
+        <AboutUs />
     </div>    
 </template>
 
@@ -60,8 +62,9 @@ export default {
         const { data: { value: {events: {items: events}, diashow: {items: diashows}} }} = await useAsyncQuery(query)
     //    const { data} = await useAsyncQuery(query2)
 
-        return {events}
-    },
+        //const { data: { value: {images: {items: diashow}} }} = await useAsyncQuery(query2)
+        return {events, diashows}
+    }
 }
 
 </script>
@@ -75,7 +78,7 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     margin-bottom: 50px;
-    filter: drop-shadow(0px 0px 16px rgb(0 0 0 / 0.5));
+    filter:drop-shadow(0px 0px 16px rgb(0 0 0 / 0.5));
 }
 
 header :deep(img) {
@@ -83,17 +86,25 @@ header :deep(img) {
 
 }
 
+section {
+
+    background: var(--secondaryBg);
+    position: relative;
+    svg {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 40px;
+        top: 99%;
+        z-index: -1;
+        filter: drop-shadow(0px 0px 16px rgb(0 0 0 / 0.5));
+    }
+}
+
 .svg {
     height: 0;
     width: 0;
     position: absolute;
-}
-
-.txt {
-    margin: 160px;
-    line-height: 2.8;
-    text-indent: 10px;
-    margin-top: 100px;
 }
 
 .timeline {

@@ -12,7 +12,6 @@ export default defineEventHandler(async (event) => {
 			responseType: 'arraybuffer',
 		});
 
-		console.log(Buffer.from(file.data))
 		return Buffer.from(file.data)
 	} else {
 		throw createError({

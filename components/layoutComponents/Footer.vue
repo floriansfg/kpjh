@@ -62,7 +62,8 @@ export default {
   <style lang="scss" scoped>
   .footer {
     background-color: var(--primaryBg);
-  z-index: 15;
+    z-index: 15;
+    position: inherit;
   }
   
   .footer .wrapper {
@@ -93,12 +94,16 @@ export default {
   }
 
   .sponsor {
-      max-width: 80px;
+      width: 120px;
+      margin: 30px;
       padding-top: 2rem;
     }
     .sponsors {
         display: flex;
-        justify-content: space-evenly;
+        flex-wrap: wrap;
+        max-width: 900px;
+        justify-content: center;
+        margin: auto;
   }
   svg {
         height: 20px;
