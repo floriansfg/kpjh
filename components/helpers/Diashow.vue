@@ -88,6 +88,7 @@
         margin: auto;
 		cursor: pointer;
 		z-index: 1;
+		transition: all 0.5s;
 		svg {
 			top: 0;
 			bottom: 0;
@@ -96,6 +97,7 @@
 			width: 20px;
 			transition: all 0.2s;
 			opacity: 0.8;
+			filter: drop-shadow(0px 0px 10px rgb(0 0 0 / 1));
 		}
     }
 
@@ -105,9 +107,12 @@
 			transform: rotate(90deg);
 			left: 18px;
 		}
-		&:hover svg {
-			opacity: 1;
-			left: 10px;
+		&:hover {
+			box-shadow: inset 64px 0px 58px -50px rgba(0,0,0,0.37);
+			svg {
+				opacity: 1;
+				left: 10px;
+			}	
 		}
     }
 
@@ -117,9 +122,12 @@
 			transform: rotate(-90deg);
 			right: 18px;
 		}
-		&:hover svg {
-			opacity: 1;
-			right: 10px;
+		&:hover {
+			box-shadow: inset -64px 0px 58px -50px rgba(0,0,0,0.37);
+			svg {
+				opacity: 1;
+				right: 10px;
+			}
 		}
     }
 </style>
