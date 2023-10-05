@@ -77,6 +77,7 @@ export default {
 		flex-direction: column;
 		align-items: center;
 		max-width: 900px;
+		margin-bottom: 100px;
 	}
 
 	.map {

@@ -137,6 +137,7 @@ export default {
 			color: initial;
 		}
 		margin-top: -100px;
+		margin-bottom: 50px;
     }
 
 	.slide-leave-active,
