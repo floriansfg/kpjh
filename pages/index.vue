@@ -13,7 +13,6 @@
                     <Event v-if="event" :event="event"/>
                 </div>
             </div>
-            <Map/>
             <svg class="wave" viewBox="0 0 1440 139" fill="var(--secondaryBg)" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
                 <path d="M381.765 99.5C236.064 99.5 70.549 125.567 0 138.6V0H1440V114.522C1373.95 109.515 1255.77 138.6 1021.21 138.6C728.005 138.6 563.892 99.5 381.765 99.5Z" />
             </svg>
@@ -87,7 +86,6 @@ header :deep(img) {
 }
 
 section {
-
     background: var(--secondaryBg);
     position: relative;
     svg {
@@ -112,7 +110,8 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
+    margin: 50px 0;
+    padding-bottom: 6rem;
 }
 
 .event {
