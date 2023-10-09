@@ -1,7 +1,7 @@
 export const useLogout = () => {
 	// useCookie('token').value = null
 	const authCookie = useCookie('token')
-	authCookie.value = null
+   	authCookie.value = null
 	useState('loggedIn').value = false
 	useState('userType').value = null
 	console.log('logged out')

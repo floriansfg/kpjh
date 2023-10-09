@@ -18,10 +18,17 @@
     </div>
 	<Modal :show="showImageModal" @close="showImageModal=false">
 		<Diashow :firstImageId="clickedImage" :images="images.map(image => image.thumbnailLink)" @nextImage="nextImage" @prevImage="prevImage" width="80vw"/>
+		<div v-if="!images[clickedImage].loaded" class="loader"></div>
+		<svg xmlns="http://www.w3.org/2000/svg" stroke-width="1.5" stroke="white" class="downloadButton" @click="downloadImage(clickedImage)" fill="currentColor" viewBox="-1 -1 19 19">
+			<path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+			<path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+		</svg>
 	</Modal>
 </template>
 
 <script>
+import { saveAs } from 'file-saver'
+
 export default {
     props: ['folderId', 'open'],
 	data() {
@@ -30,6 +37,7 @@ export default {
 			images: [],
 			openedChild: null,
 			showImageModal: false,
+			loading: false,
 			clickedImage: 0
 		}
 	},
@@ -85,11 +93,20 @@ export default {
 			}
 		},
 		prevImage(index) {
-			if(index-1>=0) this.loadImage(index-1)
+			if(index-1>=0) {
+				this.loadImage(index-1)
+				this.clickedImage--
+			}
 		},
 		nextImage(index) {
-			if(index+1<this.images.length) this.loadImage(index+1)
+			if(index+1<this.images.length) {
+				this.loadImage(index+1)
+				this.clickedImage++
+			}
 		},
+		downloadImage(index) {
+			saveAs(this.images[index].thumbnailLink, this.images[index].name);
+		}
 	}
 };
 </script>
@@ -118,6 +135,44 @@ export default {
 			transform: scale(1.02);    
 		}
 	}
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #FFF;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	position: fixed;
+	z-index: 50;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} 
+
+.downloadButton {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 20px;
+	margin: auto;
+	width: 25px;
+	fill: white;
+	filter: drop-shadow(0px 0px 10px rgb(0 0 0 / 1));
 }
 
 </style>
