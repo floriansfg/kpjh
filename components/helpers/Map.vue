@@ -2,7 +2,7 @@
 	<l-map v-if="showMap" :ref="map" @update:zoom="mapChangeZoom" @update:center="mapChangeLocation" :useGlobalLeaflet="false" :zoom="zoom" :center="center" :options="{ dragging: true,zoomControl: false,scrollWheelZoom: false,doubleClickZoom: false,boxZoom: false,attributionControl: false}">
 		<l-tile-layer url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"/>
 		<l-marker v-if="location" :lat-lng="location">
-			<l-icon iconUrl="/img/location.svg" :iconSize="[35,35]" />
+			<l-icon iconUrl="/images/location.svg" :iconSize="[35,35]" />
 		</l-marker>
 	</l-map>
 </template>
