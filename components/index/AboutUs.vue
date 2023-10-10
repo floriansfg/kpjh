@@ -5,7 +5,7 @@
             <h3>Echte Frönde stonnt tesaame...</h3>
         </div>
         <div class="grid-container">
-            <div class="grid header">...unter diesem Motto steht die Katholische Pfarrjugend Hüls seit 1978. Spielerisch lernen unsere jungen Mitglieder durch verschiedene Aktivitäten die Bedeutung von Freundschaft, Zusammenhalt und Verantwortung. Neben unseren wöchentlichen Gruppenstunden organisiert die Leiterrunde über das Jahr verteilt verschiedene Aktivitäten.</div>
+            <div class="grid header">......unter diesem Motto steht die Katholische Pfarrjugend Hüls seit 1978. Spielerisch lernen unsere jungen Mitglieder durch verschiedene Aktivitäten die Bedeutung von Freundschaft, Zusammenhalt und Verantwortung. Neben unseren wöchentlichen Gruppenstunden organisiert die Leiterrunde über das Jahr verteilt verschiedene Aktivitäten.</div>
             <div class="grid pic-1"><img class="grid-pic" src="/images/buellingen.jpg" /></div>
             <div class="grid text-1">Jeden November können sich Kinder ab der vierten Klassen in neu entstehende Mädchen- bzw. Jungengruppen einteilen lassen oder jederzeit in eine gleichaltrige Gruppe eintreten. Die Gruppen treffen sich wöchentlich für 90 Minuten mit ihren Leiter:innen im Heinrich-Joeppen-Haus, um zu spielen, kochen, backen, basteln, toben und viel zu lachen. Dies stärkt ganz besonders den Zusammenhalt, sodass aus der anfangs bunten Truppe meist ein enger Freundeskreis wird.</div>
             <div class="grid pic-2"><img class="grid-pic" src="/images/Lagerwochenende-225.jpg" /></div>
