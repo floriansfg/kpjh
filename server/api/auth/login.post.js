@@ -2,7 +2,6 @@ import jwt from 'jsonwebtoken';
 
 export default defineEventHandler(async (event) => {
 	const { userType, password } = await readBody(event);
-	
 	const user_pws = {
 		user: process.env.USER_PW,
 		groupLeader: process.env.GROUPLEADER_PW

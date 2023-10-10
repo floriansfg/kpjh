@@ -5,7 +5,7 @@ import jwt from 'jsonwebtoken';
 export default defineEventHandler(async (event) => {
 
 	const auth = new Auth.GoogleAuth({
-		keyFile: "./secret.json",
+		keyFile: process.env.GOOGLE_APPLICATION_CREDENTIALS,
 		scopes: ['https://www.googleapis.com/auth/drive.readonly']
 	})
 	
