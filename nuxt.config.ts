@@ -17,7 +17,7 @@ export default defineNuxtConfig({
 		tokenStorage: "cookie",
 		clients: {
 			default: {
-				httpEndpoint: process.env.CONTENTFUL_API,
+				httpEndpoint: 'https://graphql.contentful.com/content/v1/spaces/r7d67u2dckd4/',
 				tokenName: 'contentful-token',
 				connectToDevTools: true,
 			}
@@ -28,7 +28,12 @@ export default defineNuxtConfig({
 	},
 	runtimeConfig: {
 		// The private keys which are only available server-side
-		contentfulToken: process.env.CONTENTFUL_TOKEN
+		contentfulToken: '',
+		contentfulApi: '',
+		googleApplicationCredentials: '',
+		jwtSecret: '',
+		userPw: '',
+		groupleaderPw: ''
 	},
 	css: [
 		'@/assets/scss/styles.scss',
