@@ -1,11 +1,15 @@
 <template>
     <div class="container-fluid footer">
-        <div class="sponsors">
+        <div v-if="isLargeScreen" class="sponsors">
             <div v-if="sponsors" v-for="sponsor in sponsors">
                 <img class="sponsor" :src="sponsor.logo.url"/>
             </div>
-            <!-- funktioniert nur wenn vorher ohne geladen? -->
         </div>
+        <ImageSlider v-else :items="sponsors">
+            <template v-slot:item="{ item }">
+                <nuxt-img :src="item.logo.url" class="slider-img"/>
+            </template>
+        </ImageSlider>
         <div class="row wrapper">
             <div class="col">
                 <img src="~/assets/logo-big.png" />
@@ -35,11 +39,12 @@
   </template>
   
   <script>
-// import Modal from "../components/Modal.vue"
 import gql from 'graphql-tag'
 
 export default {
     async setup() {
+        const isLargeScreen = false;
+        console.log(isLargeScreen)
         const query = gql`
             query {
                 sponsors: sponsorsCollection(limit: 0) {
@@ -53,7 +58,11 @@ export default {
             }
         `
         const { data: { value: {sponsors: {items: sponsors} } }} = await useAsyncQuery(query)
-        return {sponsors}
+        return {sponsors, isLargeScreen}
+    },
+
+    mounted(){
+
     }
 }
 
@@ -65,7 +74,11 @@ export default {
     z-index: 15;
     position: inherit;
   }
-  
+
+  .slider-img {
+    margin-top: 2rem;
+    width: 110px;
+  }
   .footer .wrapper {
     display: flex;
   align-items: center;

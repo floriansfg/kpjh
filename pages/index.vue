@@ -49,7 +49,7 @@ export default {
                             items {
                                 url(transform: {
 									format: JPG_PROGRESSIVE,
-									quality: 20
+									quality: 100
 								})
                             }
                         }
