@@ -9,7 +9,6 @@
             <slot name="item" :item="item"></slot>
           </div>
         </div>
-        <div></div>
     </div>
 </template>
 

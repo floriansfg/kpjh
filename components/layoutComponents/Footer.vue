@@ -44,7 +44,6 @@ import gql from 'graphql-tag'
 export default {
     async setup() {
         const isLargeScreen = false;
-        console.log(isLargeScreen)
         const query = gql`
             query {
                 sponsors: sponsorsCollection(limit: 0) {

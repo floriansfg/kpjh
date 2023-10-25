@@ -7,7 +7,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-	"start": "nuxt start"
+    "start": "nuxt start"
   },
   "devDependencies": {
     "@nuxt/image-edge": "^1.0.0-28020728.5df24eb",
@@ -26,6 +26,7 @@
     "jsonwebtoken": "^9.0.0",
     "leaflet": "^1.9.3",
     "nuxt-speedkit": "^2.2.0",
-    "sass": "^1.62.1"
+    "sass": "^1.62.1",
+    "vue3-carousel-nuxt": "^1.1.0"
   }
 }

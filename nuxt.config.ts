@@ -1,14 +1,16 @@
 import { defineNuxtConfig } from 'nuxt/config'
 
+
 export default defineNuxtConfig({
 	modules: [
 		'@nuxtjs/apollo',
-		'@nuxt/image-edge'
+		'@nuxt/image-edge',
+		'vue3-carousel-nuxt'
 	],
 	components: [
 		{
 			path: '~/components', // will get any components nested in let's say /components/test too
-			pathPrefix: false,
+			pathPrefix: false
 		},
 	],
 	apollo: {

@@ -4,7 +4,10 @@
             <clipPath id="wave" clipPathUnits="objectBoundingBox"><path d="M1,0 H0 V1 L0,0.999 C0,0.999,0,1,0,1 C0.049,0.985,0.164,0.955,0.265,0.955 C0.321,0.955,0.374,0.964,0.434,0.974 L0.434,0.974 C0.509,0.986,0.595,1,0.709,1 C0.805,1,0.873,0.988,0.922,0.98 C0.956,0.974,0.981,0.97,1,0.972 L1,0"></path></clipPath>
         </svg>
         <header>
-			<Diashow  v-if="diashows" v-for="diashow in diashows" :images="diashow.images.items.map(image => image.url)" currentImg="3" height="500px" repeat/>
+			<Diashow  
+            v-if="diashows" v-for="diashow in diashows" 
+            :images="diashow.images.items.map(image => image.url)" 
+            currentImg="3" height="500px" repeat/>
         </header>
         <section>
             <h4 class="text-center">Aktuelles</h4>
@@ -23,6 +26,8 @@
 
 <script>
 import gql from 'graphql-tag'
+import 'vue3-carousel/dist/carousel.css'
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 
 export default {
     async setup() {
@@ -63,6 +68,10 @@ export default {
 
         //const { data: { value: {images: {items: diashow}} }} = await useAsyncQuery(query2)
         return {events, diashows}
+    },
+    components: {
+        Carousel,
+        Slide
     }
 }
 
@@ -73,8 +82,8 @@ export default {
 header {
     width: 100%;
     background: url(../assets/header.svg);
-    background-size: 100% 100%;
-    background-position: center;
+    background-size: 100% 95%;
+    background-position: top;
     background-repeat: no-repeat;
     margin-bottom: 50px;
     filter:drop-shadow(0px 0px 16px rgb(0 0 0 / 0.5));
@@ -83,6 +92,14 @@ header {
 header :deep(img) {
     clip-path: url(#wave);
 
+}
+
+.slideImg {
+        height: 500px;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        user-select: none;
 }
 
 section {
