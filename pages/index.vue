@@ -7,7 +7,7 @@
 			<Diashow  
             v-if="diashows" v-for="diashow in diashows" 
             :images="diashow.images.items.map(image => image.url)" 
-            currentImg="3" height="500px" repeat/>
+            firstImageId="3" height="500px" repeat/>
         </header>
         <section>
             <h4 class="text-center">Aktuelles</h4>
@@ -92,14 +92,6 @@ header {
 header :deep(img) {
     clip-path: url(#wave);
 
-}
-
-.slideImg {
-        height: 500px;
-        width: 100%;
-        object-fit: cover;
-        object-position: center;
-        user-select: none;
 }
 
 section {

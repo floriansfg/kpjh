@@ -72,11 +72,11 @@ export default {
 		align-items: center;
         background-color: white;
         box-shadow: 0px 0px 5px #5c30303e;
-        padding: 20px 30px;
-        margin: 10px 0;
         border-radius: 20px;
         width: 100%;
 		transition: all 0.5s;
+		margin: 10px 0;
+		padding: 20px 30px;
 		span {
 			display: flex;
 			align-items: center;
@@ -89,15 +89,16 @@ export default {
 		span:nth-child(2) {
 			justify-self: center;
 		}
-
+		
 		span:nth-child(3) {
 			justify-self: flex-end;
 		}
 		&:hover {
-        	box-shadow: 0px 0px 10px #0000003e;
+			box-shadow: 0px 0px 10px #0000003e;
     	}
     }
-
+	
+	
 	.searchInput {
 		position: relative;
         margin: 20px 0;
@@ -152,4 +153,16 @@ export default {
   transform: translate(-100vw, 0);
 }
     
+@media (max-width: 901px) {
+		.album {
+			padding: 15px 20px;
+			grid-template-columns: 1fr 1fr;
+			.eventType {
+				display: none;
+			}
+		}
+		.searchInput input {
+			padding: 15px 20px;
+		}
+	}
 </style>  

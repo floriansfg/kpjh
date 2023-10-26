@@ -58,10 +58,6 @@ export default {
         `
         const { data: { value: {sponsors: {items: sponsors} } }} = await useAsyncQuery(query)
         return {sponsors, isLargeScreen}
-    },
-
-    mounted(){
-
     }
 }
 

@@ -10,7 +10,6 @@
 			<h3 class="title">{{ album.eventType }} {{ album.title }}</h3>
 			<h3>{{ album.eventDate }}</h3>
 			<div class="map">
-				<Map v-if="album.location" :location="[album.location.lat, album.location.lon]"/>
 			</div>
 			<div v-if="useState('loggedIn').value" class="photos">
 				<Folder :folderId="album.folderId" open="true"/>
@@ -125,5 +124,6 @@ export default {
 			text-align: center;
 		}
 	}
-    
+
+
 </style>

@@ -5,8 +5,8 @@
 				<path d="M15.9639 16.2952C14.8821 17.4034 13.1179 17.4034 12.0361 16.2952L0.801466 4.78587C-0.267156 3.69112 -0.267156 1.92596 0.801466 0.831215C1.88326 -0.277029 3.64744 -0.277029 4.72924 0.831215L14 10.5L23.2708 0.831214C24.3526 -0.27703 26.1167 -0.27703 27.1985 0.831214C28.2672 1.92596 28.2672 3.69112 27.1985 4.78587L15.9639 16.2952Z"/>
 			</svg>
 		</div>
-		<Carousel wrapAround touchDrag mouseDrag autoplay:6000 transition:600 ref="myCarousel">
-			<Slide v-for="(image) in images" :key="currentImg">
+		<Carousel wrapAround touchDrag mouseDrag autoplay:6000 transition:600 ref="myCarousel" :style="{ 'width': width , 'height': 'height' }">
+			<Slide v-for="(image) in images" :key="currentImg" >
 				<nuxt-img :src="image" class="slideImg" :style="{ 'width': width , 'height': height }"/>
 			</Slide>
 		</Carousel>
@@ -56,19 +56,28 @@ import { ref } from 'vue'
         ],
         methods: {
             nextImage() {
+				console.log(this.currentImg)
 				this.$refs.myCarousel.next()
+				this.currentImg ++
+				this.$emit("nextImage", this.currentImg)
             },
 			prevImage(){
 				this.$refs.myCarousel.prev()
+				this.currentImg --
+				this.$emit("prevImage", this.currentImg)
+			},
+        },
+		async mounted() {
+			if(this.firstImageId) {
+				this.$refs.myCarousel.slideTo(this.firstImageId)
 			}
-        }
+			console.log(this.currentImg)
+		}
     }
 </script>
 
 <style lang="scss" scoped>
     img {
-        height: 100%;
-        width: 100%;
         object-fit: cover;
         object-position: center;
         user-select: none;
@@ -132,10 +141,4 @@ import { ref } from 'vue'
 			}
 		}
     }
-	.slideImg {
-        width: 100%;
-        object-fit: cover;
-        object-position: center;
-        user-select: none;
-}
 </style>
