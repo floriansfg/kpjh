@@ -17,7 +17,9 @@
         <img v-for="(image, index) in images" :key="image.name" :src="image.thumbnailLink" @click="openImage(index, image.id)" referrerpolicy="no-referrer" />
     </div>
 	<Modal :show="showImageModal" @close="showImageModal=false">
-		<Diashow :firstImageId="clickedImage" :images="images.map(image => image.thumbnailLink)" @nextImage="nextImage" @prevImage="prevImage" width="80vw"/>
+		<Diashow :firstImageId="clickedImage" 
+			:images="images.map(image => image.thumbnailLink)" 
+			@nextImage="nextImage" @prevImage="prevImage" width="80vw"/>
 		<div v-if="!images[clickedImage].loaded" class="loader"></div>
 		<svg xmlns="http://www.w3.org/2000/svg" stroke-width="1.5" stroke="white" class="downloadButton" @click="downloadImage(clickedImage)" fill="currentColor" viewBox="-1 -1 19 19">
 			<path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
@@ -116,6 +118,16 @@ export default {
 .accordion {
 	width: 100%;
 }
+.accordion-button {
+	color: black;
+	background-color: white;
+}
+.accordion-button:not(.collapsed)::after {
+	background-image: var(--bs-accordion-btn-icon);
+}
+.accordion-button:focus {
+	box-shadow: none;
+}
 .photoGrid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -174,5 +186,7 @@ export default {
 	fill: white;
 	filter: drop-shadow(0px 0px 10px rgb(0 0 0 / 1));
 }
+
+
 
 </style>

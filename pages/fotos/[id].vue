@@ -2,14 +2,15 @@
 <template>
 	<DefaultView titel="Fotos">
 		<div class="wrapper">
+			<h3 class="title">{{ album.eventType }} {{ album.title }}</h3>
 			<NuxtLink class="backButton" to="/fotos">
 				<svg viewBox="0 0 24 39" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M1.16478 22.2354C-0.388259 20.7286 -0.388259 18.2714 1.16478 16.7646L17.2934 1.11633C18.8275 -0.37211 21.3011 -0.37211 22.8352 1.11633C24.3883 2.62312 24.3883 5.08036 22.8352 6.58715L9.28584 19.5L22.8352 32.4128C24.3883 33.9196 24.3883 36.3769 22.8352 37.8837C21.3011 39.3721 18.8275 39.3721 17.2934 37.8837L1.16478 22.2354Z" fill="#3D5C6D" fill-opacity="0.4"/>
 				</svg>
 			</NuxtLink>
-			<h3 class="title">{{ album.eventType }} {{ album.title }}</h3>
 			<h3>{{ album.eventDate }}</h3>
 			<div class="map">
+				<Map v-if="album.location" :location="[album.location.lat, album.location.lon]"/>
 			</div>
 			<div v-if="useState('loggedIn').value" class="photos">
 				<Folder :folderId="album.folderId" open="true"/>
@@ -57,7 +58,6 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-
 	.title {
         font-family: 'ylee MHIM';
         font-size: 50px;
@@ -124,6 +124,23 @@ export default {
 			text-align: center;
 		}
 	}
+    @media (max-width: 901px) {
+		.wrapper {
+			padding: 10px 15px;
+		}
+		.map {
+		width: 100%;
+		height: 170px;
+		}
+		.backButton {
+		left: 20px;
+		top: 30px;
+		padding: 3px;
+		}
+		.title {
+			padding: 0px 5px;
+		}
 
+	}
 
 </style>

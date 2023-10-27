@@ -16,7 +16,6 @@
             </div>
             <div class="col links">
                 <NuxtLink to="/">Home </NuxtLink>
-                <NuxtLink to="/ueberuns">Über Uns</NuxtLink>
                 <NuxtLink to="/gruppen">Gruppen</NuxtLink>
                 <NuxtLink to="/fotos">Fotos</NuxtLink>
             </div>

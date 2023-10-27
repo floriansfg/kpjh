@@ -6,7 +6,6 @@
                 Katholische<br />Pfarrjugend Hüls
             </NuxtLink>
             <div class="links">
-                <NuxtLink to="/ueberuns">Über Uns</NuxtLink>
                 <NuxtLink to="/gruppen">Gruppen</NuxtLink>
                 <NuxtLink to="/fotos">Fotos</NuxtLink>
 				<a v-if="useState('loggedIn').value" @click="useLogout()" class="btn-primary">Abmelden</a>
