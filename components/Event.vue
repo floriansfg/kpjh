@@ -9,8 +9,8 @@
 	<img class="icon" :src="event.icon.url" />
 	<div class="content">
 		<b>{{ event.dateDisplay }}</b>
+		<div class="">{{ event.title }}</div>
 		<RichTextRenderer :document="event.description.json" />
-		<a class="btn btn-link" v-if="event.additionalInfo" @click="this.showEvent=true">mehr...</a>
 	</div>
 </template>
 <script>

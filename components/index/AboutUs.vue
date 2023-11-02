@@ -15,11 +15,32 @@
             <div class="grid pic-4"><img class="grid-pic" src="/images/Zeltlager2017_Feuer.jpg" /></div>
             <div class="grid footer">Hast du Lust bekommen, ein Teil der KPJH zu werden? Dann besuch uns doch mal oder fordere mehr Infos über unser Kontaktformular an.</div>
         </div>
+        <div class="text-center">
+            <h3>Unser Vorstand</h3>
+        </div>
+        <div class="board">
+            <img class="logo" src="~/assets/kjg_kpjh_logo.svg" />
+            <div class="board-members">
+                <div>
+                    1. Vorsitzende: Lorena Schünke
+                </div>
+                <div>
+                    2. Vorsitzender: Paul Vornhusen
+                </div>
+                <div>
+                    Kassiererin: Janine Führmann
+                </div>
+                <div>
+                    Materialwärterin: Rebekka Schiffers
+                </div>
+                <div>
+                    Beisitzerin: Lea Gielen
+                </div>
+            </div>
+        </div>
     </div>
 </template>
-<script>
 
-</script>
 <style scoped lang="scss">
 
 
@@ -46,13 +67,35 @@ h3 {
     'text3 text3 pic3'
     'footer footer footer';
     line-height: 2;
-    margin: 4rem 7rem;
-    margin-bottom: 80px;
+    margin: 4rem 5rem;
     justify-content: space-between;
     align-items: center;
     grid-gap: 1rem;
+    margin-bottom: 2rem;
 }
-
+.board {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 'image board-members';
+    margin: 5rem;
+}
+.logo {
+    max-width: 350px;
+    grid-area: image;
+    @media (min-width: 901px) {
+        transform: rotate(-5deg) translateX(-25px);
+    }
+}
+.board-members {
+    grid-area: board-members;
+    margin: 2rem;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
 .grid {
     margin-bottom: 2rem;
     display:flex;
@@ -124,6 +167,10 @@ h3 {
             width: 70%;
             transform: translateX(+10px);
     }
+    }
+    .board {
+        display: block;
+        margin: 1rem;
     }
 }
 

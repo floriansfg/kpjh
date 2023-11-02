@@ -31,7 +31,6 @@
         font-weight: 400;
         padding: 70px 0;
         position: relative;
-        margin-bottom: 50px;
         height: 100px;
         transition: all 0.5s ease;
         padding-top: 150px;
@@ -54,5 +53,11 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+    }
+    @media (max-width: 901px) {
+    .header{
+        font-size: 20pt;
+        padding-top: 120px;
+    }
     }
 </style>

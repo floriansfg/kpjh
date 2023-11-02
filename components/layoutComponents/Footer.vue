@@ -1,23 +1,25 @@
 <template>
     <div class="container-fluid footer">
-        <div v-if="isLargeScreen" class="sponsors">
+        <div class="sponsors">
             <div v-if="sponsors" v-for="sponsor in sponsors">
                 <img class="sponsor" :src="sponsor.logo.url"/>
             </div>
         </div>
-        <ImageSlider v-else :items="sponsors">
+        <ImageSlider class="sponsorSlider" :items="sponsors">
             <template v-slot:item="{ item }">
                 <nuxt-img :src="item.logo.url" class="slider-img"/>
             </template>
         </ImageSlider>
         <div class="row wrapper">
             <div class="col">
-                <img src="~/assets/logo-big.png" />
+                <img class="kjg-logo" src="~/assets/kjg_kpjh_logo_white.svg" />
             </div>
             <div class="col links">
                 <NuxtLink to="/">Home </NuxtLink>
                 <NuxtLink to="/gruppen">Gruppen</NuxtLink>
                 <NuxtLink to="/fotos">Fotos</NuxtLink>
+                <NuxtLink to="/impressum">Impressum</NuxtLink>
+                <NuxtLink to="/datenschutz">Datenschutz</NuxtLink>
             </div>
             <div class="col">
             <div class="col logo">
@@ -70,8 +72,11 @@ export default {
   }
 
   .slider-img {
-    margin-top: 2rem;
-    width: 110px;
+    width: 130px;
+  }
+  .kjg-logo {
+    width: 300px;
+    margin-right: 5rem;
   }
   .footer .wrapper {
     display: flex;
@@ -116,5 +121,32 @@ export default {
         height: 20px;
         width: 25px;
         padding-right: 10px;
+    }
+
+    .sponsorSlider {
+        display: none;
+    }
+
+@media (max-width: 901px) {
+        .sponsors {
+            display: none;
+        }
+        .sponsorSlider {
+            padding-top: 2rem;
+            display:block;
+            justify-content: baseline;
+        }
+        .wrapper{
+            display: block;
+            padding: 0 0;
+            img {
+                width: 200px;
+                margin: auto;
+                padding: 0;
+            }
+            .logo {
+                cols: 6;
+            }
+        }
     }
   </style>
