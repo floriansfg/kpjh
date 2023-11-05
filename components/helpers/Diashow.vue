@@ -124,7 +124,6 @@ import { ref } from 'vue'
 		&:hover {
 			overflow: visible;
 
-			box-shadow: inset 64px 0px 58px -50px rgba(0,0,0,0.37);
 			svg {
 				opacity: 1;
 				left: 10px;
@@ -139,7 +138,6 @@ import { ref } from 'vue'
 			right: 18px;
 		}
 		&:hover {
-			box-shadow: inset -64px 0px 58px -50px rgba(0,0,0,0.37);
 			svg {
 				opacity: 1;
 				right: 10px;
@@ -153,11 +151,4 @@ import { ref } from 'vue'
 	.slideImg {
 		max-height :70vh;
 	}
-	@media (max-width: 901px) {
-		.prevButton, .nextButton {	
-		&:hover {
-			box-shadow: none;
-		}
-	}
-}
 </style>
