@@ -11,9 +11,10 @@
 				<a v-if="useState('loggedIn').value" @click="useLogout()" class="btn-primary">Abmelden</a>
 				<a v-else @click="useState('showLogin').value=true" class="btn-primary">Anmelden</a>
             </div>
-			<svg class="menuButton" @click="openMenu = !openMenu" viewBox="0 0 28 18" fill="white" xmlns="http://www.w3.org/2000/svg">
-				<path d="M15.9639 16.2952C14.8821 17.4034 13.1179 17.4034 12.0361 16.2952L0.801466 4.78587C-0.267156 3.69112 -0.267156 1.92596 0.801466 0.831215C1.88326 -0.277029 3.64744 -0.277029 4.72924 0.831215L14 10.5L23.2708 0.831214C24.3526 -0.27703 26.1167 -0.27703 27.1985 0.831214C28.2672 1.92596 28.2672 3.69112 27.1985 4.78587L15.9639 16.2952Z"/>
+			<svg class="menuButton" @click="openMenu = !openMenu" viewBox="0 0 448 512" fill="white" xmlns="http://www.w3.org/2000/svg">
+				<path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
 			</svg>
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc.<path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg> -->
         </div>
 		<Login/>
     </div>
@@ -60,27 +61,27 @@ export default {
 	.nav .links, .wrapper {
 		flex-direction: column;
 	}
-
 	.nav {
 		height: 80px;
 		overflow: hidden;
 	}
 
 	.links {
-		text-align: center;
+		text-align: left;
 		width: 100%;
 		margin-top: 10px;
 		a {
-			padding: 20px;
-			font-size: 20px;
+			padding: 10px 0px;
+			font-size: 15px;
+            margin: 0 !important;
 		}
 	}
 
 	.menuButton {
 		display: block;
 		position: absolute;
-		width: 30px;
-		right: 20px;
+		width: 25px;
+		right: 30px;
 		top: 35px;
 		transition: all 0.2s;
 	}
@@ -103,7 +104,7 @@ export default {
 }
 .nav .wrapper {
     display: flex;
-    align-items: center;
+    align-items: left;
     justify-content: space-between;
     width: 100%;
     max-width: var(--contentWidth);

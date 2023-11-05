@@ -9,7 +9,6 @@
 
 <script>
 import { LMap, LTileLayer, LMarker, LIcon } from "@vue-leaflet/vue-leaflet";
-import { ref } from 'vue'
 
 
 export default {
@@ -34,7 +33,6 @@ export default {
 		setTimeout(function() { 
 			that.showMap = true;
 		}, 1000);
-		this.$refs.map.addEventListener('focusin', () => console.log('focus'))
 	},
 	methods: {
 		mapChangeZoom(e){
