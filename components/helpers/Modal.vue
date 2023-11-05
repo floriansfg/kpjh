@@ -65,4 +65,7 @@
         z-index:12;
 		cursor: pointer;
     }
+    @media (min-width: 901px) {
+        
+    }
 </style>

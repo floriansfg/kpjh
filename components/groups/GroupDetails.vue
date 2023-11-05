@@ -50,4 +50,9 @@
         height: 25px;
         background-image: linear-gradient(rgba(35, 34, 34, 0.326), rgba(0, 0, 0, 0));
     } 
+    @media (max-width: 901px) {
+    .groupDetails {
+        width: 100%;
+    }
+    }
 </style>

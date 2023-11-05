@@ -7,7 +7,7 @@
 			<Diashow  
                 v-if="diashows" v-for="diashow in diashows" 
                 :images="diashow.images.items.map(image => image.url)" 
-                :firstImageId="3" height="500px" repeat/>
+                :firstImageId="3" height="500px" transition="800" repeat/>
         </header>
         <section>
             <h4 class="text-center">Aktuelles</h4>

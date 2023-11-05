@@ -5,7 +5,7 @@
 				<path d="M15.9639 16.2952C14.8821 17.4034 13.1179 17.4034 12.0361 16.2952L0.801466 4.78587C-0.267156 3.69112 -0.267156 1.92596 0.801466 0.831215C1.88326 -0.277029 3.64744 -0.277029 4.72924 0.831215L14 10.5L23.2708 0.831214C24.3526 -0.27703 26.1167 -0.27703 27.1985 0.831214C28.2672 1.92596 28.2672 3.69112 27.1985 4.78587L15.9639 16.2952Z"/>
 			</svg>
 		</div>
-		<Carousel wrapAround autoplay:6000 transition:600 ref="myCarousel" :style="{ 'width': width , 'height': 'height' }">
+		<Carousel wrapAround :autoplay="7000" :transition="transition" ref="myCarousel" :style="{ 'width': width , 'height': 'height' }">
 			<Slide v-for="(image,index) in images" :key="index" >
 				<nuxt-img :src="image" class="slideImg" :style="{ 'width': width , 'height': height }"/>
 			</Slide>
@@ -44,6 +44,10 @@ import { ref } from 'vue'
 				type: String,
 				default: '100%'
 			},
+			transition: {
+				type: String,
+				default: '0'
+			}
 		},
 		data() {
 			return {
@@ -56,7 +60,6 @@ import { ref } from 'vue'
         ],
         methods: {
             nextImage() {
-				console.log(this.currentImg)
 				this.$refs.myCarousel.next()
 				this.currentImg ++
 				this.$emit("nextImage", this.currentImg)
@@ -71,7 +74,6 @@ import { ref } from 'vue'
 			if(this.firstImageId) {
 				this.$refs.myCarousel.slideTo(this.firstImageId)
 			}
-			console.log(this.currentImg)
 		}
     }
 </script>
@@ -151,4 +153,11 @@ import { ref } from 'vue'
 	.slideImg {
 		max-height :70vh;
 	}
+	@media (max-width: 901px) {
+		.prevButton, .nextButton {	
+		&:hover {
+			box-shadow: none;
+		}
+	}
+}
 </style>

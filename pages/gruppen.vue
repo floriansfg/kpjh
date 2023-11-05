@@ -56,4 +56,9 @@ export default {
     gap: 50px;
     justify-items: center;
 }
+@media (max-width: 901px) {
+    .groups {
+        padding: 20px 10px;
+    }
+}
 </style>
