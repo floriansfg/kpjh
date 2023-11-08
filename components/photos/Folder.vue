@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import { saveAs } from 'file-saver'
+import saveAs from 'file-saver'
 
 export default {
     props: ['folderId', 'open'],
