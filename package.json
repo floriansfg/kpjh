@@ -25,6 +25,7 @@
     "graphql-tag": "^2.12.6",
     "jsonwebtoken": "^9.0.0",
     "leaflet": "^1.9.3",
+    "node-fetch-native": "^1.4.1",
     "nuxt-speedkit": "^2.2.0",
     "sass": "^1.62.1",
     "vue3-carousel-nuxt": "^1.1.0"
