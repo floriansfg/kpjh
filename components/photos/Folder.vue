@@ -29,7 +29,8 @@
 </template>
 
 <script>
-import saveAs from 'file-saver'
+import pkg from 'file-saver'; 
+const { saveAs } = pkg;
 
 export default {
     props: ['folderId', 'open'],
