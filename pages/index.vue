@@ -1,5 +1,8 @@
 <template>
     <div>
+        <head>
+            <title>KPJH</title>
+        </head>
         <svg class="svg">
             <clipPath id="wave" clipPathUnits="objectBoundingBox"><path d="M1,0 H0 V1 L0,0.999 C0,0.999,0,1,0,1 C0.049,0.985,0.164,0.955,0.265,0.955 C0.321,0.955,0.374,0.964,0.434,0.974 L0.434,0.974 C0.509,0.986,0.595,1,0.709,1 C0.805,1,0.873,0.988,0.922,0.98 C0.956,0.974,0.981,0.97,1,0.972 L1,0"></path></clipPath>
         </svg>
@@ -7,7 +10,7 @@
 			<Diashow  
                 v-if="diashows" v-for="diashow in diashows" 
                 :images="diashow.images.items.map(image => image.url)" 
-                :firstImageId="3" height="500px" transition="800" repeat/>
+                :firstImageId="3" height="500px" :transition="800" repeat/>
         </header>
         <section>
             <h4 class="text-center">Aktuelles</h4>
@@ -87,6 +90,16 @@ header {
     background-repeat: no-repeat;
     margin-bottom: 50px;
     filter:drop-shadow(0px 0px 16px rgb(0 0 0 / 0.5));
+    position: relative;
+}
+
+header::before {
+    content: '';
+    width: 100%;
+    height: 100px;
+    z-index: 3;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.547) 0%, rgba(255,255,255,0) 100%);
+    position: absolute;
 }
 
 header :deep(img) {

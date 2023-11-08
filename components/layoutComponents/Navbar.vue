@@ -66,9 +66,10 @@ export default {
 	}
 
 	.links {
+        display: block;
 		text-align: left;
 		width: 100%;
-		margin-top: 10px;
+		margin-top: 15px !important;
 		a {
 			padding: 10px 0px;
 			font-size: 15px;
@@ -122,6 +123,7 @@ export default {
 
 .links { 
 	display: flex;
+    margin: auto 0;
 	a, button {
 		margin-left: 40px;
 		color: white;

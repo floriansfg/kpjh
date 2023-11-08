@@ -59,6 +59,7 @@ export default {
 
 .content {
     width: 40%;
+	word-wrap: break-word;
 }
 
 .eventDetail {

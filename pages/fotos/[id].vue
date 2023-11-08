@@ -1,6 +1,9 @@
 
 <template>
 	<DefaultView titel="Fotos">
+	<head>
+		<title>KPJH - Fotos</title>
+	</head>
 		<div class="wrapper">
 			<h3 class="title">{{ album.eventType }} {{ album.title }}</h3>
 			<NuxtLink class="backButton" to="/fotos">

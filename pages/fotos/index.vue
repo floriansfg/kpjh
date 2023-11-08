@@ -1,5 +1,8 @@
 <template>
-    <DefaultView titel="Fotos">
+	<DefaultView titel="Fotos">
+		<head>
+			<title>KPJH - Fotos</title>
+		</head>
 		<div v-if="albums" class="folders">
 			<div class="searchInput">
 				<input type="text" v-model="search" placeholder="Suchen..."/>

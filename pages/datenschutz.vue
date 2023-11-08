@@ -1,5 +1,8 @@
 <template>
     <DefaultView titel="Unsere Datenschutzerklärung">
+    <head>
+		<title>KPJH - Datenschutz</title>
+	</head>
         <div class="body">
             <h3>
                 1.	Allgemeine Hinweise

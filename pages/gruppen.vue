@@ -1,5 +1,8 @@
 <template>
     <DefaultView titel="Gruppen">
+    <head>
+		<title>KPJH - Gruppen</title>
+	</head>
         <div class="groups">
             <div class="group-grid">
                 <Group v-for="group in groups" :gruppe="group" />

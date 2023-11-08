@@ -45,7 +45,7 @@ import { ref } from 'vue'
 				default: '100%'
 			},
 			transition: {
-				type: String,
+				type: Number,
 				default: '0'
 			}
 		},

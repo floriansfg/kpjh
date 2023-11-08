@@ -1,5 +1,8 @@
 <template>
     <DefaultView titel="Impressum">
+    <head>
+		<title>KPJH - Impressum</title>
+	</head>
         <div class="body">
             <h3>
                 1.	Angaben gemäß § 5 TMG
@@ -13,6 +16,12 @@
             <b>KjG Pfarrjugend Hüls</b>
             <p>
                 Herrenweg 6 <br />47839 Krefeld <br />Telefon: 02151 - 73 03 97 <br />E-Mail: <a href="mailto:info@kpjh.de">info@kpjh.de</a> <br />Vertreten durch: <br />Lorena Schünke, Paul Vornhusen, Janine Führmann, Rebekka Schiffers, Lea Gielen
+            </p>
+            <b>
+                Website und technische Umsetzung:
+            </b>
+            <p>
+                Nadja Runge, Florian Seefing
             </p>
             <h3>
                 2.	Redaktionell verantwortlich
