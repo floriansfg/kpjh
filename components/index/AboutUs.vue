@@ -5,45 +5,92 @@
             <h3>Echte Frönde stonnt tesaame...</h3>
         </div>
         <div class="grid-container">
-            <div class="grid header">.....unter diesem Motto steht die Katholische Pfarrjugend Hüls seit 1978. Spielerisch lernen unsere jungen Mitglieder durch verschiedene Aktivitäten die Bedeutung von Freundschaft, Zusammenhalt und Verantwortung. Neben unseren wöchentlichen Gruppenstunden organisiert die Leiterrunde über das Jahr verteilt verschiedene Aktivitäten.</div>
-            <div class="grid pic-1"><img class="grid-pic" src="/images/buellingen.jpg" /></div>
-            <div class="grid text-1">Jeden November können sich Kinder ab der vierten Klassen in neu entstehende Mädchen- bzw. Jungengruppen einteilen lassen oder jederzeit in eine gleichaltrige Gruppe eintreten. Die Gruppen treffen sich wöchentlich für 90 Minuten mit ihren Leiter:innen im Heinrich-Joeppen-Haus, um zu spielen, kochen, backen, basteln, toben und viel zu lachen. Dies stärkt ganz besonders den Zusammenhalt, sodass aus der anfangs bunten Truppe meist ein enger Freundeskreis wird.</div>
-            <div class="grid pic-2"><img class="grid-pic" src="/images/Lagerwochenende-225.jpg" /></div>
-            <div class="grid text-2">Über das Jahr verteilt organisiert die Leiterrunde verschiedene Ausflüge ins Spaßbad oder den Freizeitpark sowie das Kartoffelfeuer mit einer Rallye oder Fahrradtour und Nachtwanderung mit anschließendem Lagerfeuer. Highlight des Jahres ist unser Zeltlager in der vierten und fünften Woche der Sommerferien. Die Favoriten im Programm sind sicher der Singsang am Lagerfeuer, die verschiedenen Stafetten und das Brennball-Turnier, aber auch der gemeinsame Küchen-, Toiletten- oder Ordnungsdienst macht eine Menge Spaß.</div>
-            <div class="grid pic-3"><img class="grid-pic" src="/images/Irrel2018_12_Party.jpg" /></div>
-            <div class="grid text-3">Seit 2022 sind wir als Ortsgruppe „KjG Pfarrjugend Hüls“ der Katholischen jungen Gemeinde (KjG) im Bistum Aachen aktiv. Dies ermöglicht uns spezielle Angebote für unsere Kindergruppen und Leiter:innen wie Gruppenstundenangebote, Erlebniswochenenden oder Fortbildungen anzubieten.</div>
-            <div class="grid pic-4"><img class="grid-pic" src="/images/Zeltlager2017_Feuer.jpg" /></div>
-            <div class="grid footer">Hast du Lust bekommen, ein Teil der KPJH zu werden? Dann besuch uns doch mal oder fordere mehr Infos über unser Kontaktformular an.</div>
+            <div class="grid header">
+                .....unter diesem Motto steht die Katholische Pfarrjugend Hüls
+                seit 1978. Spielerisch lernen unsere jungen Mitglieder durch
+                verschiedene Aktivitäten die Bedeutung von Freundschaft,
+                Zusammenhalt und Verantwortung. Neben unseren wöchentlichen
+                Gruppenstunden organisiert die Leiterrunde über das Jahr
+                verteilt verschiedene Aktivitäten.
+            </div>
+            <div class="grid pic-1">
+                <img
+                    class="grid-pic"
+                    src="/images/buellingen.jpg"
+                />
+            </div>
+            <div class="grid text-1">
+                Jeden November können sich Kinder ab der vierten Klassen in neu
+                entstehende Mädchen- bzw. Jungengruppen einteilen lassen oder
+                jederzeit in eine gleichaltrige Gruppe eintreten. Die Gruppen
+                treffen sich wöchentlich für 90 Minuten mit ihren Leiter:innen
+                im Heinrich-Joeppen-Haus, um zu spielen, kochen, backen,
+                basteln, toben und viel zu lachen. Dies stärkt ganz besonders
+                den Zusammenhalt, sodass aus der anfangs bunten Truppe meist ein
+                enger Freundeskreis wird.
+            </div>
+            <div class="grid pic-2">
+                <img
+                    class="grid-pic"
+                    src="/images/Lagerwochenende-225.jpg"
+                />
+            </div>
+            <div class="grid text-2">
+                Über das Jahr verteilt organisiert die Leiterrunde verschiedene
+                Ausflüge ins Spaßbad oder den Freizeitpark sowie das
+                Kartoffelfeuer mit einer Rallye oder Fahrradtour und
+                Nachtwanderung mit anschließendem Lagerfeuer. Highlight des
+                Jahres ist unser Zeltlager in der vierten und fünften Woche der
+                Sommerferien. Die Favoriten im Programm sind sicher der Singsang
+                am Lagerfeuer, die verschiedenen Stafetten und das
+                Brennball-Turnier, aber auch der gemeinsame Küchen-, Toiletten-
+                oder Ordnungsdienst macht eine Menge Spaß.
+            </div>
+            <div class="grid pic-3">
+                <img
+                    class="grid-pic"
+                    src="/images/Irrel2018_12_Party.jpg"
+                />
+            </div>
+            <div class="grid text-3">
+                Seit 2022 sind wir als Ortsgruppe „KjG Pfarrjugend Hüls“ der
+                Katholischen jungen Gemeinde (KjG) im Bistum Aachen aktiv. Dies
+                ermöglicht uns spezielle Angebote für unsere Kindergruppen und
+                Leiter:innen wie Gruppenstundenangebote, Erlebniswochenenden
+                oder Fortbildungen anzubieten.
+            </div>
+            <div class="grid pic-4">
+                <img
+                    class="grid-pic"
+                    src="/images/Zeltlager2017_Feuer.jpg"
+                />
+            </div>
+            <div class="grid footer">
+                Hast du Lust bekommen, ein Teil der KPJH zu werden? Dann besuch
+                uns doch mal oder fordere mehr Infos über unser Kontaktformular
+                an.
+            </div>
         </div>
         <div class="text-center">
             <h3>Unser Vorstand</h3>
         </div>
         <div class="board">
-            <img class="logo" src="~/assets/kjg_kpjh_logo.svg" />
+            <img
+                class="logo"
+                src="~/assets/kjg_kpjh_logo.svg"
+            />
             <div class="board-members">
-                <div>
-                    1. Vorsitzende: Lorena Schünke
-                </div>
-                <div>
-                    2. Vorsitzender: Paul Vornhusen
-                </div>
-                <div>
-                    Kassiererin: Janine Führmann
-                </div>
-                <div>
-                    Materialwärterin: Rebekka Schiffers
-                </div>
-                <div>
-                    Beisitzerin: Lea Gielen
-                </div>
+                <div>1. Vorsitzende: Lorena Schünke</div>
+                <div>2. Vorsitzender: Paul Vornhusen</div>
+                <div>Kassiererin: Janine Führmann</div>
+                <div>Materialwärterin: Rebekka Schiffers</div>
+                <div>Beisitzerin: Lea Gielen</div>
             </div>
         </div>
     </div>
 </template>
 
 <style scoped lang="scss">
-
-
 h2 {
     padding: 2rem;
     margin-top: 6rem;
@@ -54,18 +101,17 @@ h3 {
     font-size: 50px;
 }
 
-
 .grid-container {
     display: grid;
     justify-items: center;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
-    grid-template-areas: 
-    'header header header'
-    'text text pic'
-    'pic2 text2 text2'
-    'text3 text3 pic3'
-    'footer footer footer';
+    grid-template-areas:
+        'header header header'
+        'text text pic'
+        'pic2 text2 text2'
+        'text3 text3 pic3'
+        'footer footer footer';
     line-height: 2;
     margin: 4rem 5rem;
     justify-content: space-between;
@@ -98,7 +144,7 @@ h3 {
 }
 .grid {
     margin-bottom: 2rem;
-    display:flex;
+    display: flex;
     justify-content: center;
 }
 
@@ -106,17 +152,16 @@ h3 {
     grid-area: header;
 }
 
-.text-1{
+.text-1 {
     grid-area: text;
 }
-.pic-1{
+.pic-1 {
     grid-area: pic;
     @media (min-width: 901px) {
         transform: rotate(5deg) translateX(10px);
-    }    
-    
+    }
 }
-.text-2{
+.text-2 {
     grid-area: text2;
 }
 
@@ -127,7 +172,7 @@ h3 {
     }
 }
 
-.text-3{
+.text-3 {
     grid-area: text3;
 }
 
@@ -155,7 +200,7 @@ h3 {
 }
 
 @media (max-width: 900px) {
-    .grid-container{
+    .grid-container {
         display: block;
         margin: 1rem 1rem;
         align-items: center;
@@ -166,13 +211,11 @@ h3 {
         @media (min-width: 901px) {
             width: 70%;
             transform: translateX(+10px);
-    }
+        }
     }
     .board {
         display: block;
         margin: 1rem;
     }
 }
-
-
 </style>
