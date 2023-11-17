@@ -3,7 +3,7 @@
         <div class="wrapper">
             <NuxtLink to="/" class="logo">
                 <img src="~/assets/logo.png" />
-                Katholische<br />Pfarrjugend Hüls
+                KJG<br />Pfarrjugend Hüls
             </NuxtLink>
             <div class="links">
                 <NuxtLink to="/gruppen">Gruppen</NuxtLink>

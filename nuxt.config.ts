@@ -5,7 +5,8 @@ export default defineNuxtConfig({
 	modules: [
 		'@nuxtjs/apollo',
 		'@nuxt/image-edge',
-		'vue3-carousel-nuxt'
+		'vue3-carousel-nuxt',
+		'@nuxtjs/critters'
 	],
 	components: [
 		{

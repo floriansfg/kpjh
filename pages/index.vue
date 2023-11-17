@@ -19,6 +19,7 @@
                     <Event v-if="event" :event="event"/>
                 </div>
             </div>
+            <Downloads :downloads="downloads"/>
             <svg class="wave" viewBox="0 0 1440 139" fill="var(--secondaryBg)" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
                 <path d="M381.765 99.5C236.064 99.5 70.549 125.567 0 138.6V0H1440V114.522C1373.95 109.515 1255.77 138.6 1021.21 138.6C728.005 138.6 563.892 99.5 381.765 99.5Z" />
             </svg>
@@ -57,20 +58,28 @@ export default {
                             items {
                                 url(transform: {
 									format: JPG_PROGRESSIVE,
-									quality: 100
+									quality: 80
 								})
                             }
+                        }
+                    }
+                },
+                downloads: downloadsCollection(limit:0) {
+                    items {
+                        title,
+                 	    pdf {
+                            url
                         }
                     }
                 }
             }
         `
        
-        const { data: { value: {events: {items: events}, diashow: {items: diashows}} }} = await useAsyncQuery(query)
+        const { data: { value: {events: {items: events}, diashow: {items: diashows}, downloads: {items: downloads} }}} = await useAsyncQuery(query)
     //    const { data} = await useAsyncQuery(query2)
 
         //const { data: { value: {images: {items: diashow}} }} = await useAsyncQuery(query2)
-        return {events, diashows}
+        return {events, diashows, downloads}
     },
     components: {
         Carousel,
@@ -122,6 +131,7 @@ section {
 }
 
 .svg {
+    padding-top: 3rem;
     height: 0;
     width: 0;
     position: absolute;
@@ -133,7 +143,6 @@ section {
     flex-direction: column;
     align-items: center;
     margin: 50px 0;
-    padding-bottom: 6rem;
 }
 
 .event {

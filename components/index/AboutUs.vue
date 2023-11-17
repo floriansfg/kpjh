@@ -11,7 +11,7 @@
             <div class="grid pic-2"><img class="grid-pic" src="/images/Lagerwochenende-225.jpg" /></div>
             <div class="grid text-2">Über das Jahr verteilt organisiert die Leiterrunde verschiedene Ausflüge ins Spaßbad oder den Freizeitpark sowie das Kartoffelfeuer mit einer Rallye oder Fahrradtour und Nachtwanderung mit anschließendem Lagerfeuer. Highlight des Jahres ist unser Zeltlager in der vierten und fünften Woche der Sommerferien. Die Favoriten im Programm sind sicher der Singsang am Lagerfeuer, die verschiedenen Stafetten und das Brennball-Turnier, aber auch der gemeinsame Küchen-, Toiletten- oder Ordnungsdienst macht eine Menge Spaß.</div>
             <div class="grid pic-3"><img class="grid-pic" src="/images/Irrel2018_12_Party.jpg" /></div>
-            <div class="grid text-3">Seit 20XX sind wir als Ortsgruppe „KjG Pfarrjugend Hüls“ der Katholischen jungen Gemeinde (KjG) im Bistum Aachen aktiv. Dies ermöglicht uns spezielle Angebote für unsere Kindergruppen und Leiter:innen wie Gruppenstundenangebote, Erlebniswochenenden oder Fortbildungen anzubieten.</div>
+            <div class="grid text-3">Seit 2022 sind wir als Ortsgruppe „KjG Pfarrjugend Hüls“ der Katholischen jungen Gemeinde (KjG) im Bistum Aachen aktiv. Dies ermöglicht uns spezielle Angebote für unsere Kindergruppen und Leiter:innen wie Gruppenstundenangebote, Erlebniswochenenden oder Fortbildungen anzubieten.</div>
             <div class="grid pic-4"><img class="grid-pic" src="/images/Zeltlager2017_Feuer.jpg" /></div>
             <div class="grid footer">Hast du Lust bekommen, ein Teil der KPJH zu werden? Dann besuch uns doch mal oder fordere mehr Infos über unser Kontaktformular an.</div>
         </div>
