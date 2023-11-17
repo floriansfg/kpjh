@@ -1,11 +1,11 @@
 <template>
     <div class="pictures">
         <div
+            v-if="images.length > 1"
             class="prevButton"
             @click="prevImage"
         >
-            <svg
-                v-if="images.length > 1"
+            <svg 
                 viewBox="0 0 28 18"
                 fill="white"
                 xmlns="http://www.w3.org/2000/svg"
@@ -25,8 +25,10 @@
             <Slide
                 v-for="(image, index) in images"
                 :key="index"
-            >
-                <nuxt-img
+            >   
+                <img
+                    :srcset="`${image}&w=480 480w, ${image}&w=800 800w, ${image}&w=1200 1200w`"
+                    :sizes="`(max-width: 600px) 480px, (max-width: 1000px) 800px, (max-width: 1800px) 1200px, 2000px`"
                     :src="image"
                     class="slideImg"
                     :style="{ width: width, height: height }"
@@ -54,7 +56,6 @@
 <script>
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide } from 'vue3-carousel'
-import { ref } from 'vue'
 
 export default {
     components: {

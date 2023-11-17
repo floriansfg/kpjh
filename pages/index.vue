@@ -8,15 +8,16 @@
                 id="wave"
                 clipPathUnits="objectBoundingBox"
             >
-                <path
-                    d="M1,0 H0 V1 L0,0.999 C0,0.999,0,1,0,1 C0.049,0.985,0.164,0.955,0.265,0.955 C0.321,0.955,0.374,0.964,0.434,0.974 L0.434,0.974 C0.509,0.986,0.595,1,0.709,1 C0.805,1,0.873,0.988,0.922,0.98 C0.956,0.974,0.981,0.97,1,0.972 L1,0"
-                ></path>
+            <path
+                id="path272"
+                d="M 1,0 H 0 V 1 0.999 0.953 C 0.07338835,0.962484 0.16696688,0.9876246 0.24601002,0.9905464 0.41720789,0.9968744 0.56553662,0.96840898 0.70699957,0.9527569 0.86558789,0.93520999 0.9115516,0.94172711 1,0.953 V 0"
+            />
             </clipPath>
         </svg>
         <header>
             <Diashow
-                v-for="diashow in diashows"
-                v-if="diashows"
+                v-for="(diashow, index) in diashows"
+                :key="index"
                 :images="diashow.images.items.map((image) => image.url)"
                 :first-image-id="3"
                 height="500px"
@@ -108,7 +109,7 @@ export default {
             }
         `
 
-        const {
+        let {
             data: {
                 value: {
                     events: { items: events },
@@ -119,6 +120,7 @@ export default {
         } = await useAsyncQuery(query)
         //    const { data} = await useAsyncQuery(query2)
 
+        diashows = diashows ? diashows : []
         //const { data: { value: {images: {items: diashow}} }} = await useAsyncQuery(query2)
         return { events, diashows, downloads }
     },
