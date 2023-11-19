@@ -4,28 +4,55 @@
             <title>KPJH</title>
         </head>
         <svg class="svg">
-            <clipPath id="wave" clipPathUnits="objectBoundingBox"><path d="M1,0 H0 V1 L0,0.999 C0,0.999,0,1,0,1 C0.049,0.985,0.164,0.955,0.265,0.955 C0.321,0.955,0.374,0.964,0.434,0.974 L0.434,0.974 C0.509,0.986,0.595,1,0.709,1 C0.805,1,0.873,0.988,0.922,0.98 C0.956,0.974,0.981,0.97,1,0.972 L1,0"></path></clipPath>
+            <clipPath
+                id="wave"
+                clipPathUnits="objectBoundingBox"
+            >
+                <path
+                    d="M1,0 H0 V1 L0,0.999 C0,0.999,0,1,0,1 C0.049,0.985,0.164,0.955,0.265,0.955 C0.321,0.955,0.374,0.964,0.434,0.974 L0.434,0.974 C0.509,0.986,0.595,1,0.709,1 C0.805,1,0.873,0.988,0.922,0.98 C0.956,0.974,0.981,0.97,1,0.972 L1,0"
+                ></path>
+            </clipPath>
         </svg>
         <header>
-			<Diashow  
-                v-if="diashows" v-for="diashow in diashows" 
-                :images="diashow.images.items.map(image => image.url)" 
-                :firstImageId="3" height="500px" :transition="800" repeat/>
+            <Diashow
+                v-for="diashow in diashows"
+                v-if="diashows"
+                :images="diashow.images.items.map((image) => image.url)"
+                :first-image-id="3"
+                height="500px"
+                :transition="800"
+                repeat
+            />
         </header>
         <section>
             <h4 class="text-center">Aktuelles</h4>
             <div class="timeline">
-                <div class="event" v-if="events" v-for="event in events">
-                    <Event v-if="event" :event="event"/>
+                <div
+                    v-for="event in events"
+                    v-if="events"
+                    class="event"
+                >
+                    <Event
+                        v-if="event"
+                        :event="event"
+                    />
                 </div>
             </div>
-            <Downloads :downloads="downloads"/>
-            <svg class="wave" viewBox="0 0 1440 139" fill="var(--secondaryBg)" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-                <path d="M381.765 99.5C236.064 99.5 70.549 125.567 0 138.6V0H1440V114.522C1373.95 109.515 1255.77 138.6 1021.21 138.6C728.005 138.6 563.892 99.5 381.765 99.5Z" />
+            <Downloads :downloads="downloads" />
+            <svg
+                class="wave"
+                viewBox="0 0 1440 139"
+                fill="var(--secondaryBg)"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="none"
+            >
+                <path
+                    d="M381.765 99.5C236.064 99.5 70.549 125.567 0 138.6V0H1440V114.522C1373.95 109.515 1255.77 138.6 1021.21 138.6C728.005 138.6 563.892 99.5 381.765 99.5Z"
+                />
             </svg>
         </section>
         <AboutUs />
-    </div>    
+    </div>
 </template>
 
 <script>
@@ -34,63 +61,71 @@ import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 
 export default {
+    components: {
+        Carousel,
+        Slide,
+    },
     async setup() {
         const query = gql`
             query {
-                events: eventsCollection(limit:0, order: [date_ASC]) {
+                events: eventsCollection(limit: 0, order: [date_ASC]) {
                     items {
-                        title,
+                        title
                         icon {
                             url
-                        },
-                        dateDisplay,
+                        }
+                        dateDisplay
                         description {
                             json
-                        },
+                        }
                         additionalInfo {
                             json
                         }
                     }
-                },
-                diashow: homepageCollection(limit:0) {
+                }
+                diashow: homepageCollection(limit: 0) {
                     items {
-                        images: diashowCollection(limit:0) {
+                        images: diashowCollection(limit: 0) {
                             items {
-                                url(transform: {
-									format: JPG_PROGRESSIVE,
-									quality: 80
-								})
+                                url(
+                                    transform: {
+                                        format: JPG_PROGRESSIVE
+                                        quality: 80
+                                    }
+                                )
                             }
                         }
                     }
-                },
-                downloads: downloadsCollection(limit:0) {
+                }
+                downloads: downloadsCollection(limit: 0) {
                     items {
-                        title,
-                 	    pdf {
+                        title
+                        pdf {
                             url
                         }
                     }
                 }
             }
         `
-       
-        const { data: { value: {events: {items: events}, diashow: {items: diashows}, downloads: {items: downloads} }}} = await useAsyncQuery(query)
-    //    const { data} = await useAsyncQuery(query2)
+
+        const {
+            data: {
+                value: {
+                    events: { items: events },
+                    diashow: { items: diashows },
+                    downloads: { items: downloads },
+                },
+            },
+        } = await useAsyncQuery(query)
+        //    const { data} = await useAsyncQuery(query2)
 
         //const { data: { value: {images: {items: diashow}} }} = await useAsyncQuery(query2)
-        return {events, diashows, downloads}
+        return { events, diashows, downloads }
     },
-    components: {
-        Carousel,
-        Slide
-    }
 }
-
 </script>
 
 <style scoped lang="scss">
-
 header {
     width: 100%;
     background: url(../assets/header.svg);
@@ -98,7 +133,7 @@ header {
     background-position: top;
     background-repeat: no-repeat;
     margin-bottom: 50px;
-    filter:drop-shadow(0px 0px 16px rgb(0 0 0 / 0.5));
+    filter: drop-shadow(0px 0px 16px rgb(0 0 0 / 0.5));
     position: relative;
 }
 
@@ -107,13 +142,16 @@ header::before {
     width: 100%;
     height: 100px;
     z-index: 3;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.547) 0%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.547) 0%,
+        rgba(255, 255, 255, 0) 100%
+    );
     position: absolute;
 }
 
 header :deep(img) {
     clip-path: url(#wave);
-
 }
 
 section {

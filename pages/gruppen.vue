@@ -1,11 +1,14 @@
 <template>
     <DefaultView titel="Gruppen">
-    <head>
-		<title>KPJH - Gruppen</title>
-	</head>
+        <head>
+            <title>KPJH - Gruppen</title>
+        </head>
         <div class="groups">
             <div class="group-grid">
-                <Group v-for="group in groups" :gruppe="group" />
+                <Group
+                    v-for="group in groups"
+                    :gruppe="group"
+                />
             </div>
         </div>
     </DefaultView>
@@ -20,27 +23,34 @@ export default {
             query {
                 groups: groupCollection(limit: 0) {
                     items {
-                        name,
-                        supervisor,
-                        year,
-                        images: imagesCollection(limit:0) {
+                        name
+                        supervisor
+                        year
+                        images: imagesCollection(limit: 0) {
                             items {
-                                url(transform: {
-									format: JPG_PROGRESSIVE,
-									quality: 20
-								})
+                                url(
+                                    transform: {
+                                        format: JPG_PROGRESSIVE
+                                        quality: 20
+                                    }
+                                )
                             }
                         }
                     }
                 }
             }
         `
-        const { data: { value: {groups: {items: groups} } }} = await useAsyncQuery(query)
+        const {
+            data: {
+                value: {
+                    groups: { items: groups },
+                },
+            },
+        } = await useAsyncQuery(query)
 
-        return {groups}
-    }
+        return { groups }
+    },
 }
-
 </script>
 
 <style scoped>
@@ -49,7 +59,7 @@ export default {
     align-items: center;
     justify-content: center;
     padding: 50px 30px;
-	width: 100%;
+    width: 100%;
 }
 
 .group-grid {

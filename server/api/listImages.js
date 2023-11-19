@@ -1,37 +1,40 @@
-import { USER_TYPES } from "~/enums/enums";
+import { USER_TYPES } from '~/enums/enums'
 
 export default defineEventHandler(async (event) => {
-	const folderId = getQuery(event).id;
-	if(folderId && event.context.auth && (event.context.auth.userType == USER_TYPES.user || event.context.auth.userType == USER_TYPES.groupLeader)) {
-		if (!folderId) throw createError({ statusCode: 400, statusMessage: 'No FolderId' })
-		
-		try {
-		const response = await event.context.drive.files.list({
-			q: "'"+folderId+"' in parents",
-			fields: 'files(id,name,thumbnailLink,mimeType)',
-		});
+    const folderId = getQuery(event).id
+    if (
+        folderId &&
+        event.context.auth &&
+        (event.context.auth.userType == USER_TYPES.user ||
+            event.context.auth.userType == USER_TYPES.groupLeader)
+    ) {
+        if (!folderId)
+            throw createError({ statusCode: 400, statusMessage: 'No FolderId' })
 
-		return response.data
+        try {
+            const response = await event.context.drive.files.list({
+                q: "'" + folderId + "' in parents",
+                fields: 'files(id,name,thumbnailLink,mimeType)',
+            })
 
-		} catch(e) {
-			// console.log(e)
-		}
-		return null
-		
-	} else {
-		throw createError({
-			statusCode: 401,
-			statusMessage: 'Unauthorized',
-		})
-	}
-});
-
+            return response.data
+        } catch (e) {
+            // console.log(e)
+        }
+        return null
+    } else {
+        throw createError({
+            statusCode: 401,
+            statusMessage: 'Unauthorized',
+        })
+    }
+})
 
 // const getFilesOfFolder = async (folderId, drive) => {
 // 	try {
-		// const response = await drive.files.list({
-		// 	q: "'"+folderId+"' in parents"
-		// });
+// const response = await drive.files.list({
+// 	q: "'"+folderId+"' in parents"
+// });
 // 		let array = response.data.files
 // 		array.filter(file => file.mimeType === "application/vnd.google-apps.folder").map(async file => {
 // 			file.kind = "drive#folder"
