@@ -1,35 +1,46 @@
-@import "bootstrap/scss/bootstrap";
+@import 'bootstrap/scss/bootstrap';
 
 :root {
-	--contentWidth: 1500px;
-	--primaryBg: #304C5C; 
-	--primaryBg: #255977;
-	--secondaryBg: #FFEED3;
-	--mobileWidth: 900px; 
+    --contentWidth: 1500px;
+    --primaryBg: #304c5c;
+    --primaryBg: #255977;
+    --secondaryBg: #ffeed3;
+    --mobileWidth: 900px;
 }
 
 @font-face {
-	font-family: "ylee MHIM";
-	src: url("~/assets/fonts/secondaryFont.ttf") format("truetype");
-  }
-
-body, input {
-	margin: 0;
-	font-family: "Avenir Next", "avenir_next";
-	font-weight: 500;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
+    font-family: 'ylee MHIM';
+    src: url('~/assets/fonts/secondaryFont.ttf') format('truetype');
 }
 
+body,
+input {
+    margin: 0;
+    font-family: 'Avenir Next', 'avenir_next';
+    font-weight: 500;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
 
-$mynewcolor: #304C5C;
-
+$mynewcolor: #304c5c;
 
 .btn-primary {
-    @include button-variant($mynewcolor, darken($mynewcolor, 7.5%), darken($mynewcolor, 10%), lighten($mynewcolor,5%), lighten($mynewcolor, 10%), darken($mynewcolor,30%));
-	color: #fff;
+    @include button-variant(
+        $mynewcolor,
+        darken($mynewcolor, 7.5%),
+        darken($mynewcolor, 10%),
+        lighten($mynewcolor, 5%),
+        lighten($mynewcolor, 10%),
+        darken($mynewcolor, 30%)
+    );
+    color: #fff;
 }
 
 .btn-outline-primary {
-    @include button-outline-variant($mynewcolor, #222222, lighten($mynewcolor,5%), $mynewcolor);
+    @include button-outline-variant(
+        $mynewcolor,
+        #222222,
+        lighten($mynewcolor, 5%),
+        $mynewcolor
+    );
 }
