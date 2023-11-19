@@ -13,13 +13,16 @@
     src: url('~/assets/fonts/secondaryFont.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('~/assets/fonts/Avenir_Next-Regular.otf') format('opentype');
+}
+
 body,
 input {
     margin: 0;
-    font-family: 'Avenir Next', 'avenir_next';
+    font-family: 'Avenir Next', 'avenir_next', Arial, sans-serif;
     font-weight: 500;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
 }
 
 $mynewcolor: #304c5c;
