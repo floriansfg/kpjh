@@ -15,14 +15,30 @@
 
 @font-face {
     font-family: 'Avenir Next';
-    src: url('~/assets/fonts/Avenir_Next/Avenir_Next-Regular.otf') format('opentype');
+    src: url('~/assets/fonts/Avenir_Next/AvenirNext-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('~/assets/fonts/Avenir_Next/AvenirNext-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('~/assets/fonts/Avenir_Next/AvenirNext-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
 }
 
 body,
 input {
     margin: 0;
     font-family: 'Avenir Next', 'avenir_next', Arial, sans-serif;
-    font-weight: 500;
+    font-weight: normal;
 }
 
 $mynewcolor: #304c5c;
