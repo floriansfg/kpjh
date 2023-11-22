@@ -9,13 +9,13 @@ const client_manifest = {
     "file": "Diashow.f1e0ab24.css",
     "src": "Diashow.css"
   },
-  "_DefaultView.4a40b581.js": {
+  "_DefaultView.369559e8.js": {
     "resourceType": "script",
     "module": true,
     "css": [
       "DefaultView.e32c3771.css"
     ],
-    "file": "DefaultView.4a40b581.js",
+    "file": "DefaultView.369559e8.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ]
@@ -24,13 +24,13 @@ const client_manifest = {
     "file": "DefaultView.e32c3771.css",
     "resourceType": "style"
   },
-  "_Diashow.ed748deb.js": {
+  "_Diashow.03c865d9.js": {
     "resourceType": "script",
     "module": true,
     "css": [
       "Diashow.f1e0ab24.css"
     ],
-    "file": "Diashow.ed748deb.js",
+    "file": "Diashow.03c865d9.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ]
@@ -39,28 +39,40 @@ const client_manifest = {
     "file": "Diashow.f1e0ab24.css",
     "resourceType": "style"
   },
-  "_FileSaver.min.afbdc1dd.js": {
+  "_FileSaver.min.6bf4cac9.js": {
     "resourceType": "script",
     "module": true,
-    "file": "FileSaver.min.afbdc1dd.js",
+    "file": "FileSaver.min.6bf4cac9.js",
     "imports": [
-      "_Diashow.ed748deb.js"
+      "_Diashow.03c865d9.js"
     ]
   },
-  "_leaflet-src.ebf6ba5e.js": {
+  "_leaflet-src.3a5f17a4.js": {
     "resourceType": "script",
     "module": true,
-    "file": "leaflet-src.ebf6ba5e.js",
+    "file": "leaflet-src.3a5f17a4.js",
     "imports": [
-      "_Diashow.ed748deb.js"
+      "_Diashow.03c865d9.js"
     ],
     "isDynamicEntry": true
   },
-  "assets/fonts/Avenir_Next/Avenir_Next-Regular.otf": {
+  "assets/fonts/Avenir_Next/AvenirNext-Bold.ttf": {
     "resourceType": "font",
-    "mimeType": "font/otf",
-    "file": "Avenir_Next-Regular.6f8992eb.otf",
-    "src": "assets/fonts/Avenir_Next/Avenir_Next-Regular.otf"
+    "mimeType": "font/ttf",
+    "file": "AvenirNext-Bold.421395d6.ttf",
+    "src": "assets/fonts/Avenir_Next/AvenirNext-Bold.ttf"
+  },
+  "assets/fonts/Avenir_Next/AvenirNext-Italic.ttf": {
+    "resourceType": "font",
+    "mimeType": "font/ttf",
+    "file": "AvenirNext-Italic.4cc1bb13.ttf",
+    "src": "assets/fonts/Avenir_Next/AvenirNext-Italic.ttf"
+  },
+  "assets/fonts/Avenir_Next/AvenirNext-Regular.ttf": {
+    "resourceType": "font",
+    "mimeType": "font/ttf",
+    "file": "AvenirNext-Regular.c113d4e9.ttf",
+    "src": "assets/fonts/Avenir_Next/AvenirNext-Regular.ttf"
   },
   "assets/fonts/secondaryFont.ttf": {
     "resourceType": "font",
@@ -101,7 +113,7 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "error-404.624761f6.js",
+    "file": "error-404.83824c6e.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -121,7 +133,7 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "error-500.a91a8f72.js",
+    "file": "error-500.19592b87.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -162,7 +174,7 @@ const client_manifest = {
   },
   "node_modules/nuxt/dist/app/entry.css": {
     "resourceType": "style",
-    "file": "entry.d74ad676.css",
+    "file": "entry.73e31e5e.css",
     "src": "node_modules/nuxt/dist/app/entry.css"
   },
   "node_modules/nuxt/dist/app/entry.js": {
@@ -171,20 +183,22 @@ const client_manifest = {
     "assets": [
       "kjg_kpjh_logo_white.14b584b7.svg",
       "secondaryFont.c44dbe1c.ttf",
-      "Avenir_Next-Regular.6f8992eb.otf"
+      "AvenirNext-Regular.c113d4e9.ttf",
+      "AvenirNext-Bold.421395d6.ttf",
+      "AvenirNext-Italic.4cc1bb13.ttf"
     ],
     "css": [
-      "entry.d74ad676.css"
+      "entry.73e31e5e.css"
     ],
     "dynamicImports": [
       "virtual:nuxt:/home/runner/work/kpjh/kpjh/.nuxt/error-component.mjs"
     ],
-    "file": "entry.81f114b4.js",
+    "file": "entry.fad59579.js",
     "isEntry": true,
     "src": "node_modules/nuxt/dist/app/entry.js"
   },
-  "entry.d74ad676.css": {
-    "file": "entry.d74ad676.css",
+  "entry.73e31e5e.css": {
+    "file": "entry.73e31e5e.css",
     "resourceType": "style"
   },
   "kjg_kpjh_logo_white.14b584b7.svg": {
@@ -197,10 +211,20 @@ const client_manifest = {
     "resourceType": "font",
     "mimeType": "font/ttf"
   },
-  "Avenir_Next-Regular.6f8992eb.otf": {
-    "file": "Avenir_Next-Regular.6f8992eb.otf",
+  "AvenirNext-Regular.c113d4e9.ttf": {
+    "file": "AvenirNext-Regular.c113d4e9.ttf",
     "resourceType": "font",
-    "mimeType": "font/otf"
+    "mimeType": "font/ttf"
+  },
+  "AvenirNext-Bold.421395d6.ttf": {
+    "file": "AvenirNext-Bold.421395d6.ttf",
+    "resourceType": "font",
+    "mimeType": "font/ttf"
+  },
+  "AvenirNext-Italic.4cc1bb13.ttf": {
+    "file": "AvenirNext-Italic.4cc1bb13.ttf",
+    "resourceType": "font",
+    "mimeType": "font/ttf"
   },
   "pages/datenschutz.css": {
     "resourceType": "style",
@@ -211,9 +235,9 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "datenschutz.2e78af1b.js",
+    "file": "datenschutz.3ef7f63a.js",
     "imports": [
-      "_DefaultView.4a40b581.js",
+      "_DefaultView.369559e8.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
@@ -249,7 +273,7 @@ const client_manifest = {
       "node_modules/leaflet/dist/leaflet-src.esm.js",
       "node_modules/leaflet/dist/leaflet-src.esm.js",
       "node_modules/leaflet/dist/leaflet-src.esm.js",
-      "_leaflet-src.ebf6ba5e.js",
+      "_leaflet-src.3a5f17a4.js",
       "node_modules/leaflet/dist/leaflet-src.esm.js",
       "node_modules/leaflet/dist/leaflet-src.esm.js",
       "node_modules/leaflet/dist/leaflet-src.esm.js",
@@ -260,12 +284,12 @@ const client_manifest = {
       "node_modules/leaflet/dist/leaflet-src.esm.js",
       "node_modules/leaflet/dist/leaflet-src.esm.js"
     ],
-    "file": "_id_.9f069c70.js",
+    "file": "_id_.d545bc57.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_Diashow.ed748deb.js",
-      "_FileSaver.min.afbdc1dd.js",
-      "_DefaultView.4a40b581.js"
+      "_Diashow.03c865d9.js",
+      "_FileSaver.min.6bf4cac9.js",
+      "_DefaultView.369559e8.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/fotos/[id].vue"
@@ -283,10 +307,10 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "index.db928b06.js",
+    "file": "index.d69221be.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_DefaultView.4a40b581.js"
+      "_DefaultView.369559e8.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/fotos/index.vue"
@@ -307,11 +331,11 @@ const client_manifest = {
       "imageError.ef762fd4.svg"
     ],
     "css": [],
-    "file": "gruppen.abe0591f.js",
+    "file": "gruppen.781f7e97.js",
     "imports": [
-      "_Diashow.ed748deb.js",
+      "_Diashow.03c865d9.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_DefaultView.4a40b581.js"
+      "_DefaultView.369559e8.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/gruppen.vue"
@@ -334,9 +358,9 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "impressum.0270b046.js",
+    "file": "impressum.14bbc0e5.js",
     "imports": [
-      "_DefaultView.4a40b581.js",
+      "_DefaultView.369559e8.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
@@ -359,11 +383,11 @@ const client_manifest = {
       "header.10c98faf.svg"
     ],
     "css": [],
-    "file": "index.1c37c735.js",
+    "file": "index.9904e8d4.js",
     "imports": [
-      "_Diashow.ed748deb.js",
+      "_Diashow.03c865d9.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_FileSaver.min.afbdc1dd.js"
+      "_FileSaver.min.6bf4cac9.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/index.vue"
@@ -389,7 +413,7 @@ const client_manifest = {
       "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue",
       "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue"
     ],
-    "file": "error-component.0afeb373.js",
+    "file": "error-component.a9dddf0f.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
