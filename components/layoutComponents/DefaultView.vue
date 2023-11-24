@@ -22,7 +22,12 @@
 
 <script>
 export default {
-    props: ['titel'],
+    props: {
+        titel: {
+            type: String,
+            required: true,
+        },
+    }
 }
 </script>
 <style scoped>

@@ -17,7 +17,7 @@ export default defineEventHandler(async (event) => {
     const token = getCookie(event, 'token')
     let user = null
     if (token) {
-        const res = jwt.verify(
+        jwt.verify(
             token,
             useRuntimeConfig().jwtSecret,
             (err, decoded) => {

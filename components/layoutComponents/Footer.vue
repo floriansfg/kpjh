@@ -3,7 +3,7 @@
         <div class="sponsors">
             <div
                 v-for="sponsor in sponsors"
-                v-if="sponsors"
+                :key="sponsor.title"
             >
                 <img
                     class="sponsor"
@@ -70,7 +70,7 @@
 </template>
 
 <script>
-import gql from 'graphql-tag'
+import { gql } from 'graphql-tag'
 
 export default {
     async setup() {
@@ -87,13 +87,14 @@ export default {
                 }
             }
         `
-        const {
+        let {
             data: {
                 value: {
                     sponsors: { items: sponsors },
                 },
             },
         } = await useAsyncQuery(query)
+        sponsors = sponsors || []
         return { sponsors, isLargeScreen }
     },
 }

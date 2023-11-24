@@ -36,7 +36,16 @@
 </template>
 <script>
 export default {
-    props: ['buttonColor', 'show'],
+    props: {
+        buttonColor: {
+            type: String,
+            default: 'white',
+        },
+        show: {
+            type: Boolean,
+            default: false,
+        },
+    },
     emits: ['close'],
     methods: {
         close() {

@@ -26,6 +26,7 @@
             </div>
             <NuxtLink
                 v-for="album in filteredAlbums"
+                :key="album.sys.id"
                 :to="'/fotos/' + album.sys.id"
                 class="album"
             >

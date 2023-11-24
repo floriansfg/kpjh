@@ -30,7 +30,12 @@ import RichTextRenderer from 'contentful-rich-text-vue-renderer'
 
 export default {
     components: { RichTextRenderer },
-    props: ['event'],
+    props: {
+        event: {
+            type: Object,
+            default: () => {},
+        }
+    },
     data() {
         return {
             showEvent: false,

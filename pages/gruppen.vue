@@ -6,7 +6,8 @@
         <div class="groups">
             <div class="group-grid">
                 <Group
-                    v-for="group in groups"
+                    v-for="(group, index) in groups"
+                    :key="index"
                     :gruppe="group"
                 />
             </div>
@@ -14,8 +15,7 @@
     </DefaultView>
 </template>
 <script>
-// import Modal from "../components/Modal.vue"
-import gql from 'graphql-tag'
+import { gql } from 'graphql-tag'
 
 export default {
     async setup() {

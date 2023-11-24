@@ -9,11 +9,14 @@
         "postinstall": "nuxt prepare",
         "start": "nuxt start",
         "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix .",
-        "format": "prettier .  --write"
+        "format": "prettier .  --write",
+        "analyze bundle": "npx nuxi analyze"
     },
     "devDependencies": {
+        "@antfu/eslint-config": "^2.1.0",
         "@nuxt/image-edge": "^1.0.0-28020728.5df24eb",
         "@nuxtjs/apollo": "^5.0.0-alpha.6",
+        "@nuxtjs/eslint-config-typescript": "^12.1.0",
         "eslint": "^8.53.0",
         "eslint-config-prettier": "^9.0.0",
         "eslint-plugin-vue": "^9.18.1",

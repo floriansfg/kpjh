@@ -55,7 +55,7 @@ export default {
         window.addEventListener('scroll', this.handleScroll)
     },
     methods: {
-        handleScroll(e) {
+        handleScroll() {
             this.fixedBar = window.scrollY > 40
         },
     },

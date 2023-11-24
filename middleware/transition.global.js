@@ -1,6 +1,6 @@
 export default defineNuxtRouteMiddleware((to, from) => {
     const transition = {
-        name: to.path == '/' || from.path == '/' ? 'fullfade' : 'fade',
+        name: to.path === '/' || from.path === '/' ? 'fullfade' : 'fade',
         mode: 'out-in',
     }
 

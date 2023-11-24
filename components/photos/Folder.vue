@@ -2,6 +2,7 @@
     <div class="accordion accordion-flush">
         <div
             v-for="(folder, index) in folders"
+            :key="index"
             class="accordion-item"
         >
             <h2 class="accordion-header">
@@ -53,8 +54,8 @@
             :first-image-id="clickedImage"
             :images="images.map((image) => image.thumbnailLink)"
             width="80vw"
-            @nextImage="nextImage"
-            @prevImage="prevImage"
+            @next-image="nextImage"
+            @prev-image="prevImage"
         />
         <div
             v-if="!images[clickedImage].loaded"
@@ -84,7 +85,16 @@ import pkg from 'file-saver'
 const { saveAs } = pkg
 
 export default {
-    props: ['folderId', 'open'],
+    props: {
+        folderId: {
+            type: String,
+            required: true
+        },
+        open: {
+            type: Boolean,
+            default: false
+        }
+    },
     data() {
         return {
             folders: [],
@@ -97,19 +107,19 @@ export default {
     },
     watch: {
         // It listens to the change in prop name
-        open: async function () {
+        open: function () {
             this.loadFolder()
         },
     },
-    async created() {
+    created() {
         if (this.open) this.loadFolder()
     },
     methods: {
         async loadFolder() {
             if (
                 useState('loggedIn').value &&
-                this.folders.length == 0 &&
-                this.images.length == 0
+                this.folders.length === 0 &&
+                this.images.length === 0
             ) {
                 const {
                     data: {
@@ -151,6 +161,7 @@ export default {
                 const url = URL.createObjectURL(blob)
                 return url
             } catch (error) {
+                // eslint-disable-next-line no-console
                 console.error(error)
             }
         },

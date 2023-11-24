@@ -41,7 +41,12 @@ export default {
         LMarker,
         LIcon,
     },
-    props: ['location'],
+    props: {
+        location: {
+            type: Array,
+            default: () => [0, 0],
+        }
+    },
     data() {
         return {
             zoom: 10,
@@ -52,9 +57,8 @@ export default {
     },
     async mounted() {
         await nextTick()
-        let that = this
-        setTimeout(function () {
-            that.showMap = true
+        setTimeout(() => {
+            this.showMap = true
         }, 1000)
     },
     methods: {

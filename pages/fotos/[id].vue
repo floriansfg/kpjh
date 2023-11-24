@@ -34,7 +34,7 @@
             >
                 <Folder
                     :folder-id="album.folderId"
-                    open="true"
+                    :open="true"
                 />
             </div>
             <div
@@ -63,7 +63,6 @@
 </template>
 <script>
 export default {
-    props: ['album'],
     emits: ['back'],
     async setup() {
         const query = gql`
@@ -88,7 +87,6 @@ export default {
                 value: { album },
             },
         } = await useAsyncQuery(query, variables)
-        //console.log(album)
         return { album }
     },
 }

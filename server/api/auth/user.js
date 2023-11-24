@@ -1,4 +1,4 @@
-export default defineEventHandler(async (event) => {
+export default defineEventHandler((event) => {
     if (event.context.auth) {
         return event.context.auth
     }

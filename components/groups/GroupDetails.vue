@@ -18,7 +18,12 @@
 </template>
 <script>
 export default {
-    props: ['groupData'],
+    props: {
+        groupData: {
+            type: Object,
+            required: true,
+        },
+    },
 }
 </script>
 <style scoped>

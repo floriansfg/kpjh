@@ -36,7 +36,12 @@
 </template>
 <script>
 export default {
-    props: ['gruppe'],
+    props: {
+        gruppe: {
+            type: Object,
+            required: true,
+        },
+    },
     data() {
         return {
             showDetails: false,

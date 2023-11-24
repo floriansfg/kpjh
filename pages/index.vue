@@ -29,8 +29,8 @@
             <h4 class="text-center">Aktuelles</h4>
             <div class="timeline">
                 <div
-                    v-for="event in events"
-                    v-if="events"
+                    v-for="(event, index) in events"
+                    :key="`event-${index}`"
                     class="event"
                 >
                     <Event
@@ -57,15 +57,9 @@
 </template>
 
 <script>
-import gql from 'graphql-tag'
-import 'vue3-carousel/dist/carousel.css'
-import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
+import { gql } from 'graphql-tag'
 
 export default {
-    components: {
-        Carousel,
-        Slide,
-    },
     async setup() {
         const query = gql`
             query {
@@ -120,8 +114,10 @@ export default {
         } = await useAsyncQuery(query)
         //    const { data} = await useAsyncQuery(query2)
 
-        diashows = diashows ? diashows : []
-        //const { data: { value: {images: {items: diashow}} }} = await useAsyncQuery(query2)
+        diashows = diashows || []
+        events = events || []
+        downloads = downloads || []
+        // const { data: { value: {images: {items: diashow}} }} = await useAsyncQuery(query2)
         return { events, diashows, downloads }
     },
 }
@@ -137,19 +133,19 @@ header {
     margin-bottom: 50px;
     filter: drop-shadow(0px 0px 16px rgb(0 0 0 / 0.5));
     position: relative;
-}
 
-header::before {
-    content: '';
-    width: 100%;
-    height: 100px;
-    z-index: 3;
-    background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0.547) 0%,
-        rgba(255, 255, 255, 0) 100%
-    );
-    position: absolute;
+    &::before {
+        content: '';
+        width: 100%;
+        height: 100px;
+        z-index: 3;
+        background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.547) 0%,
+            rgba(255, 255, 255, 0) 100%
+        );
+        position: absolute;
+    }
 }
 
 header :deep(img) {

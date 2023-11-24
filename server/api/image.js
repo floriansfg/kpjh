@@ -4,15 +4,15 @@ export default defineEventHandler(async (event) => {
     // Grab the parameter from the route
     if (
         event.context.auth &&
-        (event.context.auth.userType == USER_TYPES.user ||
-            event.context.auth.userType == USER_TYPES.groupLeader)
+        (event.context.auth.userType === USER_TYPES.user ||
+            event.context.auth.userType === USER_TYPES.groupLeader)
     ) {
         const fileId = getQuery(event).id
         if (!fileId)
             throw createError({ statusCode: 400, statusMessage: 'No ImageId' })
         const file = await event.context.drive.files.get(
             {
-                fileId: fileId,
+                fileId,
                 alt: 'media',
             },
             {

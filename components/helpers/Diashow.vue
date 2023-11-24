@@ -63,7 +63,10 @@ export default {
         Slide,
     },
     props: {
-        images: Array,
+        images: {
+            type: Array,
+            default: () => [],
+        },
         firstImageId: {
             type: Number,
             default: 0,
@@ -79,7 +82,7 @@ export default {
         },
         transition: {
             type: Number,
-            default: '0',
+            default: 0,
         },
     },
     emits: ['prevImage', 'nextImage'],
@@ -88,7 +91,7 @@ export default {
             currentImg: this.firstImageId,
         }
     },
-    async mounted() {
+    mounted() {
         if (this.firstImageId) {
             this.$refs.myCarousel.slideTo(this.firstImageId)
         }

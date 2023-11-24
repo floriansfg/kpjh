@@ -4,7 +4,8 @@
             <h3>Aktuelle Downloads</h3>
         </div>
         <div
-            v-for="download in downloads"
+            v-for="(download, index) in downloads"
+            :key="index"
             class="downloads"
         >
             <div
@@ -37,7 +38,12 @@ import pkg from 'file-saver'
 const { saveAs } = pkg
 
 export default {
-    props: ['downloads'],
+    props: {
+        downloads: {
+            type: Array,
+            required: true,
+        }
+    },
     methods: {
         downloadPdf(pdfToDownload) {
             saveAs(pdfToDownload.pdf.url, pdfToDownload.title)

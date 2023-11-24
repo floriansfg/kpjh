@@ -5,8 +5,8 @@ export default defineEventHandler(async (event) => {
     if (
         folderId &&
         event.context.auth &&
-        (event.context.auth.userType == USER_TYPES.user ||
-            event.context.auth.userType == USER_TYPES.groupLeader)
+        (event.context.auth.userType === USER_TYPES.user ||
+            event.context.auth.userType === USER_TYPES.groupLeader)
     ) {
         if (!folderId)
             throw createError({ statusCode: 400, statusMessage: 'No FolderId' })

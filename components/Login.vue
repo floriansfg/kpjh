@@ -25,7 +25,8 @@
                         class="form-select"
                     >
                         <option
-                            v-for="userType in userTypes"
+                            v-for="(userType, index) in userTypes"
+                            :key="index"
                             :value="userType.value"
                         >
                             {{ userType.text }}
@@ -70,7 +71,7 @@
 </template>
 
 <script>
-import { USER_TYPES } from '/enums/enums.js'
+import { USER_TYPES } from "../enums/enums.js"
 
 export default {
     data() {
@@ -87,7 +88,7 @@ export default {
     },
     methods: {
         async submit() {
-            const { data } = await useFetch('/api/auth/login', {
+            await useFetch('/api/auth/login', {
                 method: 'POST',
                 body: {
                     userType: this.selectedUserType,

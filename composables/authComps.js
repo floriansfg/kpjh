@@ -4,7 +4,6 @@ export const useLogout = () => {
     authCookie.value = null
     useState('loggedIn').value = false
     useState('userType').value = null
-    console.log('logged out')
 }
 
 export const useLogin = () => {
