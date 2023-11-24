@@ -3,7 +3,7 @@ import { U as USER_TYPES } from './enums.mjs';
 
 const listImages = defineEventHandler(async (event) => {
   const folderId = getQuery(event).id;
-  if (folderId && event.context.auth && (event.context.auth.userType == USER_TYPES.user || event.context.auth.userType == USER_TYPES.groupLeader)) {
+  if (folderId && event.context.auth && (event.context.auth.userType === USER_TYPES.user || event.context.auth.userType === USER_TYPES.groupLeader)) {
     if (!folderId)
       throw createError({ statusCode: 400, statusMessage: "No FolderId" });
     try {

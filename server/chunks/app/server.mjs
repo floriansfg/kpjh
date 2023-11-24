@@ -19,7 +19,7 @@ import { wrap, dep } from 'optimism';
 import { equal } from '@wry/equality';
 import { Trie } from '@wry/trie';
 import { ssrRenderAttrs, ssrRenderStyle, ssrRenderSlot, ssrRenderSuspense, ssrRenderComponent, ssrRenderVNode, ssrRenderAttr, ssrRenderList, ssrInterpolate } from 'vue/server-renderer';
-import gql from 'graphql-tag';
+import { gql } from 'graphql-tag';
 import { u as useRuntimeConfig$1 } from '../nitro/node-server.mjs';
 import 'node-fetch-native/polyfill';
 import 'node:http';
@@ -617,7 +617,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/datenschutz-937b9596.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/datenschutz-4ab0d0df.mjs').then((m) => m.default || m)
   },
   {
     name: "fotos-id",
@@ -625,7 +625,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/_id_-092aa82d.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/_id_-6658b560.mjs').then((m) => m.default || m)
   },
   {
     name: "fotos",
@@ -633,7 +633,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/index-04b1a385.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-9728f3ca.mjs').then((m) => m.default || m)
   },
   {
     name: "gruppen",
@@ -641,7 +641,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/gruppen-d399b367.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/gruppen-e201dc6b.mjs').then((m) => m.default || m)
   },
   {
     name: "impressum",
@@ -649,7 +649,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/impressum-183a3bc7.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/impressum-0f8b6d66.mjs').then((m) => m.default || m)
   },
   {
     name: "index",
@@ -657,7 +657,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/index-9f3c1f49.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-4c47ae49.mjs').then((m) => m.default || m)
   }
 ];
 const routerOptions0 = {
@@ -1141,7 +1141,7 @@ function defineNuxtLink(options) {
   });
 }
 const __nuxt_component_0$3 = /* @__PURE__ */ defineNuxtLink({ componentName: "NuxtLink" });
-const auth_45global = /* @__PURE__ */ defineNuxtRouteMiddleware(async (to, from) => {
+const auth_45global = /* @__PURE__ */ defineNuxtRouteMiddleware(async () => {
   let __temp, __restore;
   const { data } = ([__temp, __restore] = executeAsync(() => useFetch("/api/auth/user", "$2Mq4CATJT7")), __temp = await __temp, __restore(), __temp);
   if (data.value && data.value.userType) {
@@ -1151,7 +1151,7 @@ const auth_45global = /* @__PURE__ */ defineNuxtRouteMiddleware(async (to, from)
 });
 const transition_45global = /* @__PURE__ */ defineNuxtRouteMiddleware((to, from) => {
   const transition = {
-    name: to.path == "/" || from.path == "/" ? "fullfade" : "fade",
+    name: to.path === "/" || from.path === "/" ? "fullfade" : "fade",
     mode: "out-in"
   };
   from.meta.pageTransition = transition;
@@ -8108,7 +8108,16 @@ const _export_sfc = (sfc, props) => {
   return target;
 };
 const _sfc_main$6 = {
-  props: ["buttonColor", "show"],
+  props: {
+    buttonColor: {
+      type: String,
+      default: "white"
+    },
+    show: {
+      type: Boolean,
+      default: false
+    }
+  },
   emits: ["close"],
   methods: {
     close() {
@@ -8118,9 +8127,9 @@ const _sfc_main$6 = {
 };
 function _sfc_ssrRender$4(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
   if ($props.show) {
-    _push(`<div${ssrRenderAttrs(mergeProps({ class: "ModalWrapper" }, _attrs))} data-v-7f0f8154><div class="Modal" data-v-7f0f8154><svg viewBox="0 0 45 45" style="${ssrRenderStyle({ stroke: $props.buttonColor })}" class="closeButton" xmlns="http://www.w3.org/2000/svg" data-v-7f0f8154><path d="M11.3137 10.9602L33.5876 33.234" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" data-v-7f0f8154></path><path d="M10.9602 33.234L33.2341 10.9602" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" data-v-7f0f8154></path></svg>`);
+    _push(`<div${ssrRenderAttrs(mergeProps({ class: "ModalWrapper" }, _attrs))} data-v-158c8507><div class="Modal" data-v-158c8507><svg viewBox="0 0 45 45" style="${ssrRenderStyle({ stroke: $props.buttonColor })}" class="closeButton" xmlns="http://www.w3.org/2000/svg" data-v-158c8507><path d="M11.3137 10.9602L33.5876 33.234" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" data-v-158c8507></path><path d="M10.9602 33.234L33.2341 10.9602" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" data-v-158c8507></path></svg>`);
     ssrRenderSlot(_ctx.$slots, "default", {}, null, _push, _parent);
-    _push(`</div><div class="Backdrop" data-v-7f0f8154></div></div>`);
+    _push(`</div><div class="Backdrop" data-v-158c8507></div></div>`);
   } else {
     _push(`<!---->`);
   }
@@ -8131,7 +8140,7 @@ _sfc_main$6.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/helpers/Modal.vue");
   return _sfc_setup$6 ? _sfc_setup$6(props, ctx) : void 0;
 };
-const __nuxt_component_0$2 = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["ssrRender", _sfc_ssrRender$4], ["__scopeId", "data-v-7f0f8154"]]);
+const __nuxt_component_0$2 = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["ssrRender", _sfc_ssrRender$4], ["__scopeId", "data-v-158c8507"]]);
 const USER_TYPES = Object.freeze({
   user: "user",
   groupLeader: "groupLeader"
@@ -8182,11 +8191,11 @@ function _sfc_ssrRender$3(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
   }, _attrs), {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
-        _push2(`<form class="loginForm" data-v-5836e423${_scopeId}><svg viewBox="0 0 34 41" class="lockIcon" xmlns="http://www.w3.org/2000/svg" fill="#304C5C" data-v-5836e423${_scopeId}><path d="M32.0002 18.4503H30.0003V13.3252C30.0003 5.94521 24.2003 0 17 0C9.79975 0 3.99969 5.94503 3.99969 13.3252V18.4503H1.99984C0.899796 18.4503 0 19.3726 0 20.5001V38.9502C0 40.0777 0.89985 41 1.99984 41H32.0002C33.1002 41 34 40.0777 34 38.9502V20.5001C34 19.3726 33.1002 18.4503 32.0002 18.4503ZM7.99991 13.3252C7.99991 8.20022 11.9996 4.10057 16.9996 4.10057C21.9997 4.10057 25.9994 8.20022 25.9994 13.3252V18.4503H7.99919L7.99991 13.3252Z" data-v-5836e423${_scopeId}></path></svg><div class="form-group" data-v-5836e423${_scopeId}><select class="form-select" data-v-5836e423${_scopeId}><!--[-->`);
-        ssrRenderList($data.userTypes, (userType) => {
-          _push2(`<option${ssrRenderAttr("value", userType.value)} data-v-5836e423${_scopeId}>${ssrInterpolate(userType.text)}</option>`);
+        _push2(`<form class="loginForm" data-v-15416ac2${_scopeId}><svg viewBox="0 0 34 41" class="lockIcon" xmlns="http://www.w3.org/2000/svg" fill="#304C5C" data-v-15416ac2${_scopeId}><path d="M32.0002 18.4503H30.0003V13.3252C30.0003 5.94521 24.2003 0 17 0C9.79975 0 3.99969 5.94503 3.99969 13.3252V18.4503H1.99984C0.899796 18.4503 0 19.3726 0 20.5001V38.9502C0 40.0777 0.89985 41 1.99984 41H32.0002C33.1002 41 34 40.0777 34 38.9502V20.5001C34 19.3726 33.1002 18.4503 32.0002 18.4503ZM7.99991 13.3252C7.99991 8.20022 11.9996 4.10057 16.9996 4.10057C21.9997 4.10057 25.9994 8.20022 25.9994 13.3252V18.4503H7.99919L7.99991 13.3252Z" data-v-15416ac2${_scopeId}></path></svg><div class="form-group" data-v-15416ac2${_scopeId}><select class="form-select" data-v-15416ac2${_scopeId}><!--[-->`);
+        ssrRenderList($data.userTypes, (userType, index) => {
+          _push2(`<option${ssrRenderAttr("value", userType.value)} data-v-15416ac2${_scopeId}>${ssrInterpolate(userType.text)}</option>`);
         });
-        _push2(`<!--]--></select><input id="passwordInput"${ssrRenderAttr("value", $data.password)} type="password" class="form-control" placeholder="Password" data-v-5836e423${_scopeId}></div><button type="submit" class="btn btn-primary" data-v-5836e423${_scopeId}> Anmelden </button><div class="info" data-v-5836e423${_scopeId}><svg viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-5836e423${_scopeId}><path d="M10.5 4.16439e-05C7.71516 4.16439e-05 5.04456 1.10634 3.07539 3.07542C1.1063 5.04451 0 7.71543 0 10.5C0 13.2846 1.1063 15.9554 3.07539 17.9246C5.04448 19.8937 7.7154 21 10.5 21C13.2846 21 15.9554 19.8937 17.9246 17.9246C19.8937 15.9555 21 13.2846 21 10.5C21 8.65693 20.5148 6.84622 19.5932 5.25001C18.6717 3.6538 17.3462 2.3283 15.75 1.40675C14.1538 0.485209 12.343 0 10.5 0L10.5 4.16439e-05ZM11.9001 15.8667C11.9001 16.3669 11.6332 16.829 11.2 17.0792C10.7668 17.3293 10.2332 17.3293 9.79996 17.0792C9.36683 16.829 9.09991 16.3669 9.09991 15.8667V9.80006C9.09991 9.29989 9.36684 8.83781 9.79996 8.58764C10.2332 8.33748 10.7668 8.33748 11.2 8.58764C11.6332 8.8378 11.9001 9.29989 11.9001 9.80006V15.8667ZM10.5 6.53339C10.1287 6.53339 9.77262 6.38593 9.51008 6.12323C9.24755 5.8607 9.09992 5.50456 9.09992 5.13331C9.09992 4.76205 9.24755 4.40593 9.51008 4.14339C9.77261 3.88086 10.1287 3.7334 10.5 3.7334C10.8713 3.7334 11.2274 3.88086 11.4899 4.14339C11.7525 4.40593 11.9001 4.76206 11.9001 5.13331C11.9001 5.50457 11.7525 5.86069 11.4899 6.12323C11.2274 6.38593 10.8713 6.53339 10.5 6.53339Z" fill="#304C5C" data-v-5836e423${_scopeId}></path></svg><span data-v-5836e423${_scopeId}>Melde dich bei deinem Leiter um das Passwort zu erhalten</span><div data-v-5836e423${_scopeId}></div></div></form>`);
+        _push2(`<!--]--></select><input id="passwordInput"${ssrRenderAttr("value", $data.password)} type="password" class="form-control" placeholder="Password" data-v-15416ac2${_scopeId}></div><button type="submit" class="btn btn-primary" data-v-15416ac2${_scopeId}> Anmelden </button><div class="info" data-v-15416ac2${_scopeId}><svg viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-15416ac2${_scopeId}><path d="M10.5 4.16439e-05C7.71516 4.16439e-05 5.04456 1.10634 3.07539 3.07542C1.1063 5.04451 0 7.71543 0 10.5C0 13.2846 1.1063 15.9554 3.07539 17.9246C5.04448 19.8937 7.7154 21 10.5 21C13.2846 21 15.9554 19.8937 17.9246 17.9246C19.8937 15.9555 21 13.2846 21 10.5C21 8.65693 20.5148 6.84622 19.5932 5.25001C18.6717 3.6538 17.3462 2.3283 15.75 1.40675C14.1538 0.485209 12.343 0 10.5 0L10.5 4.16439e-05ZM11.9001 15.8667C11.9001 16.3669 11.6332 16.829 11.2 17.0792C10.7668 17.3293 10.2332 17.3293 9.79996 17.0792C9.36683 16.829 9.09991 16.3669 9.09991 15.8667V9.80006C9.09991 9.29989 9.36684 8.83781 9.79996 8.58764C10.2332 8.33748 10.7668 8.33748 11.2 8.58764C11.6332 8.8378 11.9001 9.29989 11.9001 9.80006V15.8667ZM10.5 6.53339C10.1287 6.53339 9.77262 6.38593 9.51008 6.12323C9.24755 5.8607 9.09992 5.50456 9.09992 5.13331C9.09992 4.76205 9.24755 4.40593 9.51008 4.14339C9.77261 3.88086 10.1287 3.7334 10.5 3.7334C10.8713 3.7334 11.2274 3.88086 11.4899 4.14339C11.7525 4.40593 11.9001 4.76206 11.9001 5.13331C11.9001 5.50457 11.7525 5.86069 11.4899 6.12323C11.2274 6.38593 10.8713 6.53339 10.5 6.53339Z" fill="#304C5C" data-v-15416ac2${_scopeId}></path></svg><span data-v-15416ac2${_scopeId}>Melde dich bei deinem Leiter um das Passwort zu erhalten</span><div data-v-15416ac2${_scopeId}></div></div></form>`);
       } else {
         return [
           createVNode("form", {
@@ -8206,11 +8215,12 @@ function _sfc_ssrRender$3(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
                 "onUpdate:modelValue": ($event) => $data.selectedUserType = $event,
                 class: "form-select"
               }, [
-                (openBlock(true), createBlock(Fragment$1, null, renderList($data.userTypes, (userType) => {
+                (openBlock(true), createBlock(Fragment$1, null, renderList($data.userTypes, (userType, index) => {
                   return openBlock(), createBlock("option", {
+                    key: index,
                     value: userType.value
                   }, toDisplayString(userType.text), 9, ["value"]);
-                }), 256))
+                }), 128))
               ], 8, ["onUpdate:modelValue"]), [
                 [vModelSelect, $data.selectedUserType]
               ]),
@@ -8256,7 +8266,7 @@ _sfc_main$5.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/Login.vue");
   return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
 };
-const __nuxt_component_1$2 = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["ssrRender", _sfc_ssrRender$3], ["__scopeId", "data-v-5836e423"]]);
+const __nuxt_component_1$2 = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["ssrRender", _sfc_ssrRender$3], ["__scopeId", "data-v-15416ac2"]]);
 const _imports_0$1 = "data:image/png;base64,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";
 const _sfc_main$4 = {
   data() {
@@ -8269,7 +8279,7 @@ const _sfc_main$4 = {
     window.addEventListener("scroll", this.handleScroll);
   },
   methods: {
-    handleScroll(e) {
+    handleScroll() {
       this.fixedBar = window.scrollY > 40;
     }
   }
@@ -8279,14 +8289,14 @@ function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
   const _component_Login = __nuxt_component_1$2;
   _push(`<div${ssrRenderAttrs(mergeProps({
     class: ["nav", { fixed: $data.fixedBar, open: $data.openMenu }]
-  }, _attrs))} data-v-009dbd85><div class="wrapper" data-v-009dbd85>`);
+  }, _attrs))} data-v-ed74c6ac><div class="wrapper" data-v-ed74c6ac>`);
   _push(ssrRenderComponent(_component_NuxtLink, {
     to: "/",
     class: "logo"
   }, {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
-        _push2(`<img${ssrRenderAttr("src", _imports_0$1)} data-v-009dbd85${_scopeId}> KJG<br data-v-009dbd85${_scopeId}>Pfarrjugend Hüls `);
+        _push2(`<img${ssrRenderAttr("src", _imports_0$1)} data-v-ed74c6ac${_scopeId}> KJG<br data-v-ed74c6ac${_scopeId}>Pfarrjugend Hüls `);
       } else {
         return [
           createVNode("img", { src: _imports_0$1 }),
@@ -8298,7 +8308,7 @@ function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
     }),
     _: 1
   }, _parent));
-  _push(`<div class="links" data-v-009dbd85>`);
+  _push(`<div class="links" data-v-ed74c6ac>`);
   _push(ssrRenderComponent(_component_NuxtLink, { to: "/gruppen" }, {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
@@ -8324,11 +8334,11 @@ function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
     _: 1
   }, _parent));
   if (("useState" in _ctx ? _ctx.useState : unref(useState))("loggedIn").value) {
-    _push(`<a class="btn-primary" data-v-009dbd85>Abmelden</a>`);
+    _push(`<a class="btn-primary" data-v-ed74c6ac>Abmelden</a>`);
   } else {
-    _push(`<a class="btn-primary" data-v-009dbd85>Anmelden</a>`);
+    _push(`<a class="btn-primary" data-v-ed74c6ac>Anmelden</a>`);
   }
-  _push(`</div><svg class="menuButton" viewBox="0 0 448 512" fill="white" xmlns="http://www.w3.org/2000/svg" data-v-009dbd85><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" data-v-009dbd85></path></svg></div>`);
+  _push(`</div><svg class="menuButton" viewBox="0 0 448 512" fill="white" xmlns="http://www.w3.org/2000/svg" data-v-ed74c6ac><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" data-v-ed74c6ac></path></svg></div>`);
   _push(ssrRenderComponent(_component_Login, null, null, _parent));
   _push(`</div>`);
 }
@@ -8338,7 +8348,7 @@ _sfc_main$4.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/layoutComponents/Navbar.vue");
   return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
 };
-const __nuxt_component_0$1 = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["ssrRender", _sfc_ssrRender$2], ["__scopeId", "data-v-009dbd85"]]);
+const __nuxt_component_0$1 = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["ssrRender", _sfc_ssrRender$2], ["__scopeId", "data-v-ed74c6ac"]]);
 const __nuxt_component_1$1 = /* @__PURE__ */ defineComponent({
   name: "NuxtLoadingIndicator",
   props: {
@@ -8545,13 +8555,16 @@ const RouteProvider = /* @__PURE__ */ defineComponent({
 });
 const _sfc_main$3 = {
   props: {
-    items: Array
+    items: {
+      type: Array,
+      default: () => []
+    }
   }
 };
 function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
-  _push(`<div${ssrRenderAttrs(mergeProps({ class: "pictures" }, _attrs))} data-v-682d8131><div class="d-flex" data-v-682d8131><!--[-->`);
+  _push(`<div${ssrRenderAttrs(mergeProps({ class: "pictures" }, _attrs))} data-v-1e1f6ee7><div class="d-flex" data-v-1e1f6ee7><!--[-->`);
   ssrRenderList($props.items, (item, index) => {
-    _push(`<div class="px-3 py-3" data-v-682d8131>`);
+    _push(`<div class="px-3 py-3" data-v-1e1f6ee7>`);
     ssrRenderSlot(_ctx.$slots, "item", { item }, null, _push, _parent);
     _push(`</div>`);
   });
@@ -8563,7 +8576,7 @@ _sfc_main$3.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/helpers/ImageSlider.vue");
   return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
 };
-const __nuxt_component_0 = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["ssrRender", _sfc_ssrRender$1], ["__scopeId", "data-v-682d8131"]]);
+const __nuxt_component_0 = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["ssrRender", _sfc_ssrRender$1], ["__scopeId", "data-v-1e1f6ee7"]]);
 const useImage = () => {
   return useNuxtApp().$img;
 };
@@ -8727,13 +8740,14 @@ const _sfc_main$2 = {
                 }
             }
         `;
-    const {
+    let {
       data: {
         value: {
           sponsors: { items: sponsors }
         }
       }
     } = await useAsyncQuery(query);
+    sponsors = sponsors || [];
     return { sponsors, isLargeScreen };
   }
 };
@@ -8741,17 +8755,11 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $op
   const _component_ImageSlider = __nuxt_component_0;
   const _component_nuxt_img = __nuxt_component_1;
   const _component_NuxtLink = __nuxt_component_0$3;
-  _push(`<div${ssrRenderAttrs(mergeProps({ class: "container-fluid footer" }, _attrs))} data-v-94d44d69><div class="sponsors" data-v-94d44d69>`);
-  if ($setup.sponsors) {
-    _push(`<!--[-->`);
-    ssrRenderList($setup.sponsors, (sponsor) => {
-      _push(`<div data-v-94d44d69><img class="sponsor"${ssrRenderAttr("src", sponsor.logo.url)} data-v-94d44d69></div>`);
-    });
-    _push(`<!--]-->`);
-  } else {
-    _push(`<!---->`);
-  }
-  _push(`</div>`);
+  _push(`<div${ssrRenderAttrs(mergeProps({ class: "container-fluid footer" }, _attrs))} data-v-fa74ba7f><div class="sponsors" data-v-fa74ba7f><!--[-->`);
+  ssrRenderList($setup.sponsors, (sponsor) => {
+    _push(`<div data-v-fa74ba7f><img class="sponsor"${ssrRenderAttr("src", sponsor.logo.url)} data-v-fa74ba7f></div>`);
+  });
+  _push(`<!--]--></div>`);
   _push(ssrRenderComponent(_component_ImageSlider, {
     class: "sponsorSlider",
     items: $setup.sponsors
@@ -8773,7 +8781,7 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $op
     }),
     _: 1
   }, _parent));
-  _push(`<div class="row wrapper" data-v-94d44d69><div class="col logo" data-v-94d44d69><img class="kjg-logo"${ssrRenderAttr("src", _imports_0)} data-v-94d44d69></div><div class="col links" data-v-94d44d69>`);
+  _push(`<div class="row wrapper" data-v-fa74ba7f><div class="col logo" data-v-fa74ba7f><img class="kjg-logo"${ssrRenderAttr("src", _imports_0)} data-v-fa74ba7f></div><div class="col links" data-v-fa74ba7f>`);
   _push(ssrRenderComponent(_component_NuxtLink, { to: "/" }, {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
@@ -8834,7 +8842,7 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $op
     }),
     _: 1
   }, _parent));
-  _push(`</div><div class="col" data-v-94d44d69><div class="col info" data-v-94d44d69><svg viewBox="0 0 19 23" fill="currentColor" xmlns="http://www.w3.org/2000/svg" data-v-94d44d69><path d="M9.5001 0C4.25643 0 0 4.17113 0 9.30938C0 12.2277 1.37244 15.0195 3.07909 17.2965C5.48048 20.5017 8.48178 22.6625 8.50812 22.6818C9.09883 23.1061 9.90117 23.1061 10.4919 22.6818C10.5183 22.6625 13.5197 20.5017 15.9209 17.2965C17.6276 15.0194 19 12.2276 19 9.30938C19 4.17099 14.7434 0 9.4999 0H9.5001ZM9.5001 5.47636C11.6588 5.47636 13.412 7.19422 13.412 9.30957C13.412 11.4251 11.6588 13.143 9.5001 13.143C7.34141 13.143 5.58816 11.4251 5.58816 9.30957C5.58816 7.19422 7.34141 5.47636 9.5001 5.47636Z" data-v-94d44d69></path></svg><p data-v-94d44d69>Herrenweg 6, 47839 Krefeld-Hüls</p></div><div class="col info" data-v-94d44d69><svg viewBox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg" data-v-94d44d69><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" data-v-94d44d69></path></svg><p data-v-94d44d69>info@kpjh.de</p></div></div></div><div class="devs" data-v-94d44d69><small data-v-94d44d69>von den besten Entwicklern vonne Welt - Flocke&amp;Toni</small></div></div>`);
+  _push(`</div><div class="col" data-v-fa74ba7f><div class="col info" data-v-fa74ba7f><svg viewBox="0 0 19 23" fill="currentColor" xmlns="http://www.w3.org/2000/svg" data-v-fa74ba7f><path d="M9.5001 0C4.25643 0 0 4.17113 0 9.30938C0 12.2277 1.37244 15.0195 3.07909 17.2965C5.48048 20.5017 8.48178 22.6625 8.50812 22.6818C9.09883 23.1061 9.90117 23.1061 10.4919 22.6818C10.5183 22.6625 13.5197 20.5017 15.9209 17.2965C17.6276 15.0194 19 12.2276 19 9.30938C19 4.17099 14.7434 0 9.4999 0H9.5001ZM9.5001 5.47636C11.6588 5.47636 13.412 7.19422 13.412 9.30957C13.412 11.4251 11.6588 13.143 9.5001 13.143C7.34141 13.143 5.58816 11.4251 5.58816 9.30957C5.58816 7.19422 7.34141 5.47636 9.5001 5.47636Z" data-v-fa74ba7f></path></svg><p data-v-fa74ba7f>Herrenweg 6, 47839 Krefeld-Hüls</p></div><div class="col info" data-v-fa74ba7f><svg viewBox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg" data-v-fa74ba7f><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" data-v-fa74ba7f></path></svg><p data-v-fa74ba7f>info@kpjh.de</p></div></div></div><div class="devs" data-v-fa74ba7f><small data-v-fa74ba7f>von den besten Entwicklern vonne Welt - Flocke&amp;Toni</small></div></div>`);
 }
 const _sfc_setup$2 = _sfc_main$2.setup;
 _sfc_main$2.setup = (props, ctx) => {
@@ -8842,7 +8850,7 @@ _sfc_main$2.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/layoutComponents/Footer.vue");
   return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
 };
-const __nuxt_component_3 = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-94d44d69"]]);
+const __nuxt_component_3 = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-fa74ba7f"]]);
 const _sfc_main$1 = {
   __name: "app",
   __ssrInlineRender: true,

@@ -1,6 +1,6 @@
 import { defineEventHandler } from 'h3';
 
-const user = defineEventHandler(async (event) => {
+const user = defineEventHandler((event) => {
   if (event.context.auth) {
     return event.context.auth;
   }

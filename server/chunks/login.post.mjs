@@ -22,12 +22,12 @@ import 'ipx';
 
 const login_post = defineEventHandler(async (event) => {
   const { userType, password } = await readBody(event);
-  const user_pws = {
+  const userPws = {
     user: useRuntimeConfig().userPw,
     groupLeader: useRuntimeConfig().groupleaderPw
   };
-  if (user_pws.hasOwnProperty(userType)) {
-    if (password === user_pws[userType]) {
+  if (Object.prototype.hasOwnProperty.call(userPws, userType)) {
+    if (password === userPws[userType]) {
       const token = jwt.sign(userType, useRuntimeConfig().jwtSecret);
       setCookie(event, "token", token);
       return {
@@ -35,15 +35,12 @@ const login_post = defineEventHandler(async (event) => {
         statusMessage: "success"
       };
     } else {
-      console.log("wrong password");
       throw createError({
         statusCode: 401,
         statusMessage: "Wrong password"
       });
     }
   } else {
-    console.log("invalid type");
-    console.log(userType);
     throw createError({
       statusCode: 401,
       statusMessage: "Invalid usertype"
