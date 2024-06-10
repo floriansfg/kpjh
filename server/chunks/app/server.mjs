@@ -657,7 +657,23 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/index-4c47ae49.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-de335a77.mjs').then((m) => m.default || m)
+  },
+  {
+    name: "kontakt",
+    path: "/kontakt",
+    meta: {},
+    alias: [],
+    redirect: void 0,
+    component: () => import('./_nuxt/kontakt-d4e46d03.mjs').then((m) => m.default || m)
+  },
+  {
+    name: "ueberuns",
+    path: "/ueberuns",
+    meta: {},
+    alias: [],
+    redirect: void 0,
+    component: () => import('./_nuxt/ueberuns-fb03c680.mjs').then((m) => m.default || m)
   }
 ];
 const routerOptions0 = {
@@ -8289,14 +8305,14 @@ function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
   const _component_Login = __nuxt_component_1$2;
   _push(`<div${ssrRenderAttrs(mergeProps({
     class: ["nav", { fixed: $data.fixedBar, open: $data.openMenu }]
-  }, _attrs))} data-v-ed74c6ac><div class="wrapper" data-v-ed74c6ac>`);
+  }, _attrs))} data-v-316f9f48><div class="wrapper" data-v-316f9f48>`);
   _push(ssrRenderComponent(_component_NuxtLink, {
     to: "/",
     class: "logo"
   }, {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
-        _push2(`<img${ssrRenderAttr("src", _imports_0$1)} data-v-ed74c6ac${_scopeId}> KJG<br data-v-ed74c6ac${_scopeId}>Pfarrjugend Hüls `);
+        _push2(`<img${ssrRenderAttr("src", _imports_0$1)} data-v-316f9f48${_scopeId}> KJG<br data-v-316f9f48${_scopeId}>Pfarrjugend Hüls `);
       } else {
         return [
           createVNode("img", { src: _imports_0$1 }),
@@ -8308,7 +8324,19 @@ function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
     }),
     _: 1
   }, _parent));
-  _push(`<div class="links" data-v-ed74c6ac>`);
+  _push(`<div class="links" data-v-316f9f48>`);
+  _push(ssrRenderComponent(_component_NuxtLink, { to: "/ueberuns" }, {
+    default: withCtx((_, _push2, _parent2, _scopeId) => {
+      if (_push2) {
+        _push2(`Über uns`);
+      } else {
+        return [
+          createTextVNode("Über uns")
+        ];
+      }
+    }),
+    _: 1
+  }, _parent));
   _push(ssrRenderComponent(_component_NuxtLink, { to: "/gruppen" }, {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
@@ -8333,12 +8361,24 @@ function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
     }),
     _: 1
   }, _parent));
+  _push(ssrRenderComponent(_component_NuxtLink, { to: "/kontakt" }, {
+    default: withCtx((_, _push2, _parent2, _scopeId) => {
+      if (_push2) {
+        _push2(`Kontakt`);
+      } else {
+        return [
+          createTextVNode("Kontakt")
+        ];
+      }
+    }),
+    _: 1
+  }, _parent));
   if (("useState" in _ctx ? _ctx.useState : unref(useState))("loggedIn").value) {
-    _push(`<a class="btn-primary" data-v-ed74c6ac>Abmelden</a>`);
+    _push(`<a class="btn-primary" data-v-316f9f48>Abmelden</a>`);
   } else {
-    _push(`<a class="btn-primary" data-v-ed74c6ac>Anmelden</a>`);
+    _push(`<a class="btn-primary" data-v-316f9f48>Anmelden</a>`);
   }
-  _push(`</div><svg class="menuButton" viewBox="0 0 448 512" fill="white" xmlns="http://www.w3.org/2000/svg" data-v-ed74c6ac><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" data-v-ed74c6ac></path></svg></div>`);
+  _push(`</div><svg class="menuButton" viewBox="0 0 448 512" fill="white" xmlns="http://www.w3.org/2000/svg" data-v-316f9f48><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" data-v-316f9f48></path></svg></div>`);
   _push(ssrRenderComponent(_component_Login, null, null, _parent));
   _push(`</div>`);
 }
@@ -8348,7 +8388,7 @@ _sfc_main$4.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/layoutComponents/Navbar.vue");
   return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
 };
-const __nuxt_component_0$1 = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["ssrRender", _sfc_ssrRender$2], ["__scopeId", "data-v-ed74c6ac"]]);
+const __nuxt_component_0$1 = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["ssrRender", _sfc_ssrRender$2], ["__scopeId", "data-v-316f9f48"]]);
 const __nuxt_component_1$1 = /* @__PURE__ */ defineComponent({
   name: "NuxtLoadingIndicator",
   props: {

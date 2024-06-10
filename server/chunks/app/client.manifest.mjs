@@ -9,13 +9,18 @@ const client_manifest = {
     "file": "Diashow.9828f1a9.css",
     "src": "Diashow.css"
   },
-  "_DefaultView.c3fa18c1.js": {
+  "Downloads.css": {
+    "resourceType": "style",
+    "file": "Downloads.da5d309f.css",
+    "src": "Downloads.css"
+  },
+  "_DefaultView.5c9cd073.js": {
     "resourceType": "script",
     "module": true,
     "css": [
       "DefaultView.df3464d6.css"
     ],
-    "file": "DefaultView.c3fa18c1.js",
+    "file": "DefaultView.5c9cd073.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ]
@@ -24,14 +29,15 @@ const client_manifest = {
     "file": "DefaultView.df3464d6.css",
     "resourceType": "style"
   },
-  "_Diashow.e9a444cb.js": {
+  "_Diashow.5b91838a.js": {
     "resourceType": "script",
     "module": true,
     "css": [
       "Diashow.9828f1a9.css"
     ],
-    "file": "Diashow.e9a444cb.js",
+    "file": "Diashow.5b91838a.js",
     "imports": [
+      "__commonjsHelpers.87174ba5.js",
       "node_modules/nuxt/dist/app/entry.js"
     ]
   },
@@ -39,22 +45,53 @@ const client_manifest = {
     "file": "Diashow.9828f1a9.css",
     "resourceType": "style"
   },
-  "_FileSaver.min.67eb4eb5.js": {
+  "_Downloads.90c9274a.js": {
     "resourceType": "script",
     "module": true,
-    "file": "FileSaver.min.67eb4eb5.js",
+    "css": [
+      "Downloads.da5d309f.css"
+    ],
+    "file": "Downloads.90c9274a.js",
     "imports": [
-      "_Diashow.e9a444cb.js"
+      "_FileSaver.min.29897430.js",
+      "node_modules/nuxt/dist/app/entry.js"
     ]
   },
-  "_leaflet-src.e77fd4bb.js": {
+  "Downloads.da5d309f.css": {
+    "file": "Downloads.da5d309f.css",
+    "resourceType": "style"
+  },
+  "_FileSaver.min.29897430.js": {
     "resourceType": "script",
     "module": true,
-    "file": "leaflet-src.e77fd4bb.js",
+    "file": "FileSaver.min.29897430.js",
     "imports": [
-      "_Diashow.e9a444cb.js"
+      "__commonjsHelpers.87174ba5.js"
+    ]
+  },
+  "__commonjsHelpers.87174ba5.js": {
+    "resourceType": "script",
+    "module": true,
+    "file": "_commonjsHelpers.87174ba5.js"
+  },
+  "_leaflet-src.57deb872.js": {
+    "resourceType": "script",
+    "module": true,
+    "file": "leaflet-src.57deb872.js",
+    "imports": [
+      "__commonjsHelpers.87174ba5.js"
     ],
     "isDynamicEntry": true
+  },
+  "assets/Satzung-KPJH.pdf": {
+    "file": "Satzung-KPJH.068e13f3.pdf",
+    "src": "assets/Satzung-KPJH.pdf"
+  },
+  "assets/board.jpeg": {
+    "resourceType": "image",
+    "mimeType": "image/jpeg",
+    "file": "board.3b27d74b.jpeg",
+    "src": "assets/board.jpeg"
   },
   "assets/fonts/Avenir_Next/AvenirNext-Bold.ttf": {
     "resourceType": "font",
@@ -113,7 +150,7 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "error-404.539495fd.js",
+    "file": "error-404.2d10bc10.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -133,7 +170,7 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "error-500.a71d386c.js",
+    "file": "error-500.44a456e0.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -174,7 +211,7 @@ const client_manifest = {
   },
   "node_modules/nuxt/dist/app/entry.css": {
     "resourceType": "style",
-    "file": "entry.7201c650.css",
+    "file": "entry.4fd18275.css",
     "src": "node_modules/nuxt/dist/app/entry.css"
   },
   "node_modules/nuxt/dist/app/entry.js": {
@@ -188,17 +225,17 @@ const client_manifest = {
       "AvenirNext-Italic.4cc1bb13.ttf"
     ],
     "css": [
-      "entry.7201c650.css"
+      "entry.4fd18275.css"
     ],
     "dynamicImports": [
       "virtual:nuxt:/home/runner/work/kpjh/kpjh/.nuxt/error-component.mjs"
     ],
-    "file": "entry.bbbe8ba6.js",
+    "file": "entry.7eda5526.js",
     "isEntry": true,
     "src": "node_modules/nuxt/dist/app/entry.js"
   },
-  "entry.7201c650.css": {
-    "file": "entry.7201c650.css",
+  "entry.4fd18275.css": {
+    "file": "entry.4fd18275.css",
     "resourceType": "style"
   },
   "kjg_kpjh_logo_white.14b584b7.svg": {
@@ -235,9 +272,9 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "datenschutz.2775af97.js",
+    "file": "datenschutz.5b10c572.js",
     "imports": [
-      "_DefaultView.c3fa18c1.js",
+      "_DefaultView.5c9cd073.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
@@ -273,7 +310,7 @@ const client_manifest = {
       "node_modules/leaflet/dist/leaflet-src.esm.js",
       "node_modules/leaflet/dist/leaflet-src.esm.js",
       "node_modules/leaflet/dist/leaflet-src.esm.js",
-      "_leaflet-src.e77fd4bb.js",
+      "_leaflet-src.57deb872.js",
       "node_modules/leaflet/dist/leaflet-src.esm.js",
       "node_modules/leaflet/dist/leaflet-src.esm.js",
       "node_modules/leaflet/dist/leaflet-src.esm.js",
@@ -284,12 +321,13 @@ const client_manifest = {
       "node_modules/leaflet/dist/leaflet-src.esm.js",
       "node_modules/leaflet/dist/leaflet-src.esm.js"
     ],
-    "file": "_id_.e12da814.js",
+    "file": "_id_.450cdd28.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_Diashow.e9a444cb.js",
-      "_FileSaver.min.67eb4eb5.js",
-      "_DefaultView.c3fa18c1.js"
+      "_Diashow.5b91838a.js",
+      "_FileSaver.min.29897430.js",
+      "_DefaultView.5c9cd073.js",
+      "__commonjsHelpers.87174ba5.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/fotos/[id].vue"
@@ -307,10 +345,10 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "index.f5b1fc86.js",
+    "file": "index.d0d25fad.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_DefaultView.c3fa18c1.js"
+      "_DefaultView.5c9cd073.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/fotos/index.vue"
@@ -331,11 +369,12 @@ const client_manifest = {
       "imageError.ef762fd4.svg"
     ],
     "css": [],
-    "file": "gruppen.ec0d6b27.js",
+    "file": "gruppen.e24064f4.js",
     "imports": [
-      "_Diashow.e9a444cb.js",
+      "_Diashow.5b91838a.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_DefaultView.c3fa18c1.js"
+      "_DefaultView.5c9cd073.js",
+      "__commonjsHelpers.87174ba5.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/gruppen.vue"
@@ -358,9 +397,9 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "impressum.c23e2b0d.js",
+    "file": "impressum.f60ded28.js",
     "imports": [
-      "_DefaultView.c3fa18c1.js",
+      "_DefaultView.5c9cd073.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
@@ -372,28 +411,60 @@ const client_manifest = {
   },
   "pages/index.css": {
     "resourceType": "style",
-    "file": "index.fbe83a46.css",
+    "file": "index.ce16057c.css",
     "src": "pages/index.css"
   },
   "pages/index.vue": {
     "resourceType": "script",
     "module": true,
     "assets": [
-      "kjg_kpjh_logo.523b7780.svg",
       "header.10c98faf.svg"
     ],
     "css": [],
-    "file": "index.ad3a6fbc.js",
+    "file": "index.d9542541.js",
     "imports": [
-      "_Diashow.e9a444cb.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_FileSaver.min.67eb4eb5.js"
+      "__commonjsHelpers.87174ba5.js",
+      "_Downloads.90c9274a.js",
+      "_FileSaver.min.29897430.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/index.vue"
   },
-  "index.fbe83a46.css": {
-    "file": "index.fbe83a46.css",
+  "index.ce16057c.css": {
+    "file": "index.ce16057c.css",
+    "resourceType": "style"
+  },
+  "header.10c98faf.svg": {
+    "file": "header.10c98faf.svg",
+    "resourceType": "image",
+    "mimeType": "image/svg+xml"
+  },
+  "pages/kontakt.css": {
+    "resourceType": "style",
+    "file": "kontakt.008b22d3.css",
+    "src": "pages/kontakt.css"
+  },
+  "pages/kontakt.vue": {
+    "resourceType": "script",
+    "module": true,
+    "assets": [
+      "kjg_kpjh_logo.523b7780.svg",
+      "board.3b27d74b.jpeg"
+    ],
+    "css": [
+      "kontakt.008b22d3.css"
+    ],
+    "file": "kontakt.905b269c.js",
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.js",
+      "_DefaultView.5c9cd073.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "pages/kontakt.vue"
+  },
+  "kontakt.008b22d3.css": {
+    "file": "kontakt.008b22d3.css",
     "resourceType": "style"
   },
   "kjg_kpjh_logo.523b7780.svg": {
@@ -401,10 +472,42 @@ const client_manifest = {
     "resourceType": "image",
     "mimeType": "image/svg+xml"
   },
-  "header.10c98faf.svg": {
-    "file": "header.10c98faf.svg",
+  "board.3b27d74b.jpeg": {
+    "file": "board.3b27d74b.jpeg",
     "resourceType": "image",
-    "mimeType": "image/svg+xml"
+    "mimeType": "image/jpeg"
+  },
+  "pages/ueberuns.css": {
+    "resourceType": "style",
+    "file": "ueberuns.52802470.css",
+    "src": "pages/ueberuns.css"
+  },
+  "pages/ueberuns.vue": {
+    "resourceType": "script",
+    "module": true,
+    "assets": [
+      "Satzung-KPJH.068e13f3.pdf"
+    ],
+    "css": [
+      "ueberuns.52802470.css"
+    ],
+    "file": "ueberuns.62adb568.js",
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.js",
+      "_Downloads.90c9274a.js",
+      "_DefaultView.5c9cd073.js",
+      "_FileSaver.min.29897430.js",
+      "__commonjsHelpers.87174ba5.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "pages/ueberuns.vue"
+  },
+  "ueberuns.52802470.css": {
+    "file": "ueberuns.52802470.css",
+    "resourceType": "style"
+  },
+  "Satzung-KPJH.068e13f3.pdf": {
+    "file": "Satzung-KPJH.068e13f3.pdf"
   },
   "virtual:nuxt:/home/runner/work/kpjh/kpjh/.nuxt/error-component.mjs": {
     "resourceType": "script",
@@ -413,7 +516,7 @@ const client_manifest = {
       "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue",
       "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue"
     ],
-    "file": "error-component.de9ba7a7.js",
+    "file": "error-component.0b03b1be.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
