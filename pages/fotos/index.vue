@@ -100,14 +100,18 @@ export default {
     },
     computed: {
         filteredAlbums() {
-            return this.search
-                ? this.albums.filter((album) =>
-                      album.title
-                          .toLowerCase()
-                          .includes(this.search.toLocaleLowerCase())
-                  )
-                : this.albums
-        },
+            let albums = this.albums
+
+            if (this.search) {
+                albums = albums.filter((album) =>
+                    album.title
+                        .toLowerCase()
+                        .includes(this.search.toLowerCase())
+                )
+            }
+
+            return albums.sort((a, b) => new Date(b.eventDate) - new Date(a.eventDate))
+        }
     },
 }
 </script>

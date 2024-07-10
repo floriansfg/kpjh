@@ -26,6 +26,7 @@ export default {
                         name
                         supervisor
                         year
+                        time
                         images: imagesCollection(limit: 0) {
                             items {
                                 url(
@@ -48,8 +49,14 @@ export default {
             },
         } = await useAsyncQuery(query)
 
-        return { groups }
-    },
+        groups.forEach(group => {
+            group.numericYear = Number(group.year.slice(-4))
+        })
+
+        const sortedGroups = groups.sort((a, b) => b.numericYear - a.numericYear)
+
+        return { groups: sortedGroups }
+    }
 }
 </script>
 

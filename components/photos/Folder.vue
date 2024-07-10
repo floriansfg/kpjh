@@ -136,7 +136,8 @@ export default {
                         (file) =>
                             file.mimeType !==
                             'application/vnd.google-apps.folder'
-                    )
+                        )
+                        // console.log(this.images[0])
                 }
             }
         },
