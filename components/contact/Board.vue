@@ -49,6 +49,9 @@
     .board {
         display: block;
         margin-top: 3rem;
+        .board-members {
+            margin-top: 5rem;
+        }
     }
 } 
 </style>

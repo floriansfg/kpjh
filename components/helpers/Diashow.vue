@@ -18,8 +18,6 @@
         <Carousel
             ref="myCarousel"
             wrap-around
-            :autoplay="7000"
-            :transition="transition"
             :style="{ width: width, height: 'height' }"
         >
             <Slide

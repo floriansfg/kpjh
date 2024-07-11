@@ -160,6 +160,7 @@ a {
     align-self: center;
     width: 100%;
     height: auto;
+    border-radius: 15px;
 }
 
 @media (max-width: 900px) {
@@ -175,6 +176,7 @@ a {
             width: 70%;
             transform: translateX(+10px);
         }
+        border-radius: 15px;
     }
     .board {
         display: block;
