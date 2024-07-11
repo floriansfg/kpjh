@@ -11,7 +11,7 @@
         <div class="name">{{ groupData.name }}</div>
         <div class="info">
             <p>Jahrgang: {{ groupData.year }}</p>
-            <p>Gruppenstunde: Freitag 18:30-20:00</p>
+            <p v-if="groupData.time">Gruppenstunde: {{ groupData.time }}</p>
             <p>Leiter:in: {{ groupData.supervisor }}</p>
         </div>
     </div>
@@ -23,7 +23,7 @@ export default {
             type: Object,
             required: true,
         },
-    },
+    }
 }
 </script>
 <style scoped>

@@ -9,7 +9,7 @@
                 class="logo"
             >
                 <img src="~/assets/logo.png" />
-                KJG<br />Pfarrjugend Hüls
+                KjG<br />Pfarrjugend Hüls
             </NuxtLink>
             <div class="links">
                 <NuxtLink to="/ueberuns">Über uns</NuxtLink>

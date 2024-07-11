@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="text-center">
+        <div class="text-center mt-5">
             <h3>Hier findest du uns</h3>
         </div>
         <div class="socials">
@@ -40,7 +40,7 @@
             </div>
 
             <div>
-                <img class="logo" src="~/assets/kjg_kpjh_logo.svg"/>
+                <img src="/images/runningkids.jpg"/>
             </div>
         </div>
     </div>
@@ -49,14 +49,19 @@
 <style scoped lang="scss">
 .socials {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 'contacts logo';
-    margin: 5rem 0;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 'contacts img';
+    margin: 5rem 0 7rem 0;
 
-    .logo {
-        max-width: 500px;
-        height: -webkit-fill-available;
-        grid-area: logo;
+    img {
+        max-width: 600px;
+        padding: 3rem;
+        margin: auto;
+        grid-area: img;
+        border-radius: 70px;
+        @media (min-width: 901px) {
+        transform: rotate(+5deg) translateX(+25px);
+        }
     }
 
     .contacts {
@@ -89,8 +94,14 @@
 @media (max-width: 900px) {
     .socials{
         display: block;
-        margin: 0;
-        .logo {
+        margin: 0 0 5rem 0;
+        .contacts{
+            padding: 2rem;
+        }
+        img {
+            width: 100%;
+            padding: 1rem;
+            border-radius: 30px;
             margin: 3rem 0;
         }
     }
