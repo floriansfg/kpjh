@@ -649,7 +649,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/impressum-0f8b6d66.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/impressum-1faaccbc.mjs').then((m) => m.default || m)
   },
   {
     name: "index",
@@ -665,7 +665,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/kontakt-34977c46.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/kontakt-8b09004d.mjs').then((m) => m.default || m)
   },
   {
     name: "ueberuns",
