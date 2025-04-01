@@ -10,9 +10,9 @@
                 src="~/assets/board.jpeg"
             />
             <div class="board-members">
-                <div>1. Vorsitzende: Lorena Schünke</div>
-                <div>2. Vorsitzender: Paul Vornhusen</div>
-                <div>Kassiererin: Janine Führmann</div>
+                <div>1. Vorsitzender: Paul Vornhusen</div>
+                <div>2. Vorsitzender: Max Gerber</div>
+                <div>Kassiererin: Pia Bexkens</div>
                 <div>Materialwartin: Rebekka Schiffers</div>
                 <div>Beisitzerin: Lea Gielen</div>
             </div>
