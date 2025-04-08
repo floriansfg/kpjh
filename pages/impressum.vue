@@ -36,7 +36,7 @@
                 Für den Förderverein verantwortlich: <br />
                 Christian Paffhausen, Dünkirchener Str. 19, 47839 Krefeld <br />
                 Für die KjG Pfarrjugend Hüls verantwortlich: <br />
-                Lorena Schünke, Cyriakusstraße 29, 47839 Krefeld.
+                Paul Vornhusen, Weimannsdyk 55, 47839 Krefeld.
             </p>
         </div>
     </DefaultView>
