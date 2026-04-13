@@ -14,7 +14,7 @@
                 <div>2. Vorsitzender: Max Gerber</div>
                 <div>Kassiererin: Pia Bexkens</div>
                 <div>Materialwartin: Rebekka Schiffers</div>
-                <div>Beisitzerin: Henry Flocken</div>
+                <div>Beisitzer: Henry Flocken</div>
             </div>
         </div>
     </div>
