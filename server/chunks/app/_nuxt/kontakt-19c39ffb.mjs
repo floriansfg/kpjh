@@ -54,7 +54,7 @@ const __nuxt_component_1 = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["ssrRender
 const _imports_0 = "" + buildAssetsURL("board.3b27d74b.jpeg");
 const _sfc_main$1 = {};
 function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
-  _push(`<div${ssrRenderAttrs(_attrs)} data-v-76fcd7c2><div class="text-center" data-v-76fcd7c2><h3 data-v-76fcd7c2>Unser Vorstand</h3></div><div class="board" data-v-76fcd7c2><img class="logo"${ssrRenderAttr("src", _imports_0)} data-v-76fcd7c2><div class="board-members" data-v-76fcd7c2><div data-v-76fcd7c2>1. Vorsitzender: Paul Vornhusen</div><div data-v-76fcd7c2>2. Vorsitzender: Max Gerber</div><div data-v-76fcd7c2>Kassiererin: Pia Bexkens</div><div data-v-76fcd7c2>Materialwartin: Rebekka Schiffers</div><div data-v-76fcd7c2>Beisitzerin: Lea Gielen</div></div></div></div>`);
+  _push(`<div${ssrRenderAttrs(_attrs)} data-v-346b1029><div class="text-center" data-v-346b1029><h3 data-v-346b1029>Unser Vorstand</h3></div><div class="board" data-v-346b1029><img class="logo"${ssrRenderAttr("src", _imports_0)} data-v-346b1029><div class="board-members" data-v-346b1029><div data-v-346b1029>1. Vorsitzender: Paul Vornhusen</div><div data-v-346b1029>2. Vorsitzender: Max Gerber</div><div data-v-346b1029>Kassiererin: Pia Bexkens</div><div data-v-346b1029>Materialwartin: Rebekka Schiffers</div><div data-v-346b1029>Beisitzerin: Henry Flocken</div></div></div></div>`);
 }
 const _sfc_setup$1 = _sfc_main$1.setup;
 _sfc_main$1.setup = (props, ctx) => {
@@ -62,7 +62,7 @@ _sfc_main$1.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/contact/Board.vue");
   return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
-const __nuxt_component_2 = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["ssrRender", _sfc_ssrRender$1], ["__scopeId", "data-v-76fcd7c2"]]);
+const __nuxt_component_2 = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["ssrRender", _sfc_ssrRender$1], ["__scopeId", "data-v-346b1029"]]);
 const _sfc_main = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
   const _component_DefaultView = __nuxt_component_0;
@@ -96,4 +96,4 @@ _sfc_main.setup = (props, ctx) => {
 const kontakt = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
 
 export { kontakt as default };
-//# sourceMappingURL=kontakt-8b09004d.mjs.map
+//# sourceMappingURL=kontakt-19c39ffb.mjs.map

@@ -1,4 +1,4 @@
-import{a as w,K as m,M as H,c as r,w as d,o as a,F as _,e,P as x,Q as V,G as f,H as y,f as n,I as l,C as g,N as L,p as M,b as Z}from"./entry.62e1642c.js";import{_ as b}from"./DefaultView.4783dc46.js";const D={async setup(){const t=m`
+import{a as w,K as m,M as H,c as r,w as d,o as a,F as _,e,P as x,Q as V,G as f,H as y,f as n,I as l,C as g,N as L,p as M,b as Z}from"./entry.41fbdd66.js";import{_ as b}from"./DefaultView.027e2aff.js";const D={async setup(){const t=m`
             query {
                 albums: albumCollection(limit: 0) {
                     items {
