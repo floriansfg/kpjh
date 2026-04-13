@@ -665,7 +665,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/kontakt-19c39ffb.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/kontakt-826b8055.mjs').then((m) => m.default || m)
   },
   {
     name: "ueberuns",
