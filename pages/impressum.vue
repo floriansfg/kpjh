@@ -25,7 +25,7 @@
                 Herrenweg 6 <br />47839 Krefeld <br />Telefon: 02151 - 73 03 97
                 <br />E-Mail: <a href="mailto:info@kpjh.de">info@kpjh.de</a>
                 <br />Vertreten durch: <br />Paul Vornhusen, Max Gerber
-                Pia Bexkens, Rebekka Schiffers, Lea Gielen
+                Pia Bexkens, Rebekka Schiffers, Henry Flocken
             </p>
             <b> Website und technische Umsetzung: </b>
             <p>Nadja Runge, Florian Seefing</p>
