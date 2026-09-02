@@ -51,7 +51,7 @@ _sfc_main$2.setup = (props, ctx) => {
   return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
 };
 const __nuxt_component_1 = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["ssrRender", _sfc_ssrRender$2], ["__scopeId", "data-v-f1ca3936"]]);
-const _imports_0 = "" + buildAssetsURL("board.3b27d74b.jpeg");
+const _imports_0 = "" + buildAssetsURL("board.2245c14e.jpeg");
 const _sfc_main$1 = {};
 function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
   _push(`<div${ssrRenderAttrs(_attrs)} data-v-5e934289><div class="text-center" data-v-5e934289><h3 data-v-5e934289>Unser Vorstand</h3></div><div class="board" data-v-5e934289><img class="logo"${ssrRenderAttr("src", _imports_0)} data-v-5e934289><div class="board-members" data-v-5e934289><div data-v-5e934289>1. Vorsitzender: Paul Vornhusen</div><div data-v-5e934289>2. Vorsitzender: Max Gerber</div><div data-v-5e934289>Kassiererin: Pia Bexkens</div><div data-v-5e934289>Materialwartin: Rebekka Schiffers</div><div data-v-5e934289>Beisitzer: Henry Flocken</div></div></div></div>`);
@@ -96,4 +96,4 @@ _sfc_main.setup = (props, ctx) => {
 const kontakt = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
 
 export { kontakt as default };
-//# sourceMappingURL=kontakt-826b8055.mjs.map
+//# sourceMappingURL=kontakt-5836342e.mjs.map
